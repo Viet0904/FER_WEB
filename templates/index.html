@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Detection</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+      }
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+      }
+      .section {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 10px;
+        background: #f8f9fa;
+      }
+      .upload-container,
+      .realtime-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      input[type="file"] {
+        padding: 10px;
+        border: 2px dashed #3498db;
+        border-radius: 5px;
+        background: #ecf0f1;
+      }
+      button {
+        padding: 12px 25px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #2980b9;
+      }
+      #preview,
+      #video {
+        max-width: 800px; /* Increased size */
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      #result,
+      #realtime-result {
+        font-size: 1.5em;
+        color: #2c3e50;
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        background: #e8f4f8;
+        border-radius: 5px;
+        width: 100%;
+      }
+      .error {
+        color: #e74c3c;
+      }
+      .probability-table {
+        width: 100%;
+        margin-top: 15px;
+        border-collapse: collapse;
+      }
+      .probability-table th,
+      .probability-table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      .probability-table th {
+        background: #3498db;
+        color: white;
+      }
+      .realtime-container {
+        position: relative; /* Make container relative for absolute positioning of overlay */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      #video {
+        max-width: 800px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Emotion Detection</h1>
+
+      <div class="section">
+        <h2>Upload Image</h2>
+        <div class="upload-container">
+          <input type="file" id="imageInput" accept="image/*" />
+          <button onclick="uploadImage()">Upload and Predict</button>
+          <img id="preview" src="" alt="Preview" style="display: none" />
+          <div id="result"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Real-time Detection</h2>
+        <div class="realtime-container">
+          <video id="video" width="800" height="600" autoplay></video>
+          <button onclick="toggleWebcam()">Start/Stop Webcam</button>
+          <div id="realtime-result"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script>
+      const socket = io();
+      let streaming = false;
+      let video = document.getElementById("video");
+      let preview = document.getElementById("preview");
+      let resultDiv = document.getElementById("result");
+      let realtimeResult = document.getElementById("realtime-result");
+      let canvas = document.createElement("canvas");
+      let overlayCanvas = document.createElement("canvas");
+      let overlayCtx = overlayCanvas.getContext("2d");
+      let lastProcessedTime = 0;
+      const frameInterval = 500;
+      let lastEmotions = [];
+
+      document.querySelector(".realtime-container").appendChild(overlayCanvas);
+      overlayCanvas.style.position = "absolute";
+      overlayCanvas.style.top = video.offsetTop + "px";
+      overlayCanvas.style.left = video.offsetLeft + "px";
+      overlayCanvas.style.pointerEvents = "none";
+
+      video.addEventListener("loadedmetadata", () => {
+        overlayCanvas.width = video.videoWidth;
+        overlayCanvas.height = video.videoHeight;
+        canvas.width = 640;
+        canvas.height = 480;
+        console.log(
+          "Video metadata loaded, resolution:",
+          video.videoWidth,
+          "x",
+          video.videoHeight
+        );
+        if (streaming) processVideo();
+      });
+
+      window.addEventListener("resize", () => {
+        overlayCanvas.style.top = video.offsetTop + "px";
+        overlayCanvas.style.left = video.offsetLeft + "px";
+        overlayCanvas.width = video.videoWidth;
+        overlayCanvas.height = video.videoHeight;
+      });
+
+      function toggleWebcam() {
+        if (!streaming) {
+          navigator.mediaDevices
+            .getUserMedia({ video: true, audio: false }) // Bỏ yêu cầu độ phân giải cụ thể
+            .then((stream) => {
+              video.srcObject = stream;
+              streaming = true;
+              realtimeResult.innerHTML = "Webcam started...";
+              processVideo();
+            })
+            .catch((err) => {
+              console.error("Webcam error:", err);
+              realtimeResult.innerHTML = `<span class="error">Error: ${err.message}. Please check webcam availability and permissions.</span>`;
+            });
+        } else {
+          if (video.srcObject) {
+            video.srcObject.getTracks().forEach((track) => track.stop());
+          }
+          streaming = false;
+          realtimeResult.innerHTML = "Webcam stopped";
+          if (lastEmotions.length > 0) drawOverlay(lastEmotions);
+        }
+      }
+
+      function processVideo() {
+        if (!streaming) return;
+
+        if (!video.videoWidth || !video.videoHeight) {
+          console.log("Video not ready, retrying...");
+          setTimeout(processVideo, 100);
+          return;
+        }
+
+        const currentTime = Date.now();
+        if (currentTime - lastProcessedTime < frameInterval) {
+          requestAnimationFrame(processVideo);
+          return;
+        }
+
+        canvas.width = 640;
+        canvas.height = 480;
+        overlayCanvas.width = video.videoWidth;
+        overlayCanvas.height = video.videoHeight;
+
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const imageData = canvas.toDataURL("image/jpeg", 0.9); // Tăng chất lượng lên 90%
+        console.log(
+          "Sending image at:",
+          new Date().toISOString(),
+          "Size:",
+          imageData.length
+        );
+        socket.emit("image", imageData);
+        lastProcessedTime = currentTime;
+
+        requestAnimationFrame(processVideo);
+      }
+
+      function drawOverlay(emotions) {
+        overlayCtx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
+
+        if (!emotions || emotions.length === 0) {
+          realtimeResult.innerHTML = "No faces detected";
+          console.log(
+            "Drawing overlay (no faces) at:",
+            new Date().toISOString()
+          );
+          return;
+        }
+
+        console.log("Drawing overlay at:", new Date().toISOString());
+        let resultText = "";
+        overlayCtx.font = "20px Arial";
+        overlayCtx.lineWidth = 2;
+        overlayCtx.strokeStyle = "red";
+        overlayCtx.fillStyle = "white";
+
+        emotions.forEach((face) => {
+          if (!face.x || !face.y || !face.w || !face.h) {
+            console.error("Invalid face data:", face);
+            resultText += `Face: ${
+              face.emotion || "Unknown"
+            } (Invalid coordinates)<br>`;
+            return;
+          }
+
+          overlayCtx.strokeRect(face.x, face.y, face.w, face.h);
+          const text = face.emotion || "Unknown";
+          const textWidth = overlayCtx.measureText(text).width;
+          overlayCtx.fillRect(face.x, face.y - 25, textWidth + 10, 25);
+          overlayCtx.fillStyle = "black";
+          overlayCtx.fillText(text, face.x + 5, face.y - 5);
+          overlayCtx.fillStyle = "white";
+
+          resultText += `Face at (${face.x}, ${face.y}): ${text}<br>`;
+        });
+
+        realtimeResult.innerHTML = resultText || "No valid faces detected";
+      }
+
+      socket.on("emotion_result", (data) => {
+        console.log(
+          "Received emotion_result at:",
+          new Date().toISOString(),
+          data
+        );
+        lastEmotions = data.emotions || [];
+        drawOverlay(lastEmotions);
+      });
+
+      window.addEventListener("load", () => {
+        if (streaming) processVideo();
+      });
+    </script>
+  </body>
+</html>
