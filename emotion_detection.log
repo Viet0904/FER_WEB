@@ -1576,3 +1576,713 @@ cv2.error: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcod
 2025-03-24 16:13:17,585 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
 2025-03-24 16:13:25,620 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
 2025-03-24 16:13:25,621 - INFO - Đã cập nhật số lượng khuôn mặt tối đa thành 1
+2025-03-24 16:27:24,122 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 16:27:24,138 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 16:27:24,196 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 16:27:25,241 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 16:27:25,256 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 16:27:25,315 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:25] "GET /socket.io/?EIO=4&transport=polling&t=PN7Ucnr HTTP/1.1" 200 -
+2025-03-24 16:27:26,460 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 16:27:26,494 - INFO - Đã khởi động thread xử lý
+2025-03-24 16:27:26,513 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:26] "POST /socket.io/?EIO=4&transport=polling&t=PN7UdLP&sid=pltWsP3QI84vVVCJAAAA HTTP/1.1" 200 -
+2025-03-24 16:27:26,513 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:26] "GET /socket.io/?EIO=4&transport=polling&t=PN7UdNa&sid=pltWsP3QI84vVVCJAAAA HTTP/1.1" 200 -
+2025-03-24 16:27:26,777 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:26] "POST /socket.io/?EIO=4&transport=polling&t=PN7UdSu&sid=pltWsP3QI84vVVCJAAAA HTTP/1.1" 200 -
+2025-03-24 16:27:26,804 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 16:27:26,807 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:26] "GET /socket.io/?EIO=4&transport=polling&t=PN7UdSv&sid=pltWsP3QI84vVVCJAAAA HTTP/1.1" 200 -
+2025-03-24 16:27:26,808 - INFO - Đã cập nhật số lượng khuôn mặt tối đa thành 1
+2025-03-24 16:27:36,132 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:36] "GET / HTTP/1.1" 200 -
+2025-03-24 16:27:42,805 - INFO - Đã dừng thread xử lý
+2025-03-24 16:27:42,830 - INFO - 127.0.0.1 - - [24/Mar/2025 16:27:42] "GET /socket.io/?EIO=4&transport=websocket&sid=pltWsP3QI84vVVCJAAAA HTTP/1.1" 200 -
+2025-03-24 16:28:02,515 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 16:28:02,552 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 16:28:02,610 - ERROR - Lỗi khi lưu hoặc xử lý file: Closing SolutionBase._graph which is already None
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 385, in predict
+    initialize_face_mesh(max_faces)
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 90, in initialize_face_mesh
+    face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
+    ^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\CTU\Web_LuanVan_Demo\.venv\Lib\site-packages\mediapipe\python\solution_base.py", line 361, in close
+    raise ValueError('Closing SolutionBase._graph which is already None')
+ValueError: Closing SolutionBase._graph which is already None
+
+2025-03-24 16:28:02,610 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:02] "POST /predict HTTP/1.1" 200 -
+2025-03-24 16:28:05,195 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 16:28:05,199 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 16:28:05,200 - ERROR - Lỗi khi lưu hoặc xử lý file: Closing SolutionBase._graph which is already None
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 385, in predict
+    initialize_face_mesh(max_faces)
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 90, in initialize_face_mesh
+    face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
+    ^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\CTU\Web_LuanVan_Demo\.venv\Lib\site-packages\mediapipe\python\solution_base.py", line 361, in close
+    raise ValueError('Closing SolutionBase._graph which is already None')
+ValueError: Closing SolutionBase._graph which is already None
+
+2025-03-24 16:28:05,203 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:05] "POST /predict HTTP/1.1" 200 -
+2025-03-24 16:28:08,243 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 16:28:08,245 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 16:28:08,246 - ERROR - Lỗi khi lưu hoặc xử lý file: Closing SolutionBase._graph which is already None
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 385, in predict
+    initialize_face_mesh(max_faces)
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 90, in initialize_face_mesh
+    face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
+    ^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\CTU\Web_LuanVan_Demo\.venv\Lib\site-packages\mediapipe\python\solution_base.py", line 361, in close
+    raise ValueError('Closing SolutionBase._graph which is already None')
+ValueError: Closing SolutionBase._graph which is already None
+
+2025-03-24 16:28:08,248 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:08] "POST /predict HTTP/1.1" 200 -
+2025-03-24 16:28:10,520 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 16:28:10,520 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 16:28:10,520 - ERROR - Lỗi khi lưu hoặc xử lý file: Closing SolutionBase._graph which is already None
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 385, in predict
+    initialize_face_mesh(max_faces)
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 90, in initialize_face_mesh
+    face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
+    ^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\CTU\Web_LuanVan_Demo\.venv\Lib\site-packages\mediapipe\python\solution_base.py", line 361, in close
+    raise ValueError('Closing SolutionBase._graph which is already None')
+ValueError: Closing SolutionBase._graph which is already None
+
+2025-03-24 16:28:10,537 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:10] "POST /predict HTTP/1.1" 200 -
+2025-03-24 16:28:11,852 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 16:28:11,852 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 16:28:11,852 - ERROR - Lỗi khi lưu hoặc xử lý file: Closing SolutionBase._graph which is already None
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 385, in predict
+    initialize_face_mesh(max_faces)
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 90, in initialize_face_mesh
+    face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
+    ^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\CTU\Web_LuanVan_Demo\.venv\Lib\site-packages\mediapipe\python\solution_base.py", line 361, in close
+    raise ValueError('Closing SolutionBase._graph which is already None')
+ValueError: Closing SolutionBase._graph which is already None
+
+2025-03-24 16:28:11,852 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:11] "POST /predict HTTP/1.1" 200 -
+2025-03-24 16:28:13,036 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 16:28:13,038 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 16:28:13,039 - ERROR - Lỗi khi lưu hoặc xử lý file: Closing SolutionBase._graph which is already None
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 385, in predict
+    initialize_face_mesh(max_faces)
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 90, in initialize_face_mesh
+    face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
+    ^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\CTU\Web_LuanVan_Demo\.venv\Lib\site-packages\mediapipe\python\solution_base.py", line 361, in close
+    raise ValueError('Closing SolutionBase._graph which is already None')
+ValueError: Closing SolutionBase._graph which is already None
+
+2025-03-24 16:28:13,041 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:13] "POST /predict HTTP/1.1" 200 -
+2025-03-24 16:28:55,861 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 16:28:55,880 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 16:28:56,314 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 16:28:57,821 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 16:28:57,837 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 16:28:58,615 - INFO - 127.0.0.1 - - [24/Mar/2025 16:28:58] "GET / HTTP/1.1" 200 -
+2025-03-24 16:29:11,718 - INFO - 127.0.0.1 - - [24/Mar/2025 16:29:11] "GET / HTTP/1.1" 200 -
+2025-03-24 16:29:17,470 - INFO - 127.0.0.1 - - [24/Mar/2025 16:29:17] "GET / HTTP/1.1" 200 -
+2025-03-24 17:01:00,459 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 17:01:00,467 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 17:01:00,600 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 17:01:01,826 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 17:01:01,857 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 17:01:02,091 - INFO - 127.0.0.1 - - [24/Mar/2025 17:01:02] "GET / HTTP/1.1" 200 -
+2025-03-24 17:01:13,988 - INFO - 127.0.0.1 - - [24/Mar/2025 17:01:13] "GET /socket.io/?EIO=4&transport=polling&t=PN7cMNm HTTP/1.1" 200 -
+2025-03-24 17:01:14,090 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 17:01:14,107 - INFO - 127.0.0.1 - - [24/Mar/2025 17:01:14] "GET /socket.io/?EIO=4&transport=polling&t=PN7cMOC&sid=v7MueuKWKmsh_4z8AAAA HTTP/1.1" 200 -
+2025-03-24 17:01:14,109 - INFO - Đã khởi động thread xử lý
+2025-03-24 17:01:14,109 - INFO - 127.0.0.1 - - [24/Mar/2025 17:01:14] "POST /socket.io/?EIO=4&transport=polling&t=PN7cMOA&sid=v7MueuKWKmsh_4z8AAAA HTTP/1.1" 200 -
+2025-03-24 17:01:14,157 - INFO - Đã khởi tạo face_mesh với max_num_faces=1
+2025-03-24 17:01:14,163 - INFO - Đã cập nhật số lượng khuôn mặt tối đa thành 1
+2025-03-24 17:01:19,302 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 17:01:19,329 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 17:01:20,366 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 162, 'y': 27, 'w': 63, 'h': 57, 'probabilities': {'Surprise': 7.655440276721492e-05, 'Fear': 1.696068807177653e-06, 'Disgust': 1.2241283684488735e-06, 'Happy': 0.9988445043563843, 'Sad': 1.942675771715585e-05, 'Angry': 0.0010337699204683304, 'Neutral': 2.2857006115373224e-05}}]
+2025-03-24 17:01:20,370 - INFO - 127.0.0.1 - - [24/Mar/2025 17:01:20] "POST /predict HTTP/1.1" 200 -
+2025-03-24 17:01:23,549 - INFO - Đã dừng thread xử lý
+2025-03-24 17:01:23,552 - INFO - 127.0.0.1 - - [24/Mar/2025 17:01:23] "GET /socket.io/?EIO=4&transport=websocket&sid=v7MueuKWKmsh_4z8AAAA HTTP/1.1" 200 -
+2025-03-24 18:53:46,957 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-24 18:53:46,988 - INFO - ViT model loaded successfully
+2025-03-24 18:53:48,228 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 18:53:48,228 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 18:53:50,857 - INFO - 127.0.0.1 - - [24/Mar/2025 18:53:50] "GET / HTTP/1.1" 200 -
+2025-03-24 18:54:22,507 - INFO - Received predict request
+2025-03-24 18:54:22,547 - INFO - File saved at static/uploads\images.jpg
+2025-03-24 18:54:26,087 - INFO - Prediction result: [{'emotion': 'Happy', 'x': 162, 'y': 27, 'w': 63, 'h': 57, 'probabilities': {'Surprise': 7.655440276721492e-05, 'Fear': 1.696068807177653e-06, 'Disgust': 1.2241283684488735e-06, 'Happy': 0.9988445043563843, 'Sad': 1.942675771715585e-05, 'Angry': 0.0010337699204683304, 'Neutral': 2.2857006115373224e-05}}, {'emotion': 'Happy', 'x': 57, 'y': 43, 'w': 73, 'h': 71, 'probabilities': {'Surprise': 0.0011569461785256863, 'Fear': 4.247807737556286e-05, 'Disgust': 5.689542376785539e-05, 'Happy': 0.9964891672134399, 'Sad': 0.0016113860765472054, 'Angry': 0.00040850203367881477, 'Neutral': 0.00023466018319595605}}, {'emotion': 'Happy', 'x': 146, 'y': 65, 'w': 57, 'h': 60, 'probabilities': {'Surprise': 7.460263077518903e-06, 'Fear': 4.009850158581685e-07, 'Disgust': 4.0682058966012846e-07, 'Happy': 0.9999797344207764, 'Sad': 6.017658961354755e-06, 'Angry': 5.727826192014618e-06, 'Neutral': 3.280666192040371e-07}}]
+2025-03-24 18:54:26,087 - INFO - 127.0.0.1 - - [24/Mar/2025 18:54:26] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:54:42,573 - INFO - Received predict request
+2025-03-24 18:54:42,583 - INFO - File saved at static/uploads\Training_10118481.jpg
+2025-03-24 18:54:43,189 - INFO - Prediction result: [{'emotion': 'Angry', 'x': 2, 'y': 10, 'w': 39, 'h': 38, 'probabilities': {'Surprise': 0.00011157629342051223, 'Fear': 0.00016043374489527196, 'Disgust': 0.0024173471610993147, 'Happy': 0.00020899677474517375, 'Sad': 0.02388228103518486, 'Angry': 0.9727645516395569, 'Neutral': 0.0004548560827970505}}]
+2025-03-24 18:54:43,189 - INFO - 127.0.0.1 - - [24/Mar/2025 18:54:43] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:54:44,488 - INFO - 127.0.0.1 - - [24/Mar/2025 18:54:44] "GET /socket.io/?EIO=4&transport=polling&t=PN80L5U HTTP/1.1" 200 -
+2025-03-24 18:54:44,637 - INFO - 127.0.0.1 - - [24/Mar/2025 18:54:44] "GET /socket.io/?EIO=4&transport=polling&t=PN80L6U&sid=7VF6YTmpkMy59paOAAAA HTTP/1.1" 200 -
+2025-03-24 18:54:44,637 - INFO - Started processing thread
+2025-03-24 18:54:44,637 - INFO - 127.0.0.1 - - [24/Mar/2025 18:54:44] "POST /socket.io/?EIO=4&transport=polling&t=PN80L6S&sid=7VF6YTmpkMy59paOAAAA HTTP/1.1" 200 -
+2025-03-24 18:54:56,617 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:54:57,418 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:54:58,284 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:54:59,028 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:54:59,624 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:55:00,694 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:55:01,487 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:55:02,431 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:55:03,488 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:55:04,210 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-24 18:55:54,603 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 18:55:54,619 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 18:55:55,604 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 18:55:55,604 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 18:55:56,303 - INFO - 127.0.0.1 - - [24/Mar/2025 18:55:56] "GET /socket.io/?EIO=4&transport=polling&t=PN80cZi HTTP/1.1" 200 -
+2025-03-24 18:55:56,341 - INFO - 127.0.0.1 - - [24/Mar/2025 18:55:56] "GET /socket.io/?EIO=4&transport=polling&t=PN80ceM&sid=zwFiH0GP5FyU_K4eAAAA HTTP/1.1" 200 -
+2025-03-24 18:55:56,343 - INFO - Đã khởi động thread xử lý
+2025-03-24 18:55:56,346 - INFO - 127.0.0.1 - - [24/Mar/2025 18:55:56] "POST /socket.io/?EIO=4&transport=polling&t=PN80ceK&sid=zwFiH0GP5FyU_K4eAAAA HTTP/1.1" 200 -
+2025-03-24 18:56:00,555 - INFO - 127.0.0.1 - - [24/Mar/2025 18:56:00] "GET / HTTP/1.1" 200 -
+2025-03-24 18:56:02,793 - INFO - Đã dừng thread xử lý
+2025-03-24 18:56:02,840 - INFO - 127.0.0.1 - - [24/Mar/2025 18:56:02] "GET /socket.io/?EIO=4&transport=websocket&sid=zwFiH0GP5FyU_K4eAAAA HTTP/1.1" 200 -
+2025-03-24 18:56:09,235 - INFO - 127.0.0.1 - - [24/Mar/2025 18:56:09] "GET /socket.io/?EIO=4&transport=polling&t=PN80foE HTTP/1.1" 200 -
+2025-03-24 18:56:09,340 - INFO - Đã khởi động thread xử lý
+2025-03-24 18:56:09,340 - INFO - 127.0.0.1 - - [24/Mar/2025 18:56:09] "GET /socket.io/?EIO=4&transport=polling&t=PN80fpq&sid=hfQhSB4fbUHqPel3AAAC HTTP/1.1" 200 -
+2025-03-24 18:56:09,340 - INFO - 127.0.0.1 - - [24/Mar/2025 18:56:09] "POST /socket.io/?EIO=4&transport=polling&t=PN80fpo&sid=hfQhSB4fbUHqPel3AAAC HTTP/1.1" 200 -
+2025-03-24 18:56:09,392 - INFO - 127.0.0.1 - - [24/Mar/2025 18:56:09] "GET /socket.io/?EIO=4&transport=polling&t=PN80fqM&sid=hfQhSB4fbUHqPel3AAAC HTTP/1.1" 200 -
+2025-03-24 18:56:32,062 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:32,745 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:33,447 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:34,121 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:35,109 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:35,908 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:36,700 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:37,484 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:56:38,265 - WARNING - Định dạng landmark không hợp lệ: <class 'dict'>
+2025-03-24 18:58:51,456 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 18:58:51,456 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 18:58:52,414 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 18:58:52,415 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 18:58:57,707 - INFO - 127.0.0.1 - - [24/Mar/2025 18:58:57] "GET / HTTP/1.1" 200 -
+2025-03-24 18:59:11,766 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 18:59:11,827 - INFO - File đã được lưu tại static/uploads\animara.png
+2025-03-24 18:59:14,824 - INFO - Kết quả dự đoán: [{'emotion': 'Neutral', 'x': 58, 'y': 158, 'w': 52, 'h': 52, 'probabilities': {'Surprise': 0.03377259522676468, 'Fear': 0.007213354576379061, 'Disgust': 0.0026949504390358925, 'Happy': 0.0854557454586029, 'Sad': 0.022698083892464638, 'Angry': 0.0020762518979609013, 'Neutral': 0.8460890054702759}}, {'emotion': 'Neutral', 'x': 746, 'y': 160, 'w': 55, 'h': 55, 'probabilities': {'Surprise': 0.1609690934419632, 'Fear': 0.0009768744930624962, 'Disgust': 0.0006429071654565632, 'Happy': 0.10229285061359406, 'Sad': 0.05888821557164192, 'Angry': 0.003953973297029734, 'Neutral': 0.6722760796546936}}]
+2025-03-24 18:59:14,833 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:14] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:59:25,582 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 18:59:25,593 - INFO - File đã được lưu tại static/uploads\Screenshot_2025-01-05_181825.png
+2025-03-24 18:59:25,791 - INFO - Kết quả dự đoán: []
+2025-03-24 18:59:25,791 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:25] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:59:33,300 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 18:59:33,317 - INFO - File đã được lưu tại static/uploads\Screenshot_2025-01-05_181825.png
+2025-03-24 18:59:33,466 - INFO - Kết quả dự đoán: []
+2025-03-24 18:59:33,466 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:33] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:59:38,597 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 18:59:38,603 - INFO - File đã được lưu tại static/uploads\z6202677396161_648aed40c2b137761789bfa0ac880da1.jpg
+2025-03-24 18:59:39,000 - INFO - Kết quả dự đoán: []
+2025-03-24 18:59:39,000 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:39] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:59:43,893 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 18:59:43,899 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 18:59:45,591 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 162, 'y': 27, 'w': 63, 'h': 57, 'probabilities': {'Surprise': 7.655440276721492e-05, 'Fear': 1.696068807177653e-06, 'Disgust': 1.2241283684488735e-06, 'Happy': 0.9988445043563843, 'Sad': 1.942675771715585e-05, 'Angry': 0.0010337699204683304, 'Neutral': 2.2857006115373224e-05}}, {'emotion': 'Happy', 'x': 57, 'y': 43, 'w': 73, 'h': 71, 'probabilities': {'Surprise': 0.0011569461785256863, 'Fear': 4.247807737556286e-05, 'Disgust': 5.689542376785539e-05, 'Happy': 0.9964891672134399, 'Sad': 0.0016113860765472054, 'Angry': 0.00040850203367881477, 'Neutral': 0.00023466018319595605}}, {'emotion': 'Happy', 'x': 146, 'y': 65, 'w': 57, 'h': 60, 'probabilities': {'Surprise': 7.460263077518903e-06, 'Fear': 4.009850158581685e-07, 'Disgust': 4.0682058966012846e-07, 'Happy': 0.9999797344207764, 'Sad': 6.017658961354755e-06, 'Angry': 5.727826192014618e-06, 'Neutral': 3.280666192040371e-07}}]
+2025-03-24 18:59:45,593 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:45] "POST /predict HTTP/1.1" 200 -
+2025-03-24 18:59:47,867 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:47] "GET /socket.io/?EIO=4&transport=polling&t=PN81V9- HTTP/1.1" 200 -
+2025-03-24 18:59:47,930 - INFO - Đã khởi động thread xử lý
+2025-03-24 18:59:47,930 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:47] "POST /socket.io/?EIO=4&transport=polling&t=PN81VAW&sid=dTYP-ye9zW6R8to5AAAA HTTP/1.1" 200 -
+2025-03-24 18:59:47,930 - INFO - 127.0.0.1 - - [24/Mar/2025 18:59:47] "GET /socket.io/?EIO=4&transport=polling&t=PN81VAY&sid=dTYP-ye9zW6R8to5AAAA HTTP/1.1" 200 -
+2025-03-24 19:00:49,047 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:00:49,047 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:00:49,922 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:00:49,922 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:01:11,539 - INFO - 127.0.0.1 - - [24/Mar/2025 19:01:11] "GET / HTTP/1.1" 200 -
+2025-03-24 19:01:29,270 - INFO - 127.0.0.1 - - [24/Mar/2025 19:01:29] "GET / HTTP/1.1" 200 -
+2025-03-24 19:01:34,120 - INFO - 127.0.0.1 - - [24/Mar/2025 19:01:34] "GET /socket.io/?EIO=4&transport=polling&t=PN81v6X HTTP/1.1" 200 -
+2025-03-24 19:01:34,140 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:01:34,140 - INFO - 127.0.0.1 - - [24/Mar/2025 19:01:34] "POST /socket.io/?EIO=4&transport=polling&t=PN81v6n&sid=nfHq90rYTej-95VOAAAA HTTP/1.1" 200 -
+2025-03-24 19:01:34,145 - INFO - 127.0.0.1 - - [24/Mar/2025 19:01:34] "GET /socket.io/?EIO=4&transport=polling&t=PN81v6o&sid=nfHq90rYTej-95VOAAAA HTTP/1.1" 200 -
+2025-03-24 19:01:34,195 - INFO - 127.0.0.1 - - [24/Mar/2025 19:01:34] "GET /socket.io/?EIO=4&transport=polling&t=PN81v7g&sid=nfHq90rYTej-95VOAAAA HTTP/1.1" 200 -
+2025-03-24 19:03:21,349 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:03:21,365 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:03:22,426 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:03:22,426 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:03:35,506 - INFO - 127.0.0.1 - - [24/Mar/2025 19:03:35] "GET / HTTP/1.1" 200 -
+2025-03-24 19:03:48,393 - INFO - 127.0.0.1 - - [24/Mar/2025 19:03:48] "GET /socket.io/?EIO=4&transport=polling&t=PN82Pu6 HTTP/1.1" 200 -
+2025-03-24 19:03:48,510 - INFO - 127.0.0.1 - - [24/Mar/2025 19:03:48] "GET /socket.io/?EIO=4&transport=polling&t=PN82Pum&sid=08Oj1wq4H2YQPGxPAAAA HTTP/1.1" 200 -
+2025-03-24 19:03:48,510 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:03:48,510 - INFO - 127.0.0.1 - - [24/Mar/2025 19:03:48] "POST /socket.io/?EIO=4&transport=polling&t=PN82Pul&sid=08Oj1wq4H2YQPGxPAAAA HTTP/1.1" 200 -
+2025-03-24 19:04:47,440 - INFO - Đã dừng thread xử lý
+2025-03-24 19:04:47,441 - INFO - 127.0.0.1 - - [24/Mar/2025 19:04:47] "GET /socket.io/?EIO=4&transport=websocket&sid=08Oj1wq4H2YQPGxPAAAA HTTP/1.1" 200 -
+2025-03-24 19:05:10,200 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:05:10,215 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:05:11,113 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:05:11,113 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:05:12,794 - INFO - 127.0.0.1 - - [24/Mar/2025 19:05:12] "GET / HTTP/1.1" 200 -
+2025-03-24 19:05:21,434 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 19:05:21,439 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 19:05:23,003 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 162, 'y': 27, 'w': 63, 'h': 57, 'probabilities': {'Surprise': 7.655440276721492e-05, 'Fear': 1.696068807177653e-06, 'Disgust': 1.2241283684488735e-06, 'Happy': 0.9988445043563843, 'Sad': 1.942675771715585e-05, 'Angry': 0.0010337699204683304, 'Neutral': 2.2857006115373224e-05}}, {'emotion': 'Happy', 'x': 57, 'y': 43, 'w': 73, 'h': 71, 'probabilities': {'Surprise': 0.0011569461785256863, 'Fear': 4.247807737556286e-05, 'Disgust': 5.689542376785539e-05, 'Happy': 0.9964891672134399, 'Sad': 0.0016113860765472054, 'Angry': 0.00040850203367881477, 'Neutral': 0.00023466018319595605}}, {'emotion': 'Happy', 'x': 146, 'y': 65, 'w': 57, 'h': 60, 'probabilities': {'Surprise': 7.460263077518903e-06, 'Fear': 4.009850158581685e-07, 'Disgust': 4.0682058966012846e-07, 'Happy': 0.9999797344207764, 'Sad': 6.017658961354755e-06, 'Angry': 5.727826192014618e-06, 'Neutral': 3.280666192040371e-07}}]
+2025-03-24 19:05:23,007 - INFO - 127.0.0.1 - - [24/Mar/2025 19:05:23] "POST /predict HTTP/1.1" 200 -
+2025-03-24 19:05:29,108 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 19:05:29,111 - INFO - File đã được lưu tại static/uploads\PrivateTest_10304478.jpg
+2025-03-24 19:05:29,503 - INFO - Kết quả dự đoán: []
+2025-03-24 19:05:29,503 - INFO - 127.0.0.1 - - [24/Mar/2025 19:05:29] "POST /predict HTTP/1.1" 200 -
+2025-03-24 19:05:30,862 - INFO - 127.0.0.1 - - [24/Mar/2025 19:05:30] "GET /socket.io/?EIO=4&transport=polling&t=PN82ovk HTTP/1.1" 200 -
+2025-03-24 19:05:30,879 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:05:30,879 - INFO - 127.0.0.1 - - [24/Mar/2025 19:05:30] "GET /socket.io/?EIO=4&transport=polling&t=PN82ovx&sid=ybQBYa6l6YK799kWAAAA HTTP/1.1" 200 -
+2025-03-24 19:05:30,879 - INFO - 127.0.0.1 - - [24/Mar/2025 19:05:30] "POST /socket.io/?EIO=4&transport=polling&t=PN82ovw&sid=ybQBYa6l6YK799kWAAAA HTTP/1.1" 200 -
+2025-03-24 19:17:10,151 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:17:10,167 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:17:11,665 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:17:11,666 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:17:15,689 - INFO - 127.0.0.1 - - [24/Mar/2025 19:17:15] "GET / HTTP/1.1" 200 -
+2025-03-24 19:17:30,905 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 19:17:30,957 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 19:17:33,516 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 19:17:33,526 - INFO - 127.0.0.1 - - [24/Mar/2025 19:17:33] "POST /predict HTTP/1.1" 200 -
+2025-03-24 19:17:42,334 - INFO - 127.0.0.1 - - [24/Mar/2025 19:17:42] "GET /socket.io/?EIO=4&transport=polling&t=PN85bUb HTTP/1.1" 200 -
+2025-03-24 19:17:42,443 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:17:42,443 - INFO - 127.0.0.1 - - [24/Mar/2025 19:17:42] "POST /socket.io/?EIO=4&transport=polling&t=PN85bV4&sid=GeB4FDd0TzuoE1QgAAAA HTTP/1.1" 200 -
+2025-03-24 19:17:42,443 - INFO - 127.0.0.1 - - [24/Mar/2025 19:17:42] "GET /socket.io/?EIO=4&transport=polling&t=PN85bV5&sid=GeB4FDd0TzuoE1QgAAAA HTTP/1.1" 200 -
+2025-03-24 19:17:46,061 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:46,572 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:47,096 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:47,599 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:48,052 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:48,624 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:49,781 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:50,440 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:50,983 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:51,458 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:51,949 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:52,684 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:53,150 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:53,685 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:54,268 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:54,921 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:55,441 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:56,144 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:56,704 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:57,202 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:58,197 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:58,686 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:17:59,349 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:00,048 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:01,056 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:07,761 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:08,274 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:08,980 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:09,890 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:10,760 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:11,426 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:11,972 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:12,553 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:13,154 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:14,121 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:14,732 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:15,315 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:15,894 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:16,485 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:17,753 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:19,197 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:19,953 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:20,732 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:21,502 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:22,294 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:23,147 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:18:24,842 - ERROR - Lỗi trong thread xử lý: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 260, in process_frames
+    [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+         ~~^^^
+KeyError: 0
+
+2025-03-24 19:20:45,289 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:20:45,302 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:20:46,511 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:20:46,512 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:20:46,585 - INFO - 127.0.0.1 - - [24/Mar/2025 19:20:46] "GET /socket.io/?EIO=4&transport=polling&t=PN86ILF HTTP/1.1" 200 -
+2025-03-24 19:20:46,649 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:20:46,656 - INFO - 127.0.0.1 - - [24/Mar/2025 19:20:46] "POST /socket.io/?EIO=4&transport=polling&t=PN86IU8&sid=tzeCbEPdP0GNIadKAAAA HTTP/1.1" 200 -
+2025-03-24 19:20:46,660 - INFO - 127.0.0.1 - - [24/Mar/2025 19:20:46] "GET /socket.io/?EIO=4&transport=polling&t=PN86IUC&sid=tzeCbEPdP0GNIadKAAAA HTTP/1.1" 200 -
+2025-03-24 19:20:49,322 - INFO - 127.0.0.1 - - [24/Mar/2025 19:20:49] "GET / HTTP/1.1" 200 -
+2025-03-24 19:20:53,039 - INFO - Đã dừng thread xử lý
+2025-03-24 19:20:53,613 - INFO - 127.0.0.1 - - [24/Mar/2025 19:20:53] "GET /socket.io/?EIO=4&transport=websocket&sid=tzeCbEPdP0GNIadKAAAA HTTP/1.1" 200 -
+2025-03-24 19:21:02,497 - INFO - 127.0.0.1 - - [24/Mar/2025 19:21:02] "GET /socket.io/?EIO=4&transport=polling&t=PN86MIL HTTP/1.1" 200 -
+2025-03-24 19:21:03,044 - INFO - 127.0.0.1 - - [24/Mar/2025 19:21:03] "GET /socket.io/?EIO=4&transport=polling&t=PN86MRf&sid=atyHf-jbcU4xRFcRAAAC HTTP/1.1" 200 -
+2025-03-24 19:21:03,044 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:21:03,061 - INFO - 127.0.0.1 - - [24/Mar/2025 19:21:03] "POST /socket.io/?EIO=4&transport=polling&t=PN86MRd&sid=atyHf-jbcU4xRFcRAAAC HTTP/1.1" 200 -
+2025-03-24 19:21:13,194 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 250, 'y': 216, 'w': 220, 'h': 234}
+2025-03-24 19:21:14,032 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 248, 'y': 216, 'w': 222, 'h': 232}
+2025-03-24 19:21:14,784 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 268, 'y': 220, 'w': 170, 'h': 216}
+2025-03-24 19:21:15,396 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Surprise', 'x': 250, 'y': 162, 'w': 184, 'h': 192}
+2025-03-24 19:21:16,075 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 242, 'y': 202, 'w': 194, 'h': 226}
+2025-03-24 19:21:16,716 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 234, 'y': 184, 'w': 200, 'h': 234}
+2025-03-24 19:21:17,489 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 230, 'y': 176, 'w': 198, 'h': 222}
+2025-03-24 19:21:18,230 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 216, 'y': 160, 'w': 198, 'h': 218}
+2025-03-24 19:21:18,902 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 236, 'y': 158, 'w': 186, 'h': 202}
+2025-03-24 19:21:19,558 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 236, 'y': 148, 'w': 184, 'h': 194}
+2025-03-24 19:21:20,200 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Sad', 'x': 232, 'y': 162, 'w': 194, 'h': 202}
+2025-03-24 19:21:20,741 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Sad', 'x': 236, 'y': 148, 'w': 186, 'h': 198}
+2025-03-24 19:21:21,286 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 232, 'y': 134, 'w': 178, 'h': 196}
+2025-03-24 19:21:21,845 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 240, 'y': 146, 'w': 178, 'h': 190}
+2025-03-24 19:21:22,314 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 240, 'y': 148, 'w': 180, 'h': 190}
+2025-03-24 19:21:22,824 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 236, 'y': 150, 'w': 184, 'h': 192}
+2025-03-24 19:21:23,275 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 236, 'y': 164, 'w': 182, 'h': 190}
+2025-03-24 19:21:23,822 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 224, 'y': 162, 'w': 198, 'h': 200}
+2025-03-24 19:21:24,354 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 216, 'y': 164, 'w': 206, 'h': 204}
+2025-03-24 19:21:24,791 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 224, 'y': 170, 'w': 196, 'h': 210}
+2025-03-24 19:21:25,226 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 222, 'y': 176, 'w': 206, 'h': 222}
+2025-03-24 19:21:25,793 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 222, 'y': 186, 'w': 210, 'h': 228}
+2025-03-24 19:21:26,340 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 202, 'y': 166, 'w': 206, 'h': 228}
+2025-03-24 19:21:26,840 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 172, 'y': 154, 'w': 192, 'h': 232}
+2025-03-24 19:21:27,683 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 262, 'y': 168, 'w': 186, 'h': 204}
+2025-03-24 19:21:28,117 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 288, 'y': 166, 'w': 204, 'h': 212}
+2025-03-24 19:21:28,692 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 256, 'y': 154, 'w': 202, 'h': 220}
+2025-03-24 19:21:29,185 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 246, 'y': 164, 'w': 186, 'h': 206}
+2025-03-24 19:21:29,736 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 238, 'y': 164, 'w': 194, 'h': 206}
+2025-03-24 19:21:30,281 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 238, 'y': 166, 'w': 194, 'h': 202}
+2025-03-24 19:21:30,742 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 236, 'y': 166, 'w': 194, 'h': 202}
+2025-03-24 19:21:31,245 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Surprise', 'x': 236, 'y': 158, 'w': 192, 'h': 204}
+2025-03-24 19:21:31,881 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Surprise', 'x': 240, 'y': 158, 'w': 186, 'h': 198}
+2025-03-24 19:21:32,511 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Surprise', 'x': 240, 'y': 162, 'w': 186, 'h': 196}
+2025-03-24 19:21:33,417 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 0, 'y': 130, 'w': 140, 'h': 186}
+2025-03-24 19:21:33,936 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 0, 'y': 116, 'w': 148, 'h': 198}
+2025-03-24 19:21:34,545 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 0, 'y': 114, 'w': 158, 'h': 200}
+2025-03-24 19:21:35,216 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 0, 'y': 112, 'w': 156, 'h': 202}
+2025-03-24 19:21:35,881 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 0, 'y': 114, 'w': 152, 'h': 198}
+2025-03-24 19:21:36,673 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 350, 'y': 104, 'w': 196, 'h': 208}
+2025-03-24 19:21:37,346 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 346, 'y': 102, 'w': 196, 'h': 210}
+2025-03-24 19:21:38,060 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 330, 'y': 102, 'w': 196, 'h': 208}
+2025-03-24 19:21:38,662 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 322, 'y': 102, 'w': 196, 'h': 208}
+2025-03-24 19:21:39,110 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 210, 'y': 106, 'w': 182, 'h': 202}
+2025-03-24 19:21:39,559 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Happy', 'x': 204, 'y': 122, 'w': 192, 'h': 214}
+2025-03-24 19:21:39,973 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 220, 'y': 146, 'w': 184, 'h': 200}
+2025-03-24 19:21:40,476 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Disgust', 'x': 230, 'y': 158, 'w': 182, 'h': 196}
+2025-03-24 19:21:40,943 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Happy', 'x': 230, 'y': 158, 'w': 182, 'h': 192}
+2025-03-24 19:21:41,516 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 226, 'y': 158, 'w': 184, 'h': 194}
+2025-03-24 19:21:41,981 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 228, 'y': 162, 'w': 184, 'h': 192}
+2025-03-24 19:21:42,573 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 226, 'y': 162, 'w': 186, 'h': 194}
+2025-03-24 19:21:43,116 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Happy', 'x': 228, 'y': 162, 'w': 184, 'h': 192}
+2025-03-24 19:21:43,650 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 222, 'y': 160, 'w': 192, 'h': 196}
+2025-03-24 19:21:44,217 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 230, 'y': 160, 'w': 186, 'h': 194}
+2025-03-24 19:21:44,693 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 230, 'y': 160, 'w': 184, 'h': 196}
+2025-03-24 19:21:45,298 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 232, 'y': 184, 'w': 186, 'h': 206}
+2025-03-24 19:21:45,749 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 226, 'y': 184, 'w': 194, 'h': 210}
+2025-03-24 19:21:46,348 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Neutral', 'x': 258, 'y': 188, 'w': 158, 'h': 196}
+2025-03-24 19:21:46,833 - WARNING - Định dạng landmark không hợp lệ: {'emotion': 'Disgust', 'x': 262, 'y': 176, 'w': 168, 'h': 194}
+2025-03-24 19:25:30,970 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:25:30,970 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:25:32,048 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:25:32,048 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:25:52,016 - INFO - 127.0.0.1 - - [24/Mar/2025 19:25:52] "GET / HTTP/1.1" 200 -
+2025-03-24 19:25:54,097 - INFO - 127.0.0.1 - - [24/Mar/2025 19:25:54] "GET /socket.io/?EIO=4&transport=polling&t=PN87TPS HTTP/1.1" 200 -
+2025-03-24 19:26:01,128 - INFO - 127.0.0.1 - - [24/Mar/2025 19:26:01] "GET /socket.io/?EIO=4&transport=polling&t=PN87VGT HTTP/1.1" 200 -
+2025-03-24 19:26:01,314 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:26:01,317 - INFO - 127.0.0.1 - - [24/Mar/2025 19:26:01] "POST /socket.io/?EIO=4&transport=polling&t=PN87VGs&sid=yjzjs0AP_qYDQ5NmAAAB HTTP/1.1" 200 -
+2025-03-24 19:26:01,331 - INFO - 127.0.0.1 - - [24/Mar/2025 19:26:01] "GET /socket.io/?EIO=4&transport=polling&t=PN87VGt&sid=yjzjs0AP_qYDQ5NmAAAB HTTP/1.1" 200 -

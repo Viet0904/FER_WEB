@@ -22,6 +22,8 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 # Cấu hình logging với encoding UTF-8
 import logging
+
+
 class UTF8StreamHandler(logging.StreamHandler):
     def emit(self, record):
         try:
@@ -65,13 +67,15 @@ transform = transforms.Compose(
     ]
 )
 
-# Khởi tạo MediaPipe Face Mesh toàn cục
+# Khởi tạo MediaPipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
-mp_drawing = mp.solutions.drawing_utils
-mp_drawing_styles = mp.solutions.drawing_styles
+face_mesh = mp_face_mesh.FaceMesh(
+    static_image_mode=False,
+    max_num_faces=100,
+    min_detection_confidence=0.5,
+    min_tracking_confidence=0.5,
+)
 
-# Biến toàn cục để lưu trữ face_mesh, sẽ được cập nhật động
-face_mesh = None
 face_cascade = cv2.CascadeClassifier(
     cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
 )
@@ -80,19 +84,6 @@ frame_queue = queue.Queue(maxsize=1)
 result_queue = queue.Queue(maxsize=1)
 is_processing = False
 processing_thread = None
-
-
-def initialize_face_mesh(max_faces=1):
-    global face_mesh
-    if face_mesh is not None:
-        face_mesh.close()  # Đóng face_mesh cũ trước khi tạo mới
-    face_mesh = mp_face_mesh.FaceMesh(
-        static_image_mode=False,
-        max_num_faces=max_faces,
-        min_detection_confidence=0.5,
-        min_tracking_confidence=0.5,
-    )
-    logging.info(f"Đã khởi tạo face_mesh với max_num_faces={max_faces}")
 
 
 class ViTBasePatch16_224_Model(torch.nn.Module):
@@ -137,26 +128,17 @@ except Exception as e:
     logging.error(f"Lỗi khi tải mô hình ViT: {str(e)}")
     model = None
 
-# Khởi tạo face_mesh lần đầu với giá trị mặc định
-initialize_face_mesh(max_faces=1)
-
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-def detect_face_mediapipe(image, max_faces=10):
+def detect_face_mediapipe(image, max_faces=1):
     try:
-        if isinstance(image, np.ndarray):
-            rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        else:
-            rgb_image = np.array(Image.open(image).convert("RGB"))
-
+        rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         results = face_mesh.process(rgb_image)
-
         faces = []
         landmarks = []
-
         if results.multi_face_landmarks:
             h, w = rgb_image.shape[:2]
             for face_landmarks in results.multi_face_landmarks[:max_faces]:
@@ -164,7 +146,6 @@ def detect_face_mediapipe(image, max_faces=10):
                 y_min = h
                 x_max = 0
                 y_max = 0
-
                 face_landmarks_list = []
                 for landmark in face_landmarks.landmark:
                     x, y = int(landmark.x * w), int(landmark.y * h)
@@ -173,16 +154,13 @@ def detect_face_mediapipe(image, max_faces=10):
                     y_min = min(y_min, y)
                     x_max = max(x_max, x)
                     y_max = max(y_max, y)
-
                 margin = int((x_max - x_min) * 0.1)
                 x_min = max(0, x_min - margin)
                 y_min = max(0, y_min - margin)
                 x_max = min(w, x_max + margin)
                 y_max = min(h, y_max + margin)
-
                 faces.append((x_min, y_min, x_max - x_min, y_max - y_min))
                 landmarks.extend(face_landmarks_list)
-
         return faces, landmarks
     except Exception as e:
         logging.error(
@@ -191,24 +169,12 @@ def detect_face_mediapipe(image, max_faces=10):
         return [], []
 
 
-def predict_emotion(image, model, max_faces=10, return_probs=False, use_mediapipe=True):
+def predict_emotion(image, model, max_faces=1, return_probs=False):
     try:
         if model is None:
             raise ValueError("Mô hình chưa được tải")
-
-        if isinstance(image, np.ndarray):
-            original_image = image.copy()
-        else:
-            original_image = np.array(Image.open(image).convert("RGB"))
-
-        if use_mediapipe:
-            faces, landmarks = detect_face_mediapipe(
-                original_image, max_faces=max_faces
-            )
-        else:
-            faces = []
-            landmarks = []
-
+        original_image = image.copy()
+        faces, landmarks = detect_face_mediapipe(original_image, max_faces=max_faces)
         if not faces:
             gray = cv2.cvtColor(original_image, cv2.COLOR_RGB2GRAY)
             haar_faces = face_cascade.detectMultiScale(
@@ -216,11 +182,9 @@ def predict_emotion(image, model, max_faces=10, return_probs=False, use_mediapip
             )
             faces = [(x, y, w, h) for (x, y, w, h) in haar_faces][:max_faces]
             landmarks = []
-
         results = []
         if len(faces) == 0:
-            return [], landmarks if return_probs else []
-
+            return results, landmarks  # Luôn trả về cả results và landmarks
         for i, (x, y, w, h) in enumerate(faces):
             if (
                 w <= 0
@@ -231,67 +195,47 @@ def predict_emotion(image, model, max_faces=10, return_probs=False, use_mediapip
                 or y + h > original_image.shape[0]
             ):
                 logging.warning(
-                    f"Kích thước khuôn mặt không hợp lệ: x={x}, y={y}, w={w}, h={h}, hình ảnh có kích thước: {original_image.shape}"
+                    f"Kích thước khuôn mặt không hợp lệ: x={x}, y={y}, w={w}, h={h}"
                 )
                 continue
-
             face = original_image[y : y + h, x : x + w]
             if face.size == 0 or face.shape[0] <= 0 or face.shape[1] <= 0:
                 logging.warning(f"Vùng khuôn mặt trống")
                 continue
-
-            try:
-                face_pil = Image.fromarray(face)
-                face_tensor = transform(face_pil).unsqueeze(0).to(device)
-
-                with torch.no_grad():
-                    outputs = model(face_tensor)
-                    probabilities = (
-                        torch.softmax(outputs, dim=1)[0].cpu().numpy().tolist()
-                    )
-                    _, predicted = torch.max(outputs, 1)
-                    emotion_idx = predicted.item()
-
-                    emotion = label_to_emotion.get(emotion_idx, "Unknown")
-
-                    result = {
-                        "emotion": emotion,
-                        "x": int(x),
-                        "y": int(y),
-                        "w": int(w),
-                        "h": int(h),
+            face_pil = Image.fromarray(face)
+            face_tensor = transform(face_pil).unsqueeze(0).to(device)
+            with torch.no_grad():
+                outputs = model(face_tensor)
+                probabilities = torch.softmax(outputs, dim=1)[0].cpu().numpy().tolist()
+                _, predicted = torch.max(outputs, 1)
+                emotion_idx = predicted.item()
+                emotion = label_to_emotion.get(emotion_idx, "Unknown")
+                result = {
+                    "emotion": emotion,
+                    "x": int(x),
+                    "y": int(y),
+                    "w": int(w),
+                    "h": int(h),
+                }
+                if return_probs:
+                    result["probabilities"] = {
+                        label_to_emotion[i]: prob
+                        for i, prob in enumerate(probabilities)
                     }
-
-                    if return_probs:
-                        result["probabilities"] = {
-                            label_to_emotion[i]: prob
-                            for i, prob in enumerate(probabilities)
-                        }
-
-                    results.append(result)
-            except Exception as inner_e:
-                logging.error(
-                    f"Lỗi khi xử lý khuôn mặt: {str(inner_e)}\n{traceback.format_exc()}"
-                )
-                continue
-
-        return results, landmarks if return_probs else results
-
+                results.append(result)
+        return results, landmarks  # Luôn trả về cả results và landmarks
     except Exception as e:
         logging.error(f"Lỗi trong predict_emotion: {str(e)}\n{traceback.format_exc()}")
-        error_msg = f"Lỗi: {str(e)}"
-        return [{"emotion": error_msg, "x": 0, "y": 0, "w": 0, "h": 0}], []
+        return [{"emotion": f"Lỗi: {str(e)}", "x": 0, "y": 0, "w": 0, "h": 0}], []
 
 
-def process_frames(max_faces=1):
+def process_frames():
     global is_processing
     is_processing = True
-
     while is_processing:
         try:
             if not frame_queue.empty():
                 frame = frame_queue.get(block=False)
-
                 if (
                     frame is None
                     or not isinstance(frame, np.ndarray)
@@ -300,51 +244,37 @@ def process_frames(max_faces=1):
                     logging.warning("Nhận được frame trống hoặc không hợp lệ, bỏ qua")
                     time.sleep(0.01)
                     continue
-
                 if len(frame.shape) != 3 or frame.shape[2] != 3:
                     logging.warning(f"Định dạng frame không hợp lệ: {frame.shape}")
                     time.sleep(0.01)
                     continue
-
                 scale_factor = 0.5
                 frame_small = cv2.resize(frame, None, fx=scale_factor, fy=scale_factor)
-
-                emotions, landmarks = predict_emotion(
-                    frame_small, model, max_faces=max_faces, use_mediapipe=True
-                )
-
-                scaled_landmarks = []
-                for lm in landmarks:
-                    try:
-                        if isinstance(lm, dict) and 0 in lm and 1 in lm:
-                            scaled_landmarks.append(
-                                [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
-                            )
-                        elif isinstance(lm, (list, tuple)) and len(lm) >= 2:
-                            scaled_landmarks.append(
-                                [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
-                            )
-                        else:
-                            logging.warning(
-                                f"Định dạng landmark không hợp lệ: {type(lm)}"
-                            )
-                    except Exception as lm_error:
-                        logging.error(f"Lỗi khi xử lý landmark: {str(lm_error)}")
-                        continue
-
+                emotions, landmarks = predict_emotion(frame_small, model, max_faces=1)
                 for emotion in emotions:
                     emotion["x"] = int(emotion["x"] / scale_factor)
                     emotion["y"] = int(emotion["y"] / scale_factor)
                     emotion["w"] = int(emotion["w"] / scale_factor)
                     emotion["h"] = int(emotion["h"] / scale_factor)
-
+                scaled_landmarks = []
+                for lm in landmarks:
+                    if isinstance(lm, (list, tuple)) and len(lm) >= 2:
+                        try:
+                            scaled_landmarks.append(
+                                [int(lm[0] / scale_factor), int(lm[1] / scale_factor)]
+                            )
+                        except (TypeError, ValueError) as e:
+                            logging.warning(f"Lỗi khi chia tỷ lệ landmark: {str(e)}")
+                    else:
+                        logging.warning(f"Định dạng landmark không hợp lệ: {lm}")
                 if not result_queue.full():
                     while not result_queue.empty():
                         result_queue.get()
-                    result_queue.put((emotions, scaled_landmarks))
+                    result_queue.put(
+                        {"emotions": emotions, "landmarks": scaled_landmarks}
+                    )
             else:
                 time.sleep(0.01)
-
         except Exception as e:
             logging.error(f"Lỗi trong thread xử lý: {str(e)}\n{traceback.format_exc()}")
             time.sleep(0.1)
@@ -361,21 +291,19 @@ def predict():
     if "file" not in request.files:
         logging.warning("Không có phần file trong yêu cầu")
         return jsonify({"error": "Không có phần file"})
-
     file = request.files["file"]
     if file.filename == "":
         logging.warning("Không có file được chọn")
         return jsonify({"error": "Không có file được chọn"})
-
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
-
         try:
             file.save(filepath)
             logging.info(f"File đã được lưu tại {filepath}")
+            img = cv2.imread(filepath)
             results, landmarks = predict_emotion(
-                filepath, model, max_faces=10, return_probs=True, use_mediapipe=True
+                img, model, max_faces=10, return_probs=True
             )
             logging.info(f"Kết quả dự đoán: {results}")
             return jsonify({"emotions": results, "landmarks": landmarks})
@@ -384,7 +312,6 @@ def predict():
                 f"Lỗi khi lưu hoặc xử lý file: {str(e)}\n{traceback.format_exc()}"
             )
             return jsonify({"error": f"Lỗi khi xử lý file: {str(e)}"})
-
     logging.warning("Định dạng file không hợp lệ")
     return jsonify({"error": "Định dạng file không hợp lệ"})
 
@@ -409,12 +336,10 @@ def handle_image(data):
                 },
             )
             return
-
         base64_str = data.split(",")[1]
         image_data = base64.b64decode(base64_str)
         npimg = np.frombuffer(image_data, np.uint8)
         frame = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
-
         if frame is None or frame.size == 0:
             socketio.emit(
                 "emotion_result",
@@ -432,18 +357,13 @@ def handle_image(data):
                 },
             )
             return
-
         if not frame_queue.full():
             while not frame_queue.empty():
                 frame_queue.get()
             frame_queue.put(frame)
-
         if not result_queue.empty():
-            emotions, landmarks = result_queue.get()
-            socketio.emit(
-                "emotion_result", {"emotions": emotions, "landmarks": landmarks}
-            )
-
+            result = result_queue.get()
+            socketio.emit("emotion_result", result)
     except Exception as e:
         logging.error(f"Lỗi trong handle_image: {str(e)}\n{traceback.format_exc()}")
         socketio.emit(
@@ -458,47 +378,20 @@ def handle_image(data):
 
 
 @socketio.on("connect")
-def handle_connect(sid=None):
+def handle_connect():
     global processing_thread, is_processing
     if processing_thread is None or not processing_thread.is_alive():
         is_processing = True
-        max_faces = 1  # Giá trị mặc định ban đầu
-        initialize_face_mesh(max_faces)  # Khởi tạo face_mesh với giá trị mặc định
-        processing_thread = threading.Thread(target=process_frames, args=(max_faces,))
+        processing_thread = threading.Thread(target=process_frames)
         processing_thread.daemon = True
         processing_thread.start()
         logging.info("Đã khởi động thread xử lý")
-
-
-@socketio.on("update_max_faces")
-def handle_update_max_faces(data):
-    global processing_thread, is_processing
-    try:
-        max_faces = max(1, int(data.get("max_faces", 1)))
-        # Dừng thread hiện tại
-        if processing_thread is not None and processing_thread.is_alive():
-            is_processing = False
-            processing_thread.join(timeout=1.0)  # Chờ thread dừng trong tối đa 1 giây
-
-        # Cập nhật face_mesh với số lượng khuôn mặt mới
-        initialize_face_mesh(max_faces)
-
-        # Khởi động thread mới với max_faces mới
-        is_processing = True
-        processing_thread = threading.Thread(target=process_frames, args=(max_faces,))
-        processing_thread.daemon = True
-        processing_thread.start()
-        logging.info(f"Đã cập nhật số lượng khuôn mặt tối đa thành {max_faces}")
-    except Exception as e:
-        logging.error(f"Lỗi khi cập nhật số lượng khuôn mặt: {str(e)}")
 
 
 @socketio.on("disconnect")
 def handle_disconnect():
     global is_processing
     is_processing = False
-    if face_mesh is not None:
-        face_mesh.close()  # Đóng face_mesh khi ngắt kết nối
     logging.info("Đã dừng thread xử lý")
 
 
