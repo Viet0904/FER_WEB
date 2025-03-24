@@ -7,11 +7,11 @@
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
         background-color: #f7f7f7;
       }
+
       h1 {
         color: #333;
         text-align: center;
@@ -30,15 +30,18 @@
         background-color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+
       .tab.active {
         display: block;
       }
+
       .tabs {
         display: flex;
         gap: 10px;
         margin-bottom: 20px;
         justify-content: center;
       }
+
       .tab-btn {
         padding: 12px 24px;
         background-color: #f0f0f0;
@@ -51,6 +54,7 @@
       .tab-btn:hover {
         background-color: #e0e0e0;
       }
+
       .tab-btn.active {
         background-color: #4285f4;
         color: white;
@@ -64,6 +68,7 @@
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+
       #video,
       #canvas {
         width: 100%;
@@ -71,11 +76,13 @@
         height: auto;
         border-radius: 8px;
       }
+
       #canvas {
         position: absolute;
         top: 0;
         left: 0;
       }
+
       #landmarksCanvas {
         position: absolute;
         top: 0;
@@ -227,6 +234,7 @@
   <body>
     <h1>Emotion Detection</h1>
 
+    <!-- Nhóm nút chuyển đổi tab -->
     <div class="tabs">
       <button class="tab-btn active" onclick="showTab('upload')">
         Upload Image
@@ -236,12 +244,16 @@
       </button>
     </div>
 
+    <!-- Container chính chứa các tab -->
     <div class="container">
+      <!-- Tab tải lên ảnh -->
       <div id="uploadTab" class="tab active">
         <h2>Upload Image</h2>
+        <!-- Nhóm nút chọn và tải lên ảnh -->
         <div class="upload-buttons-container">
           <div class="file-input-wrapper">
             <button class="btn">Choose Image</button>
+            <!-- Input chọn file ảnh -->
             <input
               type="file"
               id="fileInput"
@@ -249,28 +261,37 @@
               onchange="previewImage()"
             />
           </div>
+          <!-- Nút gửi yêu cầu dự đoán -->
           <button type="button" class="btn" onclick="uploadAndPredict()">
             Upload and Predict
           </button>
         </div>
 
+        <!-- Thông báo lỗi khi chọn file -->
         <div id="fileInputError" class="error-message"></div>
+        <!-- Hiệu ứng tải khi xử lý ảnh -->
         <div id="uploadLoading" class="loading">Processing image...</div>
 
+        <!-- Container hiển thị ảnh xem trước -->
         <div class="preview-container">
           <img id="uploadPreview" alt="Upload Preview" />
         </div>
 
+        <!-- Container hiển thị kết quả dự đoán -->
         <div id="uploadResult" class="result-container"></div>
       </div>
 
+      <!-- Tab phát hiện cảm xúc thời gian thực -->
       <div id="realtimeTab" class="tab">
         <h2>Real-time Detection</h2>
 
+        <!-- Tùy chọn điều khiển camera -->
         <div class="camera-options">
+          <!-- Nút bật/tắt webcam -->
           <button id="startBtn" class="btn" onclick="toggleWebcam()">
             Start
           </button>
+          <!-- Nút chuyển đổi camera -->
           <button
             id="switchCameraBtn"
             class="btn"
@@ -279,6 +300,7 @@
           >
             Switch Camera
           </button>
+          <!-- Dropdown chọn camera -->
           <select
             id="cameraSelection"
             style="display: none"
@@ -288,44 +310,53 @@
           </select>
         </div>
 
+        <!-- Thông báo lỗi camera -->
         <div id="cameraError" class="error-message"></div>
 
+        <!-- Container hiển thị video và kết quả thời gian thực -->
         <div class="video-container">
           <video id="video" autoplay playsinline></video>
           <canvas id="canvas"></canvas>
           <canvas id="landmarksCanvas"></canvas>
         </div>
 
+        <!-- Container hiển thị kết quả thời gian thực -->
         <div id="realtimeResult" class="result-container"></div>
       </div>
     </div>
 
+    <!-- Thư viện Socket.IO để giao tiếp real-time -->
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
     <script>
-      let socket;
-      let videoStream;
-      let isStreaming = false;
-      let lastCaptureTime = 0;
-      const CAPTURE_INTERVAL_MS = 200;
-      let currentCameraIndex = 0;
-      let availableCameras = [];
+      // Khai báo biến toàn cục
+      let socket; // Đối tượng Socket.IO
+      let videoStream; // Luồng video từ webcam
+      let isStreaming = false; // Trạng thái phát video
+      let lastCaptureTime = 0; // Thời điểm chụp frame cuối
+      const CAPTURE_INTERVAL_MS = 200; // Khoảng thời gian giữa các lần chụp frame (ms)
+      let currentCameraIndex = 0; // Chỉ số camera hiện tại
+      let availableCameras = []; // Danh sách camera khả dụng
 
+      // Khởi tạo kết nối Socket.IO
       function initSocket() {
         if (!socket) {
           const protocol =
-            window.location.protocol === "https:" ? "wss:" : "ws:";
-          const host = window.location.host;
-          const socketUrl = `${protocol}//${host}`;
-          socket = io(socketUrl);
+            window.location.protocol === "https:" ? "wss:" : "ws:"; // Giao thức socket
+          const host = window.location.host; // Địa chỉ host
+          const socketUrl = `${protocol}//${host}`; // URL socket
+          socket = io(socketUrl); // Khởi tạo socket
 
+          // Xử lý sự kiện kết nối thành công
           socket.on("connect", () => {
             console.log("Connected to server");
           });
 
+          // Xử lý kết quả cảm xúc từ server
           socket.on("emotion_result", (data) => {
             displayRealtimeResult(data);
           });
 
+          // Xử lý sự kiện mất kết nối
           socket.on("disconnect", () => {
             console.log("Disconnected from server");
             showError(
@@ -334,6 +365,7 @@
             );
           });
 
+          // Xử lý lỗi kết nối
           socket.on("connect_error", (error) => {
             console.error("Socket.IO connection error:", error);
             showError(
@@ -342,6 +374,7 @@
             );
           });
 
+          // Xử lý lỗi socket chung
           socket.on("error", (error) => {
             console.error("Socket.IO error:", error);
             showError("cameraError", "Socket error: " + error);
@@ -349,20 +382,23 @@
         }
       }
 
+      // Hiển thị thông báo lỗi
       function showError(elementId, message) {
         const errorElement = document.getElementById(elementId);
         errorElement.textContent = message;
         errorElement.style.display = "block";
         setTimeout(() => {
           errorElement.style.display = "none";
-        }, 5000);
+        }, 5000); // Ẩn sau 5 giây
       }
 
+      // Xóa thông báo lỗi
       function clearError(elementId) {
         const errorElement = document.getElementById(elementId);
         errorElement.style.display = "none";
       }
 
+      // Chuyển đổi giữa các tab
       function showTab(tabName) {
         document
           .querySelectorAll(".tab")
@@ -376,21 +412,22 @@
           .classList.add("active");
 
         if (tabName === "realtime") {
-          initSocket();
+          initSocket(); // Khởi tạo socket khi vào tab real-time
           if (!isStreaming && availableCameras.length === 0) {
-            checkCameraAvailability();
+            checkCameraAvailability(); // Kiểm tra camera khả dụng
           }
         } else if (isStreaming) {
-          stopWebcam();
+          stopWebcam(); // Dừng webcam khi rời tab real-time
         }
       }
 
+      // Kiểm tra các camera khả dụng
       async function checkCameraAvailability() {
         try {
-          const devices = await navigator.mediaDevices.enumerateDevices();
+          const devices = await navigator.mediaDevices.enumerateDevices(); // Lấy danh sách thiết bị
           const videoDevices = devices.filter(
             (device) => device.kind === "videoinput"
-          );
+          ); // Lọc camera
           if (videoDevices.length === 0) {
             showError("cameraError", "No camera found on your device.");
             return;
@@ -398,15 +435,15 @@
           availableCameras = videoDevices;
           if (videoDevices.length > 1) {
             document.getElementById("switchCameraBtn").style.display =
-              "inline-block";
+              "inline-block"; // Hiển thị nút chuyển camera
             const cameraSelection = document.getElementById("cameraSelection");
             cameraSelection.innerHTML = "";
-            cameraSelection.style.display = "inline-block";
+            cameraSelection.style.display = "inline-block"; // Hiển thị dropdown
             videoDevices.forEach((device, index) => {
               const option = document.createElement("option");
               option.value = index;
               option.text = device.label || `Camera ${index + 1}`;
-              cameraSelection.appendChild(option);
+              cameraSelection.appendChild(option); // Thêm tùy chọn camera
             });
           }
         } catch (error) {
@@ -418,6 +455,7 @@
         }
       }
 
+      // Xem trước ảnh khi chọn file
       function previewImage() {
         const fileInput = document.getElementById("fileInput");
         const preview = document.getElementById("uploadPreview");
@@ -450,7 +488,7 @@
             img.onload = function () {
               preview.src = e.target.result;
               preview.style.display = "block";
-              document.getElementById("uploadResult").innerHTML = "";
+              document.getElementById("uploadResult").innerHTML = ""; // Xóa kết quả cũ
             };
             img.src = e.target.result;
           };
@@ -461,10 +499,11 @@
             );
             preview.style.display = "none";
           };
-          reader.readAsDataURL(file);
+          reader.readAsDataURL(file); // Đọc file dưới dạng URL
         }
       }
 
+      // Tải lên và dự đoán cảm xúc
       function uploadAndPredict() {
         const fileInput = document.getElementById("fileInput");
         const uploadLoading = document.getElementById("uploadLoading");
@@ -474,9 +513,9 @@
           return;
         }
         const formData = new FormData();
-        formData.append("file", fileInput.files[0]);
+        formData.append("file", fileInput.files[0]); // Thêm file vào form
         document.getElementById("uploadResult").innerHTML = "";
-        uploadLoading.style.display = "block";
+        uploadLoading.style.display = "block"; // Hiển thị hiệu ứng tải
         fetch("/predict", {
           method: "POST",
           body: formData,
@@ -487,7 +526,7 @@
           })
           .then((data) => {
             uploadLoading.style.display = "none";
-            displayUploadResult(data);
+            displayUploadResult(data); // Hiển thị kết quả
           })
           .catch((error) => {
             console.error("Error:", error);
@@ -496,6 +535,7 @@
           });
       }
 
+      // Hiển thị kết quả dự đoán từ ảnh tải lên
       function displayUploadResult(data) {
         const resultDiv = document.getElementById("uploadResult");
         resultDiv.innerHTML = "";
@@ -503,13 +543,13 @@
           let errorMsg;
           switch (data.error) {
             case "No file part":
-              errorMsg = "No file part in the request.";
+              errorMsg = "Không có phần file trong yêu cầu.";
               break;
             case "No selected file":
-              errorMsg = "No file selected.";
+              errorMsg = "Chưa chọn file.";
               break;
             case "Invalid file format":
-              errorMsg = "Invalid file format.";
+              errorMsg = "Định dạng file không hợp lệ.";
               break;
             default:
               errorMsg = data.error;
@@ -518,19 +558,19 @@
           return;
         }
         if (!data.emotions || data.emotions.length === 0) {
-          resultDiv.innerHTML = "<p>No faces detected in the image.</p>";
+          resultDiv.innerHTML = "<p>Không phát hiện khuôn mặt trong ảnh.</p>";
           return;
         }
         const resultContainer = document.createElement("div");
         data.emotions.forEach((result, index) => {
           const faceResult = document.createElement("div");
-          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
+          faceResult.innerHTML = `<h3>Khuôn mặt ${index + 1}: ${
             result.emotion
           }</h3>`;
           if (result.probabilities) {
             const probContainer = document.createElement("div");
             Object.entries(result.probabilities)
-              .sort((a, b) => b[1] - a[1])
+              .sort((a, b) => b[1] - a[1]) // Sắp xếp theo xác suất giảm dần
               .forEach(([emotion, probability]) => {
                 const percentage = Math.round(probability * 100);
                 probContainer.innerHTML += `
@@ -555,32 +595,33 @@
           const ctx = canvas.getContext("2d");
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
           if (data.landmarks && data.landmarks.length > 0) {
-            ctx.fillStyle = "#00ff00";
+            ctx.fillStyle = "#00ff00"; // Màu điểm landmarks
             data.landmarks.forEach((point) => {
               ctx.beginPath();
               ctx.arc(point[0], point[1], 1, 0, 2 * Math.PI);
-              ctx.fill();
+              ctx.fill(); // Vẽ các điểm landmarks
             });
-            ctx.strokeStyle = "rgba(0, 255, 0, 0.3)";
+            ctx.strokeStyle = "rgba(0, 255, 0, 0.3)"; // Màu đường nối
             ctx.lineWidth = 0.5;
-            connectLandmarks(ctx, data.landmarks);
+            connectLandmarks(ctx, data.landmarks); // Nối các điểm landmarks
           }
           data.emotions.forEach((result) => {
-            ctx.strokeStyle = "#00ff00";
+            ctx.strokeStyle = "#00ff00"; // Màu viền bounding box
             ctx.lineWidth = 2;
-            ctx.strokeRect(result.x, result.y, result.w, result.h);
-            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+            ctx.strokeRect(result.x, result.y, result.w, result.h); // Vẽ bounding box
+            ctx.fillStyle = "rgba(0, 0, 0, 0.7)"; // Màu nền nhãn
             ctx.fillRect(result.x, result.y - 25, 100, 25);
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = "#ffffff"; // Màu chữ nhãn
             ctx.font = "16px Arial";
-            ctx.fillText(result.emotion, result.x + 5, result.y - 5);
+            ctx.fillText(result.emotion, result.x + 5, result.y - 5); // Vẽ nhãn cảm xúc
           });
-          previewImg.src = canvas.toDataURL();
+          previewImg.src = canvas.toDataURL(); // Cập nhật ảnh xem trước
           resultDiv.appendChild(resultContainer);
         };
         img.src = previewImg.src;
       }
 
+      // Nối các điểm landmarks trên canvas
       function connectLandmarks(ctx, landmarks) {
         if (landmarks.length < 30) return;
         const faceRegions = [
@@ -608,10 +649,11 @@
             }
           }
           if (regionIndex !== 2 && regionIndex !== 3) ctx.closePath();
-          ctx.stroke();
+          ctx.stroke(); // Vẽ các đường nối
         });
       }
 
+      // Tạo danh sách chỉ số điểm landmarks
       function generatePointIndices(start, end) {
         const indices = [];
         start = Math.floor(start);
@@ -620,6 +662,7 @@
         return indices;
       }
 
+      // Bật/tắt webcam
       function toggleWebcam() {
         if (isStreaming) {
           stopWebcam();
@@ -629,11 +672,12 @@
         }
       }
 
+      // Khởi động webcam
       async function startWebcam() {
         clearError("cameraError");
         try {
           if (videoStream)
-            videoStream.getTracks().forEach((track) => track.stop());
+            videoStream.getTracks().forEach((track) => track.stop()); // Dừng stream cũ
           if (availableCameras.length === 0) {
             await checkCameraAvailability();
             if (availableCameras.length === 0)
@@ -649,7 +693,7 @@
               height: { ideal: 480 },
             },
           };
-          const stream = await navigator.mediaDevices.getUserMedia(constraints);
+          const stream = await navigator.mediaDevices.getUserMedia(constraints); // Lấy stream từ camera
           const video = document.getElementById("video");
           const canvas = document.getElementById("canvas");
           const landmarksCanvas = document.getElementById("landmarksCanvas");
@@ -663,7 +707,7 @@
             landmarksCanvas.height = video.videoHeight;
             isStreaming = true;
             document.getElementById("startBtn").textContent = "Stop";
-            requestAnimationFrame(captureFrame);
+            requestAnimationFrame(captureFrame); // Bắt đầu chụp frame
           };
           video.onerror = (e) => {
             console.error("Video error:", e);
@@ -678,29 +722,28 @@
           let errorMessage;
           switch (error.name) {
             case "NotFoundError":
-              errorMessage = "No camera found. Check camera connection.";
+              errorMessage = "Không tìm thấy camera. Kiểm tra kết nối.";
               break;
             case "NotAllowedError":
-              errorMessage =
-                "Camera access denied. Please allow camera access.";
+              errorMessage = "Truy cập camera bị từ chối. Vui lòng cho phép.";
               break;
             case "NotReadableError":
             case "AbortError":
               errorMessage =
-                "Cannot start camera. It may be in use by another app.";
+                "Không thể khởi động camera. Có thể đang được dùng.";
               break;
             case "OverconstrainedError":
-              errorMessage =
-                "Camera does not meet requirements. Check settings.";
+              errorMessage = "Camera không đáp ứng yêu cầu. Kiểm tra cài đặt.";
               break;
             case "SecurityError":
-              errorMessage = "Security error accessing camera.";
+              errorMessage = "Lỗi bảo mật khi truy cập camera.";
               break;
             case "TypeError":
-              errorMessage = "Invalid data type. Check settings.";
+              errorMessage = "Kiểu dữ liệu không hợp lệ. Kiểm tra cài đặt.";
               break;
             default:
-              errorMessage = "Unknown error accessing camera: " + error.message;
+              errorMessage =
+                "Lỗi không xác định khi truy cập camera: " + error.message;
           }
           showError("cameraError", errorMessage);
           isStreaming = false;
@@ -708,39 +751,42 @@
         }
       }
 
+      // Dừng webcam
       function stopWebcam() {
         if (videoStream) {
-          videoStream.getTracks().forEach((track) => track.stop());
+          videoStream.getTracks().forEach((track) => track.stop()); // Dừng tất cả track
           document.getElementById("video").srcObject = null;
           isStreaming = false;
           const canvas = document.getElementById("canvas");
           const landmarksCanvas = document.getElementById("landmarksCanvas");
           const canvasCtx = canvas.getContext("2d");
           const landmarksCtx = landmarksCanvas.getContext("2d");
-          canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+          canvasCtx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas
           landmarksCtx.clearRect(
             0,
             0,
             landmarksCanvas.width,
             landmarksCanvas.height
           );
-          document.getElementById("realtimeResult").innerHTML = "";
+          document.getElementById("realtimeResult").innerHTML = ""; // Xóa kết quả
         }
       }
 
+      // Chuyển đổi camera
       function switchCamera() {
         if (availableCameras.length <= 1) {
-          showError("cameraError", "No other camera available to switch.");
+          showError("cameraError", "Không có camera khác để chuyển.");
           return;
         }
         currentCameraIndex = (currentCameraIndex + 1) % availableCameras.length;
         document.getElementById("cameraSelection").value = currentCameraIndex;
         if (isStreaming) {
           stopWebcam();
-          startWebcam();
+          startWebcam(); // Khởi động lại với camera mới
         }
       }
 
+      // Thay đổi camera từ dropdown
       function changeCamera() {
         const selection = document.getElementById("cameraSelection");
         const newIndex = parseInt(selection.value);
@@ -752,11 +798,12 @@
           currentCameraIndex = newIndex;
           if (isStreaming) {
             stopWebcam();
-            startWebcam();
+            startWebcam(); // Khởi động lại với camera được chọn
           }
         }
       }
 
+      // Chụp frame từ video và gửi qua socket
       function captureFrame() {
         if (!isStreaming) return;
         const now = Date.now();
@@ -772,15 +819,16 @@
           canvas.height = video.videoHeight;
           const ctx = canvas.getContext("2d");
           ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-          const imageData = canvas.toDataURL("image/jpeg", 0.7);
+          const imageData = canvas.toDataURL("image/jpeg", 0.7); // Chuyển frame thành JPEG
           if (socket && socket.connected) {
-            socket.emit("image", imageData); // Gửi dữ liệu ảnh mà không cần numFaces
+            socket.emit("image", imageData); // Gửi frame qua socket
             lastCaptureTime = now;
           }
         }
-        requestAnimationFrame(captureFrame);
+        requestAnimationFrame(captureFrame); // Tiếp tục chụp frame
       }
 
+      // Hiển thị kết quả cảm xúc thời gian thực
       function displayRealtimeResult(data) {
         const canvas = document.getElementById("canvas");
         const landmarksCanvas = document.getElementById("landmarksCanvas");
@@ -788,48 +836,41 @@
         if (!canvas || !landmarksCanvas) return;
         const ctx = canvas.getContext("2d");
         const landmarksCtx = landmarksCanvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas chính
         landmarksCtx.clearRect(
           0,
           0,
           landmarksCanvas.width,
           landmarksCanvas.height
-        );
+        ); // Xóa canvas landmarks
         if (!data.emotions || data.emotions.length === 0) {
-          resultDiv.innerHTML = "<p>No faces detected</p>";
+          resultDiv.innerHTML = "<p>Không phát hiện khuôn mặt</p>";
           return;
         }
         resultDiv.innerHTML = "";
         data.emotions.forEach((result, index) => {
-          ctx.strokeStyle = "#00ff00";
+          ctx.strokeStyle = "#00ff00"; // Màu viền bounding box
           ctx.lineWidth = 3;
-          ctx.strokeRect(result.x, result.y, result.w, result.h);
-          ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+          ctx.strokeRect(result.x, result.y, result.w, result.h); // Vẽ bounding box
+          ctx.fillStyle = "rgba(0, 0, 0, 0.7)"; // Màu nền nhãn
           ctx.fillRect(result.x, result.y - 25, 130, 25);
-          ctx.fillStyle = "#ffffff";
+          ctx.fillStyle = "#ffffff"; // Màu chữ nhãn
           ctx.font = "16px Arial";
-          ctx.fillText(result.emotion, result.x + 5, result.y - 5);
+          ctx.fillText(result.emotion, result.x + 5, result.y - 5); // Vẽ nhãn cảm xúc
           const faceResult = document.createElement("div");
-          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
+          faceResult.innerHTML = `<h3>Khuôn mặt ${index + 1}: ${
             result.emotion
           }</h3>`;
-          resultDiv.appendChild(faceResult);
+          resultDiv.appendChild(faceResult); // Thêm kết quả vào div
         });
-        if (data.landmarks && data.landmarks.length > 0) {
-          landmarksCtx.fillStyle = "#00ff00";
-          data.landmarks.forEach((point) => {
-            landmarksCtx.beginPath();
-            landmarksCtx.arc(point[0], point[1], 1, 0, 2 * Math.PI);
-            landmarksCtx.fill();
-          });
-          connectLandmarks(landmarksCtx, data.landmarks);
-        }
       }
 
+      // Khởi động tab Upload khi tải trang
       window.onload = function () {
         showTab("upload");
       };
 
+      // Dọn dẹp khi rời trang
       window.onbeforeunload = function () {
         if (isStreaming) stopWebcam();
         if (socket) socket.disconnect();

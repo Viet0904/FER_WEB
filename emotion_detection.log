@@ -2305,3 +2305,40 @@ KeyError: 0
 2025-03-24 19:30:18,765 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:18] "GET /socket.io/?EIO=4&transport=polling&t=PN88U9f&sid=W3lMB4b4rxspIUzOAAAC HTTP/1.1" 200 -
 2025-03-24 19:30:18,765 - INFO - Đã khởi động thread xử lý
 2025-03-24 19:30:18,773 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:18] "POST /socket.io/?EIO=4&transport=polling&t=PN88U9e&sid=W3lMB4b4rxspIUzOAAAC HTTP/1.1" 200 -
+2025-03-24 20:09:01,751 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 20:09:01,825 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 20:09:02,824 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 20:09:02,825 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 20:09:40,083 - INFO - 127.0.0.1 - - [24/Mar/2025 20:09:40] "GET / HTTP/1.1" 200 -
+2025-03-24 20:09:47,239 - INFO - 127.0.0.1 - - [24/Mar/2025 20:09:47] "GET /socket.io/?EIO=4&transport=polling&t=PN8HWPC HTTP/1.1" 200 -
+2025-03-24 20:09:47,388 - INFO - Đã khởi động thread xử lý
+2025-03-24 20:09:47,405 - INFO - 127.0.0.1 - - [24/Mar/2025 20:09:47] "POST /socket.io/?EIO=4&transport=polling&t=PN8HWPn&sid=9BGgaJXvCGyklnoJAAAA HTTP/1.1" 200 -
+2025-03-24 20:09:47,405 - INFO - 127.0.0.1 - - [24/Mar/2025 20:09:47] "GET /socket.io/?EIO=4&transport=polling&t=PN8HWPo&sid=9BGgaJXvCGyklnoJAAAA HTTP/1.1" 200 -
+2025-03-24 20:09:47,424 - INFO - 127.0.0.1 - - [24/Mar/2025 20:09:47] "GET /socket.io/?EIO=4&transport=polling&t=PN8HWSY&sid=9BGgaJXvCGyklnoJAAAA HTTP/1.1" 200 -
+2025-03-24 20:10:05,143 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 20:10:05,165 - INFO - File đã được lưu tại static/uploads\Training_10118481.jpg
+2025-03-24 20:10:06,076 - INFO - Kết quả dự đoán: [{'emotion': 'Angry', 'x': 2, 'y': 10, 'w': 39, 'h': 38, 'probabilities': {'Surprise': 0.00011157629342051223, 'Fear': 0.00016043374489527196, 'Disgust': 0.0024173471610993147, 'Happy': 0.00020899677474517375, 'Sad': 0.02388228103518486, 'Angry': 0.9727645516395569, 'Neutral': 0.0004548560827970505}}]
+2025-03-24 20:10:06,079 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:06] "POST /predict HTTP/1.1" 200 -
+2025-03-24 20:10:11,486 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 20:10:11,496 - INFO - File đã được lưu tại static/uploads\PrivateTest_10304478.jpg
+2025-03-24 20:10:12,411 - INFO - Kết quả dự đoán: [{'emotion': 'Angry', 'x': 2, 'y': 12, 'w': 39, 'h': 36, 'probabilities': {'Surprise': 0.010751473717391491, 'Fear': 7.133708277251571e-05, 'Disgust': 5.602880264632404e-05, 'Happy': 0.000722319062333554, 'Sad': 1.6955002138274722e-05, 'Angry': 0.9883266091346741, 'Neutral': 5.520194099517539e-05}}]
+2025-03-24 20:10:12,416 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:12] "POST /predict HTTP/1.1" 200 -
+2025-03-24 20:10:19,216 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 20:10:19,216 - INFO - File đã được lưu tại static/uploads\PrivateTest_528072.jpg
+2025-03-24 20:10:19,856 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 4, 'y': 9, 'w': 41, 'h': 39, 'probabilities': {'Surprise': 9.377400419907644e-05, 'Fear': 0.3836304843425751, 'Disgust': 6.988441782596055e-06, 'Happy': 0.5123575329780579, 'Sad': 0.10206733644008636, 'Angry': 2.0131521523580886e-05, 'Neutral': 0.0018236448522657156}}]
+2025-03-24 20:10:19,857 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:19] "POST /predict HTTP/1.1" 200 -
+2025-03-24 20:10:25,093 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 20:10:25,104 - INFO - File đã được lưu tại static/uploads\PrivateTest_366361.jpg
+2025-03-24 20:10:25,692 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 9, 'y': 6, 'w': 25, 'h': 24, 'probabilities': {'Surprise': 0.0020048171281814575, 'Fear': 0.0005077690002508461, 'Disgust': 3.076954817515798e-05, 'Happy': 0.991239607334137, 'Sad': 4.125847772229463e-05, 'Angry': 0.0006153798312880099, 'Neutral': 0.005560328718274832}}]
+2025-03-24 20:10:25,692 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:25] "POST /predict HTTP/1.1" 200 -
+2025-03-24 20:10:44,355 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 20:10:44,374 - INFO - File đã được lưu tại static/uploads\u_cv_1790c2449af7597c3ed567adf27eccf5.png
+2025-03-24 20:10:44,785 - INFO - Kết quả dự đoán: [{'emotion': 'Neutral', 'x': 577, 'y': 77, 'w': 117, 'h': 136, 'probabilities': {'Surprise': 0.0037257028743624687, 'Fear': 4.640097372998753e-08, 'Disgust': 0.00021651411952916533, 'Happy': 0.000364009290933609, 'Sad': 0.001946615637280047, 'Angry': 7.421116606565192e-06, 'Neutral': 0.9937397241592407}}]
+2025-03-24 20:10:44,787 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:44] "POST /predict HTTP/1.1" 200 -
+2025-03-24 20:10:51,402 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 20:10:51,416 - INFO - File đã được lưu tại static/uploads\Alien.png
+2025-03-24 20:10:51,580 - INFO - Kết quả dự đoán: []
+2025-03-24 20:10:51,580 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:51] "POST /predict HTTP/1.1" 200 -
