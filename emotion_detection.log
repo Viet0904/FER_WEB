@@ -2286,3 +2286,22 @@ KeyError: 0
 2025-03-24 19:26:01,314 - INFO - Đã khởi động thread xử lý
 2025-03-24 19:26:01,317 - INFO - 127.0.0.1 - - [24/Mar/2025 19:26:01] "POST /socket.io/?EIO=4&transport=polling&t=PN87VGs&sid=yjzjs0AP_qYDQ5NmAAAB HTTP/1.1" 200 -
 2025-03-24 19:26:01,331 - INFO - 127.0.0.1 - - [24/Mar/2025 19:26:01] "GET /socket.io/?EIO=4&transport=polling&t=PN87VGt&sid=yjzjs0AP_qYDQ5NmAAAB HTTP/1.1" 200 -
+2025-03-24 19:30:00,981 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 19:30:01,002 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 19:30:02,076 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 19:30:02,076 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 19:30:09,006 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:09] "GET / HTTP/1.1" 200 -
+2025-03-24 19:30:12,036 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:12] "GET /socket.io/?EIO=4&transport=polling&t=PN88SVs HTTP/1.1" 200 -
+2025-03-24 19:30:12,157 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:30:12,167 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:12] "POST /socket.io/?EIO=4&transport=polling&t=PN88SXT&sid=tVWXsPn9gMQTFrZvAAAA HTTP/1.1" 200 -
+2025-03-24 19:30:12,168 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:12] "GET /socket.io/?EIO=4&transport=polling&t=PN88SXX&sid=tVWXsPn9gMQTFrZvAAAA HTTP/1.1" 200 -
+2025-03-24 19:30:12,232 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:12] "GET /socket.io/?EIO=4&transport=polling&t=PN88SZT&sid=tVWXsPn9gMQTFrZvAAAA HTTP/1.1" 200 -
+2025-03-24 19:30:13,362 - INFO - Đã dừng thread xử lý
+2025-03-24 19:30:13,362 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:13] "GET /socket.io/?EIO=4&transport=websocket&sid=tVWXsPn9gMQTFrZvAAAA HTTP/1.1" 200 -
+2025-03-24 19:30:18,718 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:18] "GET /socket.io/?EIO=4&transport=polling&t=PN88U8y HTTP/1.1" 200 -
+2025-03-24 19:30:18,765 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:18] "GET /socket.io/?EIO=4&transport=polling&t=PN88U9f&sid=W3lMB4b4rxspIUzOAAAC HTTP/1.1" 200 -
+2025-03-24 19:30:18,765 - INFO - Đã khởi động thread xử lý
+2025-03-24 19:30:18,773 - INFO - 127.0.0.1 - - [24/Mar/2025 19:30:18] "POST /socket.io/?EIO=4&transport=polling&t=PN88U9e&sid=W3lMB4b4rxspIUzOAAAC HTTP/1.1" 200 -
