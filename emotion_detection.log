@@ -2342,3 +2342,144 @@ KeyError: 0
 2025-03-24 20:10:51,416 - INFO - File đã được lưu tại static/uploads\Alien.png
 2025-03-24 20:10:51,580 - INFO - Kết quả dự đoán: []
 2025-03-24 20:10:51,580 - INFO - 127.0.0.1 - - [24/Mar/2025 20:10:51] "POST /predict HTTP/1.1" 200 -
+2025-03-24 21:36:42,868 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 21:36:42,885 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 21:36:43,993 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 21:36:43,993 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:38:13,532 - INFO - 127.0.0.1 - - [24/Mar/2025 21:38:13] "GET / HTTP/1.1" 200 -
+2025-03-24 21:38:34,358 - INFO - 127.0.0.1 - - [24/Mar/2025 21:38:34] "GET /socket.io/?EIO=4&transport=polling&t=PN8bqzD HTTP/1.1" 200 -
+2025-03-24 21:38:34,473 - INFO - Đã khởi động thread xử lý
+2025-03-24 21:38:34,478 - INFO - 127.0.0.1 - - [24/Mar/2025 21:38:34] "POST /socket.io/?EIO=4&transport=polling&t=PN8bqz-&sid=AICv8JzMUUyDkgbjAAAA HTTP/1.1" 200 -
+2025-03-24 21:38:34,487 - INFO - 127.0.0.1 - - [24/Mar/2025 21:38:34] "GET /socket.io/?EIO=4&transport=polling&t=PN8bq-4&sid=AICv8JzMUUyDkgbjAAAA HTTP/1.1" 200 -
+2025-03-24 21:38:34,512 - INFO - 127.0.0.1 - - [24/Mar/2025 21:38:34] "GET /socket.io/?EIO=4&transport=polling&t=PN8br06&sid=AICv8JzMUUyDkgbjAAAA HTTP/1.1" 200 -
+2025-03-24 21:38:55,301 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 21:38:55,336 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 21:38:58,961 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 21:38:58,971 - INFO - 127.0.0.1 - - [24/Mar/2025 21:38:58] "POST /predict HTTP/1.1" 200 -
+2025-03-24 21:42:28,833 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 21:42:28,881 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 21:42:29,975 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 21:42:29,975 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:42:30,076 - INFO - 127.0.0.1 - - [24/Mar/2025 21:42:30] "GET /socket.io/?EIO=4&transport=polling&t=PN8ckGH HTTP/1.1" 200 -
+2025-03-24 21:42:30,189 - INFO - Đã khởi động thread xử lý
+2025-03-24 21:42:30,191 - INFO - 127.0.0.1 - - [24/Mar/2025 21:42:30] "POST /socket.io/?EIO=4&transport=polling&t=PN8ckXR&sid=Pivzq1J-SsXo-p1AAAAA HTTP/1.1" 200 -
+2025-03-24 21:42:30,193 - INFO - 127.0.0.1 - - [24/Mar/2025 21:42:30] "GET /socket.io/?EIO=4&transport=polling&t=PN8ckY7&sid=Pivzq1J-SsXo-p1AAAAA HTTP/1.1" 200 -
+2025-03-24 21:42:30,243 - INFO - 127.0.0.1 - - [24/Mar/2025 21:42:30] "GET /socket.io/?EIO=4&transport=polling&t=PN8ckZU&sid=Pivzq1J-SsXo-p1AAAAA HTTP/1.1" 200 -
+2025-03-24 21:42:56,894 - INFO - Đã dừng thread xử lý
+2025-03-24 21:42:56,928 - INFO - 127.0.0.1 - - [24/Mar/2025 21:42:56] "GET /socket.io/?EIO=4&transport=websocket&sid=Pivzq1J-SsXo-p1AAAAA HTTP/1.1" 200 -
+2025-03-24 21:42:57,133 - INFO - 127.0.0.1 - - [24/Mar/2025 21:42:57] "GET / HTTP/1.1" 200 -
+2025-03-24 21:43:08,820 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 21:43:08,859 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 21:43:12,619 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 21:43:12,639 - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:12] "POST /predict HTTP/1.1" 200 -
+2025-03-24 21:43:26,884 - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PN8cyOQ HTTP/1.1" 200 -
+2025-03-24 21:43:26,912 - INFO - Đã khởi động thread xử lý
+2025-03-24 21:43:26,913 - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PN8cyOr&sid=eezz9iRYZFuB6M8yAAAC HTTP/1.1" 200 -
+2025-03-24 21:43:26,914 - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:26] "POST /socket.io/?EIO=4&transport=polling&t=PN8cyOl&sid=eezz9iRYZFuB6M8yAAAC HTTP/1.1" 200 -
+2025-03-24 21:43:26,932 - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:26] "GET /socket.io/?EIO=4&transport=polling&t=PN8cyPI&sid=eezz9iRYZFuB6M8yAAAC HTTP/1.1" 200 -
+2025-03-24 21:45:29,873 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 21:45:29,877 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 21:45:30,768 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 21:45:30,769 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:45:31,023 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:31] "GET /socket.io/?EIO=4&transport=polling&t=PN8dQi1 HTTP/1.1" 200 -
+2025-03-24 21:45:31,054 - INFO - Đã khởi động thread xử lý
+2025-03-24 21:45:31,054 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:31] "GET /socket.io/?EIO=4&transport=polling&t=PN8dQiS&sid=QUOt8x0FenftH0NyAAAA HTTP/1.1" 200 -
+2025-03-24 21:45:31,056 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:31] "POST /socket.io/?EIO=4&transport=polling&t=PN8dQiP&sid=QUOt8x0FenftH0NyAAAA HTTP/1.1" 200 -
+2025-03-24 21:45:35,384 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:35] "GET / HTTP/1.1" 200 -
+2025-03-24 21:45:39,977 - INFO - Đã dừng thread xử lý
+2025-03-24 21:45:40,037 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:40] "GET /socket.io/?EIO=4&transport=websocket&sid=QUOt8x0FenftH0NyAAAA HTTP/1.1" 200 -
+2025-03-24 21:45:48,831 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:48] "GET /socket.io/?EIO=4&transport=polling&t=PN8dV2R HTTP/1.1" 200 -
+2025-03-24 21:45:48,847 - INFO - Đã khởi động thread xử lý
+2025-03-24 21:45:48,847 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:48] "POST /socket.io/?EIO=4&transport=polling&t=PN8dV2c&sid=G78J4xGEXM80y0gHAAAC HTTP/1.1" 200 -
+2025-03-24 21:45:48,848 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:48] "GET /socket.io/?EIO=4&transport=polling&t=PN8dV2e&sid=G78J4xGEXM80y0gHAAAC HTTP/1.1" 200 -
+2025-03-24 21:45:54,181 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 21:45:54,203 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 21:45:56,269 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 21:45:56,281 - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:56] "POST /predict HTTP/1.1" 200 -
+2025-03-24 21:59:28,499 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 21:59:28,499 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 21:59:29,462 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 21:59:29,462 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:59:32,055 - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:32] "GET / HTTP/1.1" 200 -
+2025-03-24 21:59:33,215 - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:33] "GET /socket.io/?EIO=4&transport=polling&t=PN8geIS HTTP/1.1" 200 -
+2025-03-24 21:59:33,373 - INFO - Đã khởi động thread xử lý
+2025-03-24 21:59:33,377 - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:33] "POST /socket.io/?EIO=4&transport=polling&t=PN8geKl&sid=8C-gPdx-tOC32khpAAAA HTTP/1.1" 200 -
+2025-03-24 21:59:33,384 - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:33] "GET /socket.io/?EIO=4&transport=polling&t=PN8geKv&sid=8C-gPdx-tOC32khpAAAA HTTP/1.1" 200 -
+2025-03-24 21:59:33,663 - INFO - Đã dừng thread xử lý
+2025-03-24 21:59:33,907 - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:33] "GET /socket.io/?EIO=4&transport=websocket&sid=8C-gPdx-tOC32khpAAAA HTTP/1.1" 200 -
+2025-03-24 21:59:44,427 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 21:59:44,446 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 21:59:46,600 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 21:59:46,616 - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:46] "POST /predict HTTP/1.1" 200 -
+2025-03-24 22:01:00,522 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 22:01:00,528 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 22:01:01,479 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 22:01:01,479 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:01:04,236 - INFO - 127.0.0.1 - - [24/Mar/2025 22:01:04] "GET / HTTP/1.1" 200 -
+2025-03-24 22:01:17,538 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 22:01:17,583 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 22:01:20,412 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 22:01:20,412 - INFO - 127.0.0.1 - - [24/Mar/2025 22:01:20] "POST /predict HTTP/1.1" 200 -
+2025-03-24 22:09:37,646 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 22:09:37,662 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 22:09:38,645 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 22:09:38,661 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:09:40,912 - INFO - 127.0.0.1 - - [24/Mar/2025 22:09:40] "GET / HTTP/1.1" 200 -
+2025-03-24 22:09:52,585 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 22:09:52,636 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 22:09:55,495 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 22:09:55,511 - INFO - 127.0.0.1 - - [24/Mar/2025 22:09:55] "POST /predict HTTP/1.1" 200 -
+2025-03-24 22:15:05,643 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 22:15:05,739 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 22:15:06,935 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 22:15:06,935 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:15:13,150 - INFO - 127.0.0.1 - - [24/Mar/2025 22:15:13] "GET / HTTP/1.1" 200 -
+2025-03-24 22:15:23,870 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 22:15:23,909 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 22:15:26,985 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 22:15:26,998 - INFO - 127.0.0.1 - - [24/Mar/2025 22:15:26] "POST /predict HTTP/1.1" 200 -
+2025-03-24 22:17:42,234 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 22:17:42,269 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 22:17:43,483 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 22:17:43,483 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:17:48,681 - INFO - 127.0.0.1 - - [24/Mar/2025 22:17:48] "GET / HTTP/1.1" 200 -
+2025-03-24 22:17:59,084 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 22:17:59,141 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 22:18:01,711 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 22:18:01,724 - INFO - 127.0.0.1 - - [24/Mar/2025 22:18:01] "POST /predict HTTP/1.1" 200 -
+2025-03-24 22:24:02,166 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-24 22:24:02,183 - INFO - Đã tải mô hình ViT thành công
+2025-03-24 22:24:04,461 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-24 22:24:04,465 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:24:13,957 - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:13] "GET / HTTP/1.1" 200 -
+2025-03-24 22:24:23,275 - INFO - Nhận được yêu cầu dự đoán
+2025-03-24 22:24:23,309 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-03-24 22:24:25,551 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
+2025-03-24 22:24:25,561 - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:25] "POST /predict HTTP/1.1" 200 -

@@ -7,11 +7,11 @@
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
         background-color: #f7f7f7;
       }
-
       h1 {
         color: #333;
         text-align: center;
@@ -30,18 +30,15 @@
         background-color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
-
       .tab.active {
         display: block;
       }
-
       .tabs {
         display: flex;
         gap: 10px;
         margin-bottom: 20px;
         justify-content: center;
       }
-
       .tab-btn {
         padding: 12px 24px;
         background-color: #f0f0f0;
@@ -54,7 +51,6 @@
       .tab-btn:hover {
         background-color: #e0e0e0;
       }
-
       .tab-btn.active {
         background-color: #4285f4;
         color: white;
@@ -68,7 +64,6 @@
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-
       #video,
       #canvas {
         width: 100%;
@@ -76,13 +71,11 @@
         height: auto;
         border-radius: 8px;
       }
-
       #canvas {
         position: absolute;
         top: 0;
         left: 0;
       }
-
       #landmarksCanvas {
         position: absolute;
         top: 0;
@@ -270,7 +263,7 @@
         <!-- Thông báo lỗi khi chọn file -->
         <div id="fileInputError" class="error-message"></div>
         <!-- Hiệu ứng tải khi xử lý ảnh -->
-        <div id="uploadLoading" class="loading">Processing image...</div>
+        <div id="uploadLoading" class="loading">Đang xử lý...</div>
 
         <!-- Container hiển thị ảnh xem trước -->
         <div class="preview-container">
@@ -348,7 +341,7 @@
 
           // Xử lý sự kiện kết nối thành công
           socket.on("connect", () => {
-            console.log("Connected to server");
+            console.log("Đã kết nối với máy chủ");
           });
 
           // Xử lý kết quả cảm xúc từ server
@@ -358,26 +351,27 @@
 
           // Xử lý sự kiện mất kết nối
           socket.on("disconnect", () => {
-            console.log("Disconnected from server");
+            console.log("Đã ngắt kết nối khỏi máy chủ");
             showError(
               "cameraError",
-              "Lost connection to server. Please refresh the page."
+              "Mất kết nối với máy chủ. Vui lòng tải lại trang."
             );
           });
 
           // Xử lý lỗi kết nối
           socket.on("connect_error", (error) => {
-            console.error("Socket.IO connection error:", error);
+            console.error("Lỗi kết nối Socket.IO:", error);
             showError(
               "cameraError",
-              "Cannot connect to server. Check your network."
+              "Không thể kết nối với máy chủ. Kiểm tra kết nối mạng của bạn."
             );
           });
 
           // Xử lý lỗi socket chung
+          // Xử lý lỗi socket chung
           socket.on("error", (error) => {
-            console.error("Socket.IO error:", error);
-            showError("cameraError", "Socket error: " + error);
+            console.error("Lỗi Socket.IO:", error);
+            showError("cameraError", "Lỗi Socket: " + error);
           });
         }
       }
@@ -429,7 +423,10 @@
             (device) => device.kind === "videoinput"
           ); // Lọc camera
           if (videoDevices.length === 0) {
-            showError("cameraError", "No camera found on your device.");
+            showError(
+              "cameraError",
+              "Không tìm thấy máy ảnh trên thiết bị của bạn."
+            );
             return;
           }
           availableCameras = videoDevices;
@@ -447,10 +444,10 @@
             });
           }
         } catch (error) {
-          console.error("Error checking cameras:", error);
+          console.error("Lỗi kiểm tra máy ảnh:", error);
           showError(
             "cameraError",
-            `Cannot access camera list: ${error.message}`
+            `Không thể truy cập danh sách máy ảnh: ${error.message}`
           );
         }
       }
@@ -468,7 +465,7 @@
             !file.type.match("image/jpg") &&
             !file.type.match("image/png")
           ) {
-            showError("fileInputError", "Please select a JPEG or PNG image.");
+            showError("fileInputError", "Vui lòng chọn ảnh JPEG hoặc PNG.");
             fileInput.value = "";
             preview.style.display = "none";
             return;
@@ -476,7 +473,7 @@
           if (file.size > 5 * 1024 * 1024) {
             showError(
               "fileInputError",
-              "File size too large. Please select a file smaller than 5MB."
+              "Kích thước tệp quá lớn. Vui lòng chọn tệp nhỏ hơn 5MB."
             );
             fileInput.value = "";
             preview.style.display = "none";
@@ -493,10 +490,7 @@
             img.src = e.target.result;
           };
           reader.onerror = function () {
-            showError(
-              "fileInputError",
-              "Error reading file. Please try again."
-            );
+            showError("fileInputError", "Lỗi đọc tệp. Vui lòng thử lại.");
             preview.style.display = "none";
           };
           reader.readAsDataURL(file); // Đọc file dưới dạng URL
@@ -509,7 +503,7 @@
         const uploadLoading = document.getElementById("uploadLoading");
         clearError("fileInputError");
         if (!fileInput.files || !fileInput.files[0]) {
-          showError("fileInputError", "Please select an image first.");
+          showError("fileInputError", "Vui lòng chọn ảnh trước.");
           return;
         }
         const formData = new FormData();
@@ -531,7 +525,7 @@
           .catch((error) => {
             console.error("Error:", error);
             uploadLoading.style.display = "none";
-            showError("fileInputError", `Processing error: ${error.message}`);
+            showError("fileInputError", `Lỗi xử lý: ${error.message}`);
           });
       }
 
@@ -568,11 +562,14 @@
             result.emotion
           }</h3>`;
           if (result.probabilities) {
+            console.log("Raw probabilities:", result.probabilities); // In dữ liệu gốc
             const probContainer = document.createElement("div");
+            let totalPercentage = 0; // Theo dõi tổng xác suất
             Object.entries(result.probabilities)
               .sort((a, b) => b[1] - a[1]) // Sắp xếp theo xác suất giảm dần
               .forEach(([emotion, probability]) => {
-                const percentage = Math.round(probability * 100);
+                const percentage = Math.round(probability * 100).toFixed(8);
+                totalPercentage += parseFloat(percentage);
                 probContainer.innerHTML += `
                   <div>
                     <span>${emotion}: ${percentage}%</span>
@@ -582,6 +579,7 @@
                   </div>
                 `;
               });
+            console.log("Total percentage displayed:", totalPercentage); // In tổng hiển thị
             faceResult.appendChild(probContainer);
           }
           resultContainer.appendChild(faceResult);
@@ -594,7 +592,7 @@
           canvas.height = img.naturalHeight;
           const ctx = canvas.getContext("2d");
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          if (data.landmarks && data.landmarks.length > 0) {
+          /* if (data.landmarks && data.landmarks.length > 0) {
             ctx.fillStyle = "#00ff00"; // Màu điểm landmarks
             data.landmarks.forEach((point) => {
               ctx.beginPath();
@@ -604,7 +602,7 @@
             ctx.strokeStyle = "rgba(0, 255, 0, 0.3)"; // Màu đường nối
             ctx.lineWidth = 0.5;
             connectLandmarks(ctx, data.landmarks); // Nối các điểm landmarks
-          }
+          }  */
           data.emotions.forEach((result) => {
             ctx.strokeStyle = "#00ff00"; // Màu viền bounding box
             ctx.lineWidth = 2;
@@ -713,7 +711,7 @@
             console.error("Video error:", e);
             showError(
               "cameraError",
-              "Error playing video. Please refresh and try again."
+              "Lỗi phát video. Vui lòng tải lại trang và thử lại."
             );
             stopWebcam();
           };
@@ -810,7 +808,7 @@
         if (now - lastCaptureTime >= CAPTURE_INTERVAL_MS) {
           const video = document.getElementById("video");
           if (video.videoWidth === 0 || video.videoHeight === 0) {
-            console.log("Video dimensions not available yet");
+            console.log("Kích thước video chưa khả dụng");
             requestAnimationFrame(captureFrame);
             return;
           }
@@ -833,35 +831,36 @@
         const canvas = document.getElementById("canvas");
         const landmarksCanvas = document.getElementById("landmarksCanvas");
         const resultDiv = document.getElementById("realtimeResult");
+        console.log("Received data from server (realtime):", data); // In dữ liệu nhận được
         if (!canvas || !landmarksCanvas) return;
         const ctx = canvas.getContext("2d");
         const landmarksCtx = landmarksCanvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas chính
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         landmarksCtx.clearRect(
           0,
           0,
           landmarksCanvas.width,
           landmarksCanvas.height
-        ); // Xóa canvas landmarks
+        );
         if (!data.emotions || data.emotions.length === 0) {
           resultDiv.innerHTML = "<p>Không phát hiện khuôn mặt</p>";
           return;
         }
         resultDiv.innerHTML = "";
         data.emotions.forEach((result, index) => {
-          ctx.strokeStyle = "#00ff00"; // Màu viền bounding box
+          ctx.strokeStyle = "#00ff00";
           ctx.lineWidth = 3;
-          ctx.strokeRect(result.x, result.y, result.w, result.h); // Vẽ bounding box
-          ctx.fillStyle = "rgba(0, 0, 0, 0.7)"; // Màu nền nhãn
+          ctx.strokeRect(result.x, result.y, result.w, result.h);
+          ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
           ctx.fillRect(result.x, result.y - 25, 130, 25);
-          ctx.fillStyle = "#ffffff"; // Màu chữ nhãn
+          ctx.fillStyle = "#ffffff";
           ctx.font = "16px Arial";
-          ctx.fillText(result.emotion, result.x + 5, result.y - 5); // Vẽ nhãn cảm xúc
+          ctx.fillText(result.emotion, result.x + 5, result.y - 5);
           const faceResult = document.createElement("div");
-          faceResult.innerHTML = `<h3>Khuôn mặt ${index + 1}: ${
+          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
             result.emotion
           }</h3>`;
-          resultDiv.appendChild(faceResult); // Thêm kết quả vào div
+          resultDiv.appendChild(faceResult);
         });
       }
 
