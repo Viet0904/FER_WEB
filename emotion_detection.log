@@ -1,0 +1,1104 @@
+2025-03-21 21:51:45,039 - root - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-21 21:51:45,118 - root - INFO - ViT model loaded successfully
+2025-03-21 21:51:45,383 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/mobilenetv2_100.ra_in1k)
+2025-03-21 21:51:46,729 - timm.models._hub - INFO - [timm/mobilenetv2_100.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-03-21 21:51:46,985 - root - INFO - MobileNet model created for real-time processing
+2025-03-21 21:51:48,016 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 21:51:48,017 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 21:51:54,045 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:51:54] "GET / HTTP/1.1" 200 -
+2025-03-21 21:52:06,011 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:52:06] "GET /socket.io/?EIO=4&transport=polling&t=PMvC9tI HTTP/1.1" 200 -
+2025-03-21 21:52:06,114 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:52:06] "GET /socket.io/?EIO=4&transport=polling&t=PMvC9uU&sid=ehl-TjbLWcxznRK7AAAA HTTP/1.1" 200 -
+2025-03-21 21:52:06,114 - root - INFO - Started processing thread
+2025-03-21 21:52:06,127 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:52:06] "POST /socket.io/?EIO=4&transport=polling&t=PMvC9uP&sid=ehl-TjbLWcxznRK7AAAA HTTP/1.1" 200 -
+2025-03-21 21:53:01,082 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:01,332 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:01,897 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:02,217 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:02,727 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:03,019 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:03,285 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:03,706 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:03,930 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:04,168 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:04,374 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:04,632 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:04,846 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:05,094 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:05,298 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:05,481 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:05,649 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:05,860 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:06,221 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:06,398 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:06,679 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:06,912 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:07,127 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:07,414 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:08,159 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:08,347 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:08,636 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:08,798 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:09,010 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:09,195 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:09,620 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:15,519 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:15,743 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:16,125 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:16,329 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:16,816 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:17,017 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:17,304 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:17,493 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:17,695 - root - ERROR - Error in processing thread: 0
+2025-03-21 21:53:31,374 - root - INFO - Received predict request
+2025-03-21 21:53:31,416 - root - INFO - File saved at static/uploads\S014_002_00000016.png
+2025-03-21 21:53:34,633 - root - ERROR - Error processing face: name 'label_to_emotion_vi' is not defined
+2025-03-21 21:53:34,633 - root - INFO - Prediction result: []
+2025-03-21 21:53:34,650 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:53:34] "POST /predict HTTP/1.1" 200 -
+2025-03-21 21:53:42,379 - root - INFO - Received predict request
+2025-03-21 21:53:42,388 - root - INFO - File saved at static/uploads\S046_001_00000025.png
+2025-03-21 21:53:42,974 - root - ERROR - Error processing face: name 'label_to_emotion_vi' is not defined
+2025-03-21 21:53:42,974 - root - INFO - Prediction result: []
+2025-03-21 21:53:42,974 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:53:42] "POST /predict HTTP/1.1" 200 -
+2025-03-21 21:53:47,360 - root - INFO - Received predict request
+2025-03-21 21:53:47,369 - root - INFO - File saved at static/uploads\S081_002_00000024.png
+2025-03-21 21:53:47,941 - root - ERROR - Error processing face: name 'label_to_emotion_vi' is not defined
+2025-03-21 21:53:47,941 - root - INFO - Prediction result: []
+2025-03-21 21:53:47,941 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:53:47] "POST /predict HTTP/1.1" 200 -
+2025-03-21 21:53:53,954 - root - INFO - Received predict request
+2025-03-21 21:53:53,961 - root - INFO - File saved at static/uploads\S011_005_00000020.png
+2025-03-21 21:53:54,420 - root - ERROR - Error processing face: name 'label_to_emotion_vi' is not defined
+2025-03-21 21:53:54,420 - root - INFO - Prediction result: []
+2025-03-21 21:53:54,427 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:53:54] "POST /predict HTTP/1.1" 200 -
+2025-03-21 21:54:06,886 - root - INFO - Received predict request
+2025-03-21 21:54:06,890 - root - INFO - File saved at static/uploads\train_00023_aligned.jpg
+2025-03-21 21:54:06,953 - root - INFO - Prediction result: []
+2025-03-21 21:54:06,953 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:54:06] "POST /predict HTTP/1.1" 200 -
+2025-03-21 21:54:11,085 - root - INFO - Received predict request
+2025-03-21 21:54:11,086 - root - INFO - File saved at static/uploads\train_00070_aligned.jpg
+2025-03-21 21:54:11,593 - root - ERROR - Error processing face: name 'label_to_emotion_vi' is not defined
+2025-03-21 21:54:11,597 - root - INFO - Prediction result: []
+2025-03-21 21:54:11,597 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2025 21:54:11] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:10:30,531 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-21 22:10:30,548 - INFO - ViT model loaded successfully
+2025-03-21 22:10:30,823 - INFO - Loading pretrained weights from Hugging Face hub (timm/mobilenetv2_100.ra_in1k)
+2025-03-21 22:10:33,450 - INFO - [timm/mobilenetv2_100.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-03-21 22:10:33,628 - INFO - MobileNet model created for real-time processing
+2025-03-21 22:10:34,658 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 22:10:34,659 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 22:10:50,540 - INFO - 127.0.0.1 - - [21/Mar/2025 22:10:50] "GET / HTTP/1.1" 200 -
+2025-03-21 22:10:59,709 - INFO - 127.0.0.1 - - [21/Mar/2025 22:10:59] "GET /socket.io/?EIO=4&transport=polling&t=PMvGUdu HTTP/1.1" 200 -
+2025-03-21 22:11:00,249 - INFO - 127.0.0.1 - - [21/Mar/2025 22:11:00] "GET /socket.io/?EIO=4&transport=polling&t=PMvGUnj&sid=Csdop6IyPPmqhBdKAAAA HTTP/1.1" 200 -
+2025-03-21 22:11:00,249 - INFO - Started processing thread
+2025-03-21 22:11:00,257 - INFO - 127.0.0.1 - - [21/Mar/2025 22:11:00] "POST /socket.io/?EIO=4&transport=polling&t=PMvGUnh&sid=Csdop6IyPPmqhBdKAAAA HTTP/1.1" 200 -
+2025-03-21 22:11:14,408 - INFO - Received predict request
+2025-03-21 22:11:14,422 - INFO - File saved at static/uploads\PrivateTest_528072.jpg
+2025-03-21 22:11:15,194 - INFO - Prediction result: [{'emotion': 'Happy', 'x': 3, 'y': 0, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 2.9459488359862007e-05, 'Fear': 0.023235099390149117, 'Disgust': 2.9519376312237e-06, 'Happy': 0.9573245644569397, 'Sad': 0.01866106316447258, 'Angry': 6.270101584959775e-05, 'Neutral': 0.0006841503782197833}}]
+2025-03-21 22:11:15,200 - INFO - 127.0.0.1 - - [21/Mar/2025 22:11:15] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:11:34,994 - INFO - Received predict request
+2025-03-21 22:11:34,998 - INFO - File saved at static/uploads\PublicTest_858686.jpg
+2025-03-21 22:11:35,442 - INFO - Prediction result: [{'emotion': 'Happy', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 2.017895894823596e-06, 'Fear': 4.524149801454769e-07, 'Disgust': 5.617395117951673e-07, 'Happy': 0.9999871253967285, 'Sad': 1.679874458204722e-06, 'Angry': 7.250675480463542e-06, 'Neutral': 9.575416015650262e-07}}]
+2025-03-21 22:11:35,443 - INFO - 127.0.0.1 - - [21/Mar/2025 22:11:35] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:11:45,866 - INFO - Received predict request
+2025-03-21 22:11:45,872 - INFO - File saved at static/uploads\Training_680349.jpg
+2025-03-21 22:11:46,369 - INFO - Prediction result: [{'emotion': 'Disgust', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 8.56976555496658e-07, 'Fear': 8.551298833481269e-07, 'Disgust': 0.9990830421447754, 'Happy': 0.000523615104611963, 'Sad': 0.00027853218489326537, 'Angry': 0.00010647899034665897, 'Neutral': 6.64286335450015e-06}}]
+2025-03-21 22:11:46,371 - INFO - 127.0.0.1 - - [21/Mar/2025 22:11:46] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:12:06,004 - INFO - Received predict request
+2025-03-21 22:12:06,007 - INFO - File saved at static/uploads\Training_3858356.jpg
+2025-03-21 22:12:06,649 - INFO - Prediction result: [{'emotion': 'Disgust', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 1.2821089967474109e-07, 'Fear': 6.074246243770176e-07, 'Disgust': 0.997996985912323, 'Happy': 0.00030022638384252787, 'Sad': 0.0013331533409655094, 'Angry': 3.199660932295956e-05, 'Neutral': 0.00033674639416858554}}]
+2025-03-21 22:12:06,651 - INFO - 127.0.0.1 - - [21/Mar/2025 22:12:06] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:12:16,334 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:24,599 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:25,368 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:25,788 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:26,041 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:26,200 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:26,364 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:26,598 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:26,786 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:26,980 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:27,192 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:27,400 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:27,610 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:27,821 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:28,048 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:28,249 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:28,511 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:28,666 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:28,867 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:29,058 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:29,335 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:29,485 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:29,681 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:29,924 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:30,182 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:30,378 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:30,547 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:30,741 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:30,991 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:31,161 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:31,354 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:31,554 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:31,750 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:31,967 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:32,265 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:32,443 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:32,603 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:32,778 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:33,046 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:33,197 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:33,379 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:33,601 - ERROR - Error in processing thread: 0
+2025-03-21 22:12:34,468 - ERROR - Error in processing thread: 0
+2025-03-21 22:17:39,813 - INFO - Stopped processing thread
+2025-03-21 22:17:39,834 - INFO - 127.0.0.1 - - [21/Mar/2025 22:17:39] "GET /socket.io/?EIO=4&transport=websocket&sid=Csdop6IyPPmqhBdKAAAA HTTP/1.1" 200 -
+2025-03-21 22:24:27,717 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-21 22:24:27,739 - INFO - ViT model loaded successfully
+2025-03-21 22:24:27,828 - INFO - Loading pretrained weights from Hugging Face hub (timm/mobilenetv2_100.ra_in1k)
+2025-03-21 22:24:28,847 - INFO - [timm/mobilenetv2_100.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2025-03-21 22:24:29,029 - INFO - MobileNet model created for real-time processing
+2025-03-21 22:24:29,935 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 22:24:29,936 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 22:24:35,748 - INFO - 127.0.0.1 - - [21/Mar/2025 22:24:35] "GET / HTTP/1.1" 200 -
+2025-03-21 22:25:23,286 - INFO - 127.0.0.1 - - [21/Mar/2025 22:25:23] "GET /socket.io/?EIO=4&transport=polling&t=PMvJnVE HTTP/1.1" 200 -
+2025-03-21 22:25:23,313 - INFO - Started processing thread
+2025-03-21 22:25:23,315 - INFO - 127.0.0.1 - - [21/Mar/2025 22:25:23] "GET /socket.io/?EIO=4&transport=polling&t=PMvJnVU&sid=F3GOX3WyeBS_zoiUAAAA HTTP/1.1" 200 -
+2025-03-21 22:25:23,315 - INFO - 127.0.0.1 - - [21/Mar/2025 22:25:23] "POST /socket.io/?EIO=4&transport=polling&t=PMvJnVS&sid=F3GOX3WyeBS_zoiUAAAA HTTP/1.1" 200 -
+2025-03-21 22:25:26,912 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:27,006 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:27,188 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:27,310 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:27,543 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:27,744 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:28,193 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:28,585 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:28,987 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:29,221 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:29,391 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:29,610 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:30,751 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:31,064 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:31,295 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:31,472 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:31,727 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:31,888 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:32,084 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:32,307 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:32,506 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:32,706 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:32,913 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:33,136 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:33,327 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:33,537 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:33,731 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:33,941 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:34,138 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:34,362 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:34,543 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:34,763 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:34,965 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:35,161 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:35,367 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:36,428 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:38,666 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:38,871 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:39,144 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:39,283 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:39,508 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:39,807 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:46,354 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:46,557 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:46,772 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:46,971 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:47,170 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:47,371 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:47,587 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:47,791 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:47,999 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:48,337 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:58,539 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:58,934 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:25:59,134 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:26:00,239 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:26:00,440 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:26:00,656 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:00] "GET /socket.io/?EIO=4&transport=polling&t=PMvJwc_ HTTP/1.1" 200 -
+2025-03-21 22:26:00,743 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:00] "POST /socket.io/?EIO=4&transport=polling&t=PMvJwdv&sid=k0GiZfa5zg75TeK3AAAC HTTP/1.1" 200 -
+2025-03-21 22:26:00,955 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:00] "GET /socket.io/?EIO=4&transport=polling&t=PMvJwhW&sid=k0GiZfa5zg75TeK3AAAC HTTP/1.1" 200 -
+2025-03-21 22:26:01,025 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:01] "GET /socket.io/?EIO=4&transport=polling&t=PMvJwiQ&sid=k0GiZfa5zg75TeK3AAAC HTTP/1.1" 200 -
+2025-03-21 22:26:01,156 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:01] "GET /socket.io/?EIO=4&transport=polling&t=PMvJwkw&sid=k0GiZfa5zg75TeK3AAAC HTTP/1.1" 200 -
+2025-03-21 22:26:10,309 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:26:10,653 - ERROR - Error processing results: 0
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 296, in process_frames
+    scaled_landmarks.append((int(lm[0] / scale_factor), int(lm[1] / scale_factor)))
+                                 ~~^^^
+KeyError: 0
+
+2025-03-21 22:26:10,665 - INFO - Stopped processing thread
+2025-03-21 22:26:10,669 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:10] "GET /socket.io/?EIO=4&transport=websocket&sid=k0GiZfa5zg75TeK3AAAC HTTP/1.1" 200 -
+2025-03-21 22:26:17,414 - INFO - Received predict request
+2025-03-21 22:26:17,461 - INFO - File saved at static/uploads\Training_680349.jpg
+2025-03-21 22:26:17,730 - INFO - Prediction result: []
+2025-03-21 22:26:17,739 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:17] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:26:22,332 - INFO - Received predict request
+2025-03-21 22:26:22,416 - INFO - File saved at static/uploads\Training_1527298.jpg
+2025-03-21 22:26:24,892 - INFO - Prediction result: [{'emotion': 'Neutral', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 1.273896577913547e-05, 'Fear': 3.997110070486087e-06, 'Disgust': 0.3528302311897278, 'Happy': 0.0006444660248234868, 'Sad': 0.029189208522439003, 'Angry': 1.3721348295803182e-05, 'Neutral': 0.6173056364059448}}]
+2025-03-21 22:26:24,894 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:24] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:26:32,883 - INFO - Received predict request
+2025-03-21 22:26:32,888 - INFO - File saved at static/uploads\Training_5242503.jpg
+2025-03-21 22:26:32,909 - INFO - Prediction result: []
+2025-03-21 22:26:32,909 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:32] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:26:37,241 - INFO - Received predict request
+2025-03-21 22:26:37,245 - INFO - File saved at static/uploads\Training_3858356.jpg
+2025-03-21 22:26:37,999 - INFO - Prediction result: [{'emotion': 'Disgust', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 1.2821089967474109e-07, 'Fear': 6.074246243770176e-07, 'Disgust': 0.997996985912323, 'Happy': 0.00030022638384252787, 'Sad': 0.0013331533409655094, 'Angry': 3.199660932295956e-05, 'Neutral': 0.00033674639416858554}}]
+2025-03-21 22:26:38,000 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:38] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:26:43,000 - INFO - Received predict request
+2025-03-21 22:26:43,005 - INFO - File saved at static/uploads\Training_5395043.jpg
+2025-03-21 22:26:43,761 - INFO - Prediction result: [{'emotion': 'Happy', 'x': 2, 'y': 1, 'w': 43, 'h': 47, 'probabilities': {'Surprise': 0.0002751644351519644, 'Fear': 1.675440671533579e-06, 'Disgust': 0.13026250898838043, 'Happy': 0.5133084654808044, 'Sad': 0.0009029413340613246, 'Angry': 0.02629774995148182, 'Neutral': 0.3289514482021332}}]
+2025-03-21 22:26:43,763 - INFO - 127.0.0.1 - - [21/Mar/2025 22:26:43] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:27:18,668 - INFO - Received predict request
+2025-03-21 22:27:18,677 - INFO - File saved at static/uploads\test_0037_aligned.jpg
+2025-03-21 22:27:18,788 - INFO - Prediction result: []
+2025-03-21 22:27:18,840 - INFO - 127.0.0.1 - - [21/Mar/2025 22:27:18] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:27:20,429 - INFO - Received predict request
+2025-03-21 22:27:20,435 - INFO - File saved at static/uploads\test_0037_aligned.jpg
+2025-03-21 22:27:20,474 - INFO - Prediction result: []
+2025-03-21 22:27:20,476 - INFO - 127.0.0.1 - - [21/Mar/2025 22:27:20] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:27:24,279 - INFO - Received predict request
+2025-03-21 22:27:24,283 - INFO - File saved at static/uploads\test_0091_aligned.jpg
+2025-03-21 22:27:25,876 - INFO - Prediction result: [{'emotion': 'Neutral', 'x': 4, 'y': 1, 'w': 92, 'h': 92, 'probabilities': {'Surprise': 7.236462352011586e-06, 'Fear': 5.469076569397657e-08, 'Disgust': 0.002876977203413844, 'Happy': 0.0006099567981436849, 'Sad': 0.000245545816142112, 'Angry': 4.920101673633326e-06, 'Neutral': 0.9962552785873413}}]
+2025-03-21 22:27:25,879 - INFO - 127.0.0.1 - - [21/Mar/2025 22:27:25] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:27:36,786 - INFO - Received predict request
+2025-03-21 22:27:36,790 - INFO - File saved at static/uploads\test_0228_aligned.jpg
+2025-03-21 22:27:37,502 - INFO - Prediction result: [{'emotion': 'Angry', 'x': 5, 'y': 4, 'w': 89, 'h': 89, 'probabilities': {'Surprise': 5.410777248471277e-06, 'Fear': 4.867586903856136e-05, 'Disgust': 0.0025328288320451975, 'Happy': 0.041071485728025436, 'Sad': 1.803824670787435e-05, 'Angry': 0.9557032585144043, 'Neutral': 0.0006203859811648726}}]
+2025-03-21 22:27:37,503 - INFO - 127.0.0.1 - - [21/Mar/2025 22:27:37] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:47:53,000 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-21 22:47:53,007 - INFO - ViT model loaded successfully
+2025-03-21 22:47:54,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 22:47:54,083 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 22:48:02,990 - INFO - 127.0.0.1 - - [21/Mar/2025 22:48:02] "GET / HTTP/1.1" 200 -
+2025-03-21 22:48:23,967 - INFO - Received predict request
+2025-03-21 22:48:23,988 - INFO - File saved at static/uploads\test_0027_aligned.jpg
+2025-03-21 22:48:25,566 - INFO - Prediction result: [{'emotion': 'Angry', 'x': 0, 'y': 0, 'w': 100, 'h': 100, 'probabilities': {'Surprise': 2.3913175937195774e-06, 'Fear': 2.8111797334418043e-09, 'Disgust': 4.0528288280938796e-08, 'Happy': 8.761802661183538e-08, 'Sad': 1.0525996074761679e-08, 'Angry': 0.9999974966049194, 'Neutral': 1.4114942548104636e-09}}]
+2025-03-21 22:48:25,575 - INFO - 127.0.0.1 - - [21/Mar/2025 22:48:25] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:48:31,077 - INFO - Received predict request
+2025-03-21 22:48:31,082 - INFO - File saved at static/uploads\test_0057_aligned.jpg
+2025-03-21 22:48:32,234 - INFO - Prediction result: [{'emotion': 'Disgust', 'x': 0, 'y': 0, 'w': 100, 'h': 100, 'probabilities': {'Surprise': 0.0013228951720520854, 'Fear': 6.74257316859439e-05, 'Disgust': 0.93459552526474, 'Happy': 0.0001189767790492624, 'Sad': 2.3516897272202186e-05, 'Angry': 0.06252744048833847, 'Neutral': 0.001344182644970715}}]
+2025-03-21 22:48:32,236 - INFO - 127.0.0.1 - - [21/Mar/2025 22:48:32] "POST /predict HTTP/1.1" 200 -
+2025-03-21 22:48:33,919 - INFO - 127.0.0.1 - - [21/Mar/2025 22:48:33] "GET /socket.io/?EIO=4&transport=polling&t=PMvP4_c HTTP/1.1" 200 -
+2025-03-21 22:48:33,983 - INFO - Started processing thread
+2025-03-21 22:48:33,983 - INFO - 127.0.0.1 - - [21/Mar/2025 22:48:33] "POST /socket.io/?EIO=4&transport=polling&t=PMvP504&sid=xjJ_j8q1LKi2DO0AAAAA HTTP/1.1" 200 -
+2025-03-21 22:48:33,987 - INFO - 127.0.0.1 - - [21/Mar/2025 22:48:33] "GET /socket.io/?EIO=4&transport=polling&t=PMvP506&sid=xjJ_j8q1LKi2DO0AAAAA HTTP/1.1" 200 -
+2025-03-21 22:48:37,996 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:38,616 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:39,268 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:40,025 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:41,471 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:42,538 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:43,191 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:44,884 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:45,784 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:46,556 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:47,323 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:47,834 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:48,350 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:49,086 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:49,897 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:50,493 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:51,122 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:51,661 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:52,219 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:52,876 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:53,515 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:54,209 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:54,820 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:55,553 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:56,279 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:57,079 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:57,842 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:58,621 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:59,383 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:48:59,922 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:00,493 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:01,080 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:01,697 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:02,224 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:02,824 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:03,444 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:03,985 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:04,509 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:05,909 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:06,530 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:07,051 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:09,190 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:11,435 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:16,476 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:17,784 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:18,953 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:19,755 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:20,473 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:21,062 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:21,693 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:22,416 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:22,945 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:23,594 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:24,364 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:24,881 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:25,487 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:26,064 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:26,696 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:27,407 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:28,329 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:29,044 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:29,801 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:30,594 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:31,554 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:32,355 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:33,084 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:34,020 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:35,240 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:36,222 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:37,149 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:38,661 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:40,206 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:41,156 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:42,009 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:42,934 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:43,784 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:44,776 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:45,590 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:46,359 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:47,230 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:47,994 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:48,875 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:49,758 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:50,576 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:51,285 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:51,972 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:52,710 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:53,396 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:54,187 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:54,996 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:55,844 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:56,793 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:57,537 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:58,295 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:58,981 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:49:59,871 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:00,697 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:01,418 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:02,117 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:02,730 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:03,485 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:04,261 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:13,171 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:13,644 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:15,454 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:15,993 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:22,076 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:22,701 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:24,920 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:25,492 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:26,033 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:26,775 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:27,431 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:28,065 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:28,668 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:29,192 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 22:50:59,328 - INFO - Stopped processing thread
+2025-03-21 22:50:59,338 - INFO - 127.0.0.1 - - [21/Mar/2025 22:50:59] "GET /socket.io/?EIO=4&transport=websocket&sid=xjJ_j8q1LKi2DO0AAAAA HTTP/1.1" 200 -
+2025-03-21 23:31:11,643 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 23:31:11,645 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 23:31:20,574 - INFO - 127.0.0.1 - - [21/Mar/2025 23:31:20] "GET / HTTP/1.1" 200 -
+2025-03-21 23:31:40,592 - INFO - 127.0.0.1 - - [21/Mar/2025 23:31:40] "POST /predict HTTP/1.1" 200 -
+2025-03-21 23:31:51,782 - INFO - 127.0.0.1 - - [21/Mar/2025 23:31:51] "GET /socket.io/?EIO=4&transport=polling&t=PMvY_F7 HTTP/1.1" 200 -
+2025-03-21 23:31:51,898 - INFO - 127.0.0.1 - - [21/Mar/2025 23:31:51] "GET /socket.io/?EIO=4&transport=polling&t=PMvY_Fh&sid=unZURm9pJyrMyEKOAAAA HTTP/1.1" 200 -
+2025-03-21 23:31:52,008 - INFO - 127.0.0.1 - - [21/Mar/2025 23:31:52] "POST /socket.io/?EIO=4&transport=polling&t=PMvY_Ff&sid=unZURm9pJyrMyEKOAAAA HTTP/1.1" 200 -
+2025-03-21 23:33:10,045 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-21 23:33:10,080 - INFO - ViT model loaded successfully
+2025-03-21 23:33:11,085 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 23:33:11,086 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 23:33:13,636 - INFO - 127.0.0.1 - - [21/Mar/2025 23:33:13] "GET /socket.io/?EIO=4&transport=polling&t=PMvZJ5l HTTP/1.1" 200 -
+2025-03-21 23:33:13,707 - INFO - Started processing thread
+2025-03-21 23:33:13,723 - INFO - 127.0.0.1 - - [21/Mar/2025 23:33:13] "POST /socket.io/?EIO=4&transport=polling&t=PMvZJEp&sid=Ld4y3kCWHWodbA0-AAAA HTTP/1.1" 200 -
+2025-03-21 23:33:13,723 - INFO - 127.0.0.1 - - [21/Mar/2025 23:33:13] "GET /socket.io/?EIO=4&transport=polling&t=PMvZJEv&sid=Ld4y3kCWHWodbA0-AAAA HTTP/1.1" 200 -
+2025-03-21 23:33:13,753 - INFO - 127.0.0.1 - - [21/Mar/2025 23:33:13] "GET /socket.io/?EIO=4&transport=polling&t=PMvZJGC&sid=Ld4y3kCWHWodbA0-AAAA HTTP/1.1" 200 -
+2025-03-21 23:33:40,888 - INFO - 127.0.0.1 - - [21/Mar/2025 23:33:40] "GET / HTTP/1.1" 200 -
+2025-03-21 23:33:48,364 - INFO - Stopped processing thread
+2025-03-21 23:33:48,375 - INFO - 127.0.0.1 - - [21/Mar/2025 23:33:48] "GET /socket.io/?EIO=4&transport=websocket&sid=Ld4y3kCWHWodbA0-AAAA HTTP/1.1" 200 -
+2025-03-21 23:34:02,459 - INFO - Received predict request
+2025-03-21 23:34:02,476 - INFO - File saved at static/uploads\test_0091_aligned.jpg
+2025-03-21 23:34:03,490 - INFO - Prediction result: [{'emotion': 'Neutral', 'x': 4, 'y': 1, 'w': 92, 'h': 92, 'probabilities': {'Surprise': 7.236462352011586e-06, 'Fear': 5.469076569397657e-08, 'Disgust': 0.002876977203413844, 'Happy': 0.0006099567981436849, 'Sad': 0.000245545816142112, 'Angry': 4.920101673633326e-06, 'Neutral': 0.9962552785873413}}]
+2025-03-21 23:34:03,491 - INFO - 127.0.0.1 - - [21/Mar/2025 23:34:03] "POST /predict HTTP/1.1" 200 -
+2025-03-21 23:35:01,892 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-21 23:35:01,986 - INFO - ViT model loaded successfully
+2025-03-21 23:35:03,256 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-21 23:35:03,258 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-21 23:35:23,599 - INFO - 127.0.0.1 - - [21/Mar/2025 23:35:23] "GET / HTTP/1.1" 200 -
+2025-03-21 23:35:36,822 - INFO - Received predict request
+2025-03-21 23:35:36,859 - INFO - File saved at static/uploads\test_0057_aligned.jpg
+2025-03-21 23:35:38,133 - INFO - Prediction result: [{'emotion': 'Disgust', 'x': 0, 'y': 0, 'w': 100, 'h': 100, 'probabilities': {'Surprise': 0.0013228951720520854, 'Fear': 6.74257316859439e-05, 'Disgust': 0.93459552526474, 'Happy': 0.0001189767790492624, 'Sad': 2.3516897272202186e-05, 'Angry': 0.06252744048833847, 'Neutral': 0.001344182644970715}}]
+2025-03-21 23:35:38,136 - INFO - 127.0.0.1 - - [21/Mar/2025 23:35:38] "POST /predict HTTP/1.1" 200 -
+2025-03-21 23:35:40,191 - INFO - 127.0.0.1 - - [21/Mar/2025 23:35:40] "GET /socket.io/?EIO=4&transport=polling&t=PMvZt07 HTTP/1.1" 200 -
+2025-03-21 23:35:40,270 - INFO - Started processing thread
+2025-03-21 23:35:40,281 - INFO - 127.0.0.1 - - [21/Mar/2025 23:35:40] "POST /socket.io/?EIO=4&transport=polling&t=PMvZt0Z&sid=QuFaU32skwOrnBw5AAAA HTTP/1.1" 200 -
+2025-03-21 23:35:40,281 - INFO - 127.0.0.1 - - [21/Mar/2025 23:35:40] "GET /socket.io/?EIO=4&transport=polling&t=PMvZt0b&sid=QuFaU32skwOrnBw5AAAA HTTP/1.1" 200 -
+2025-03-21 23:36:12,349 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:13,491 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:14,386 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:16,146 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:16,148 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:18,224 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:18,227 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:19,255 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:20,156 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:21,018 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:21,912 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:22,644 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:23,320 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:24,240 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:25,143 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:25,757 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:26,297 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:27,091 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:27,825 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:28,561 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:29,272 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:29,934 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:30,686 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:31,385 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:32,146 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-21 23:36:36,417 - INFO - Stopped processing thread
+2025-03-21 23:36:36,420 - INFO - 127.0.0.1 - - [21/Mar/2025 23:36:36] "GET /socket.io/?EIO=4&transport=websocket&sid=QuFaU32skwOrnBw5AAAA HTTP/1.1" 200 -
+2025-03-22 19:54:48,177 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-22 19:54:48,186 - INFO - ViT model loaded successfully
+2025-03-22 19:54:50,082 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-22 19:54:50,089 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-22 19:54:54,496 - INFO - 127.0.0.1 - - [22/Mar/2025 19:54:54] "GET / HTTP/1.1" 200 -
+2025-03-22 19:55:10,941 - INFO - Received predict request
+2025-03-22 19:55:11,007 - INFO - File saved at static/uploads\test_0037_aligned.jpg
+2025-03-22 19:55:13,095 - INFO - Prediction result: []
+2025-03-22 19:55:13,101 - INFO - 127.0.0.1 - - [22/Mar/2025 19:55:13] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:55:17,638 - INFO - Received predict request
+2025-03-22 19:55:17,644 - INFO - File saved at static/uploads\test_0327_aligned.jpg
+2025-03-22 19:55:17,689 - INFO - Prediction result: []
+2025-03-22 19:55:17,690 - INFO - 127.0.0.1 - - [22/Mar/2025 19:55:17] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:55:21,761 - INFO - Received predict request
+2025-03-22 19:55:21,769 - INFO - File saved at static/uploads\test_0347_aligned.jpg
+2025-03-22 19:55:23,434 - INFO - Prediction result: [{'emotion': 'Angry', 'x': 0, 'y': 0, 'w': 92, 'h': 100, 'probabilities': {'Surprise': 0.0038580242544412613, 'Fear': 0.005702258087694645, 'Disgust': 0.007652870379388332, 'Happy': 0.2498432844877243, 'Sad': 0.005406138952821493, 'Angry': 0.7275341749191284, 'Neutral': 3.2449715945404023e-06}}]
+2025-03-22 19:55:23,436 - INFO - 127.0.0.1 - - [22/Mar/2025 19:55:23] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:55:33,871 - INFO - Received predict request
+2025-03-22 19:55:33,879 - INFO - File saved at static/uploads\test_0395_aligned.jpg
+2025-03-22 19:55:34,815 - INFO - Prediction result: [{'emotion': 'Angry', 'x': 0, 'y': 0, 'w': 100, 'h': 100, 'probabilities': {'Surprise': 0.0015639008488506079, 'Fear': 2.6659139621187933e-05, 'Disgust': 0.0003601339121814817, 'Happy': 5.721189882024191e-05, 'Sad': 0.0012593342689797282, 'Angry': 0.9964088797569275, 'Neutral': 0.00032392508001066744}}]
+2025-03-22 19:55:34,819 - INFO - 127.0.0.1 - - [22/Mar/2025 19:55:34] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:55:48,786 - INFO - Received predict request
+2025-03-22 19:55:48,793 - INFO - File saved at static/uploads\Training_10057152.jpg
+2025-03-22 19:55:49,648 - INFO - Prediction result: [{'emotion': 'Angry', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 1.4619434978158097e-06, 'Fear': 8.723696396373271e-07, 'Disgust': 5.9741854784078896e-05, 'Happy': 1.3491277968569193e-05, 'Sad': 0.0025587829295545816, 'Angry': 0.9971939325332642, 'Neutral': 0.00017164050950668752}}]
+2025-03-22 19:55:49,650 - INFO - 127.0.0.1 - - [22/Mar/2025 19:55:49] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:55:53,924 - INFO - Received predict request
+2025-03-22 19:55:53,933 - INFO - File saved at static/uploads\Training_10122997.jpg
+2025-03-22 19:55:54,833 - INFO - Prediction result: [{'emotion': 'Happy', 'x': 3, 'y': 1, 'w': 42, 'h': 47, 'probabilities': {'Surprise': 0.003384003648534417, 'Fear': 0.008375094272196293, 'Disgust': 6.495158118013933e-07, 'Happy': 0.6392077207565308, 'Sad': 0.0033372968900948763, 'Angry': 2.611157287901733e-05, 'Neutral': 0.34566909074783325}}]
+2025-03-22 19:55:54,835 - INFO - 127.0.0.1 - - [22/Mar/2025 19:55:54] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:56:01,560 - INFO - Received predict request
+2025-03-22 19:56:01,565 - INFO - File saved at static/uploads\Training_6956023.jpg
+2025-03-22 19:56:02,513 - INFO - Prediction result: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 46, 'h': 48, 'probabilities': {'Surprise': 2.65346207015682e-05, 'Fear': 0.00022503462969325483, 'Disgust': 0.00017881095118355006, 'Happy': 1.0479138836672064e-05, 'Sad': 0.9991549253463745, 'Angry': 0.00023633184900972992, 'Neutral': 0.00016799865989014506}}]
+2025-03-22 19:56:02,517 - INFO - 127.0.0.1 - - [22/Mar/2025 19:56:02] "POST /predict HTTP/1.1" 200 -
+2025-03-22 19:56:04,402 - INFO - 127.0.0.1 - - [22/Mar/2025 19:56:04] "GET /socket.io/?EIO=4&transport=polling&t=PMzxC00 HTTP/1.1" 200 -
+2025-03-22 19:56:04,486 - INFO - Started processing thread
+2025-03-22 19:56:04,492 - INFO - 127.0.0.1 - - [22/Mar/2025 19:56:04] "POST /socket.io/?EIO=4&transport=polling&t=PMzxC0r&sid=wD886sDXrD-Yn5tdAAAA HTTP/1.1" 200 -
+2025-03-22 19:56:04,493 - INFO - 127.0.0.1 - - [22/Mar/2025 19:56:04] "GET /socket.io/?EIO=4&transport=polling&t=PMzxC0s&sid=wD886sDXrD-Yn5tdAAAA HTTP/1.1" 200 -
+2025-03-22 19:56:23,233 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:24,320 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:25,571 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:26,604 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:27,958 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:29,174 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:30,335 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:31,460 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:32,602 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:33,613 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:34,483 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:35,397 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:37,441 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:38,515 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:40,673 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:40,674 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:41,903 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:42,908 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:43,787 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:45,068 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:46,108 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:47,151 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:48,130 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:49,207 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:50,421 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:51,474 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:52,516 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:53,584 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:54,697 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:55,728 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:56,820 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:57,863 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:56:59,023 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:00,275 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:01,252 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:02,303 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:03,465 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:04,440 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:05,418 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:06,472 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:08,740 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:08,747 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:11,335 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:11,337 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:12,578 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:13,625 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:14,724 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:15,938 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:20,776 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:22,864 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:24,408 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:25,639 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:26,812 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:27,990 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:29,168 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:30,566 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:31,610 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:32,721 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:33,844 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:34,991 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:36,952 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:38,056 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:40,121 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:40,123 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:42,286 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:42,289 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:43,421 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:45,777 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:45,780 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:46,892 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:47,981 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:49,029 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:50,473 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:57:51,937 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:03,996 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:05,349 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:07,454 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:07,455 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:09,954 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:09,956 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:11,103 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:12,275 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:14,687 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:14,687 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:16,201 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:18,351 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:18,351 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:19,558 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:20,592 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:21,831 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:22,849 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:23,997 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:26,202 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:26,202 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:27,417 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:29,895 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:29,895 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:32,817 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:32,819 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:34,770 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:34,770 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:38,605 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:38,605 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:38,609 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:41,982 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:41,984 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:41,984 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:46,165 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:46,166 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:46,167 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:48,753 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 19:58:48,754 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:00:40,169 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-22 20:00:40,176 - INFO - ViT model loaded successfully
+2025-03-22 20:00:41,374 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-22 20:00:41,375 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-22 20:00:44,348 - INFO - 127.0.0.1 - - [22/Mar/2025 20:00:44] "GET /socket.io/?EIO=4&transport=polling&t=PMzyF_k HTTP/1.1" 200 -
+2025-03-22 20:00:45,912 - INFO - Started processing thread
+2025-03-22 20:00:45,913 - INFO - 127.0.0.1 - - [22/Mar/2025 20:00:45] "GET /socket.io/?EIO=4&transport=polling&t=PMzyGY4&sid=0324LpcoPDixICzAAAAA HTTP/1.1" 200 -
+2025-03-22 20:00:45,913 - INFO - 127.0.0.1 - - [22/Mar/2025 20:00:45] "POST /socket.io/?EIO=4&transport=polling&t=PMzyGUJ&sid=0324LpcoPDixICzAAAAA HTTP/1.1" 200 -
+2025-03-22 20:00:48,039 - INFO - Stopped processing thread
+2025-03-22 20:00:48,043 - INFO - 127.0.0.1 - - [22/Mar/2025 20:00:48] "GET /socket.io/?EIO=4&transport=websocket&sid=0324LpcoPDixICzAAAAA HTTP/1.1" 200 -
+2025-03-22 20:00:48,229 - INFO - 127.0.0.1 - - [22/Mar/2025 20:00:48] "GET / HTTP/1.1" 200 -
+2025-03-22 20:01:04,464 - INFO - Received predict request
+2025-03-22 20:01:06,189 - INFO - File saved at static/uploads\Training_6736373.jpg
+2025-03-22 20:01:09,424 - INFO - Prediction result: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 7.05346028553322e-05, 'Fear': 0.0006681038066744804, 'Disgust': 0.00027773858164437115, 'Happy': 0.007160895504057407, 'Sad': 0.8470419645309448, 'Angry': 5.060938201495446e-05, 'Neutral': 0.14473013579845428}}]
+2025-03-22 20:01:09,426 - INFO - 127.0.0.1 - - [22/Mar/2025 20:01:09] "POST /predict HTTP/1.1" 200 -
+2025-03-22 20:01:24,931 - INFO - Received predict request
+2025-03-22 20:01:24,940 - INFO - File saved at static/uploads\Training_6736373.jpg
+2025-03-22 20:01:25,921 - INFO - Prediction result: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 48, 'h': 48, 'probabilities': {'Surprise': 7.05346028553322e-05, 'Fear': 0.0006681038066744804, 'Disgust': 0.00027773858164437115, 'Happy': 0.007160895504057407, 'Sad': 0.8470419645309448, 'Angry': 5.060938201495446e-05, 'Neutral': 0.14473013579845428}}]
+2025-03-22 20:01:25,924 - INFO - 127.0.0.1 - - [22/Mar/2025 20:01:25] "POST /predict HTTP/1.1" 200 -
+2025-03-22 20:08:32,279 - INFO - 127.0.0.1 - - [22/Mar/2025 20:08:32] "GET /socket.io/?EIO=4&transport=polling&t=PMz-2a9 HTTP/1.1" 200 -
+2025-03-22 20:08:32,444 - INFO - Started processing thread
+2025-03-22 20:08:32,449 - INFO - 127.0.0.1 - - [22/Mar/2025 20:08:32] "POST /socket.io/?EIO=4&transport=polling&t=PMz-2cy&sid=NnRN2_z5y9pP9D0aAAAC HTTP/1.1" 200 -
+2025-03-22 20:08:32,450 - INFO - 127.0.0.1 - - [22/Mar/2025 20:08:32] "GET /socket.io/?EIO=4&transport=polling&t=PMz-2d1&sid=NnRN2_z5y9pP9D0aAAAC HTTP/1.1" 200 -
+2025-03-22 20:09:18,212 - INFO - Received predict request
+2025-03-22 20:09:18,366 - INFO - File saved at static/uploads\Training_951355.jpg
+2025-03-22 20:09:18,889 - INFO - Prediction result: []
+2025-03-22 20:09:18,899 - INFO - 127.0.0.1 - - [22/Mar/2025 20:09:18] "POST /predict HTTP/1.1" 200 -
+2025-03-22 20:09:25,671 - INFO - Received predict request
+2025-03-22 20:09:25,682 - INFO - File saved at static/uploads\Training_6748595.jpg
+2025-03-22 20:09:34,230 - INFO - Prediction result: [{'emotion': 'Neutral', 'x': 0, 'y': 0, 'w': 44, 'h': 48, 'probabilities': {'Surprise': 0.01340736448764801, 'Fear': 0.0033032791689038277, 'Disgust': 0.006425764877349138, 'Happy': 0.19493938982486725, 'Sad': 0.35103434324264526, 'Angry': 0.06919383257627487, 'Neutral': 0.3616960346698761}}]
+2025-03-22 20:09:34,238 - INFO - 127.0.0.1 - - [22/Mar/2025 20:09:34] "POST /predict HTTP/1.1" 200 -
+2025-03-22 20:10:44,984 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:46,386 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:47,698 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:48,724 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:49,946 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:51,113 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:52,221 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:53,374 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:55,456 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:57,924 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:10:59,354 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:00,892 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:02,094 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:03,166 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:04,582 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:05,759 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:06,863 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:08,026 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:09,141 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:10,314 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:11,603 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:12,876 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:14,121 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:15,220 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:16,537 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:17,854 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:19,114 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:20,293 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:21,974 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:35,904 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:37,402 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:38,512 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:39,779 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:40,890 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:42,113 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:43,440 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:44,763 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:46,017 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:47,333 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:48,425 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:49,642 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:51,062 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:52,132 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:53,330 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:54,680 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:55,820 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:57,072 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:11:58,751 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:00,668 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:02,043 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:03,272 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:04,820 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:06,021 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:07,132 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:08,380 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:09,540 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:10,701 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:12,004 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:13,152 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:14,426 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:16,131 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:17,527 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:18,899 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:20,141 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:12:26,713 - WARNING - Invalid landmark format: <class 'dict'>
+2025-03-22 20:14:12,182 - INFO - Model loaded successfully from ViTBase_RAFDB_f1.pth
+2025-03-22 20:14:12,607 - INFO - ViT model loaded successfully
+2025-03-22 20:14:16,019 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-22 20:14:16,165 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-22 20:14:22,463 - INFO - 127.0.0.1 - - [22/Mar/2025 20:14:22] "GET /socket.io/?EIO=4&transport=polling&t=PMz_O0Y HTTP/1.1" 200 -
+2025-03-22 20:14:25,220 - INFO - Started processing thread
+2025-03-22 20:14:25,230 - INFO - 127.0.0.1 - - [22/Mar/2025 20:14:25] "POST /socket.io/?EIO=4&transport=polling&t=PMz_OhB&sid=Pu_Ni-KdKm-nGnRMAAAA HTTP/1.1" 200 -
+2025-03-22 20:14:25,230 - INFO - 127.0.0.1 - - [22/Mar/2025 20:14:25] "GET /socket.io/?EIO=4&transport=polling&t=PMz_OiS&sid=Pu_Ni-KdKm-nGnRMAAAA HTTP/1.1" 200 -
+2025-03-22 20:14:25,395 - INFO - 127.0.0.1 - - [22/Mar/2025 20:14:25] "GET /socket.io/?EIO=4&transport=polling&t=PMz_Ooy&sid=Pu_Ni-KdKm-nGnRMAAAA HTTP/1.1" 200 -

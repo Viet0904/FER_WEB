@@ -7,290 +7,1004 @@
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        margin: 0;
-        padding: 20px;
-        min-height: 100vh;
-      }
-      .container {
-        max-width: 1200px;
+        max-width: 800px;
         margin: 0 auto;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        padding: 30px;
+        padding: 20px;
+        background-color: #f7f7f7;
       }
       h1 {
+        color: #333;
         text-align: center;
-        color: #2c3e50;
         margin-bottom: 30px;
-        font-size: 2.5em;
       }
-      .section {
-        margin: 20px 0;
-        padding: 20px;
-        border-radius: 10px;
-        background: #f8f9fa;
-      }
-      .upload-container,
-      .realtime-container {
+      .container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        gap: 20px;
       }
-      input[type="file"] {
-        padding: 10px;
-        border: 2px dashed #3498db;
+      .tab {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .tab.active {
+        display: block;
+      }
+      .tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+      .tab-btn {
+        padding: 12px 24px;
+        background-color: #f0f0f0;
+        border: none;
         border-radius: 5px;
-        background: #ecf0f1;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
       }
-      button {
-        padding: 12px 25px;
-        background: #3498db;
+      .tab-btn:hover {
+        background-color: #e0e0e0;
+      }
+      .tab-btn.active {
+        background-color: #4285f4;
+        color: white;
+      }
+      .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      #video,
+      #canvas {
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+        border-radius: 8px;
+      }
+      #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #landmarksCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+      .emotion-label {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+      .btn {
+        padding: 12px 24px;
+        background-color: #4285f4;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background 0.3s;
+        font-weight: 600;
+        transition: all 0.2s;
+        display: inline-block;
+        margin: 10px 0;
       }
-      button:hover {
-        background: #2980b9;
+      .btn:hover {
+        background-color: #3367d6;
+        transform: translateY(-2px);
       }
-      #preview,
-      #video {
-        max-width: 800px; /* Increased size */
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      .btn:active {
+        transform: translateY(0);
       }
-      #result,
-      #realtime-result {
-        font-size: 1.5em;
-        color: #2c3e50;
-        margin-top: 20px;
-        font-weight: bold;
-        text-align: center;
-        padding: 10px;
-        background: #e8f4f8;
-        border-radius: 5px;
-        width: 100%;
-      }
-      .error {
-        color: #e74c3c;
-      }
-      .probability-table {
-        width: 100%;
-        margin-top: 15px;
-        border-collapse: collapse;
-      }
-      .probability-table th,
-      .probability-table td {
-        padding: 8px;
-        border: 1px solid #ddd;
-        text-align: left;
-      }
-      .probability-table th {
-        background: #3498db;
-        color: white;
-      }
-      .realtime-container {
-        position: relative; /* Make container relative for absolute positioning of overlay */
+      .btn-group {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        gap: 10px;
+        justify-content: center;
+        margin: 15px 0;
       }
-
-      #video {
-        max-width: 800px;
+      /* FIX: Cải thiện kích thước và hiển thị ảnh tải lên */
+      #uploadPreview {
+        max-width: 100%;
+        max-height: 600px; /* Tăng chiều cao tối đa */
+        width: auto;
+        height: auto;
+        display: none;
+        margin: 15px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        object-fit: contain; /* Đảm bảo ảnh hiển thị đầy đủ */
+      }
+      .preview-container {
         width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 15px 0;
+        min-height: 300px; /* Đặt chiều cao tối thiểu cho container */
+      }
+      .result-container {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        border-left: 4px solid #4285f4;
+      }
+      .progress-container {
+        width: 100%;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        margin-top: 8px;
+        overflow: hidden;
+      }
+      .progress-bar {
+        height: 20px;
+        border-radius: 5px;
+        background-color: #4285f4;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        line-height: 20px;
+        transition: width 0.3s ease;
+      }
+      /* FIX: Cải thiện CSS cho file input wrapper */
+      .file-input-wrapper {
         position: relative;
+        overflow: hidden;
+        display: inline-block;
+        margin: 10px 0;
+      }
+      .file-input-wrapper input[type="file"] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .file-input-wrapper .btn {
+        display: inline-block;
+        padding: 12px 24px;
+      }
+      /* FIX: Điều chỉnh kiểu hiển thị để các nút không bị xuống dòng */
+      .camera-options {
+        margin: 15px 0;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .error-message {
+        color: #d32f2f;
+        background-color: #ffebee;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        display: none;
+      }
+      .loading {
+        display: none;
+        text-align: center;
+        margin: 15px 0;
+      }
+      .loading::after {
+        content: "⏳";
+        animation: loading 1.5s infinite;
+        font-size: 20px;
+        margin-left: 10px;
+      }
+      @keyframes loading {
+        0% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.3;
+        }
+      }
+      #cameraSelection {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-left: 10px;
+      }
+      /* FIX: Thêm container cho nút tải lên để ngăn chúng xuống dòng */
+      .upload-buttons-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Emotion Detection</h1>
+    <h1>Emotion Detection</h1>
 
-      <div class="section">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('upload')">
+        Upload Image
+      </button>
+      <button class="tab-btn" onclick="showTab('realtime')">
+        Real-time Detection
+      </button>
+    </div>
+
+    <div class="container">
+      <div id="uploadTab" class="tab active">
         <h2>Upload Image</h2>
-        <div class="upload-container">
-          <input type="file" id="imageInput" accept="image/*" />
-          <button onclick="uploadImage()">Upload and Predict</button>
-          <img id="preview" src="" alt="Preview" style="display: none" />
-          <div id="result"></div>
+        <!-- FIX: Thêm container div để ngăn các nút xuống dòng -->
+        <div class="upload-buttons-container">
+          <div class="file-input-wrapper">
+            <button class="btn">Choose Image</button>
+            <input
+              type="file"
+              id="fileInput"
+              accept=".jpg,.jpeg,.png"
+              onchange="previewImage()"
+            />
+          </div>
+
+          <button type="button" class="btn" onclick="uploadAndPredict()">
+            Upload and Predict
+          </button>
         </div>
+
+        <div id="fileInputError" class="error-message"></div>
+        <div id="uploadLoading" class="loading">Processing image...</div>
+
+        <!-- FIX: Thêm container để điều chỉnh kích thước preview -->
+        <div class="preview-container">
+          <img id="uploadPreview" alt="Upload Preview" />
+        </div>
+
+        <div id="uploadResult" class="result-container"></div>
       </div>
 
-      <div class="section">
+      <div id="realtimeTab" class="tab">
         <h2>Real-time Detection</h2>
-        <div class="realtime-container">
-          <video id="video" width="800" height="600" autoplay></video>
-          <button onclick="toggleWebcam()">Start/Stop Webcam</button>
-          <div id="realtime-result"></div>
+
+        <div class="camera-options">
+          <button id="startBtn" class="btn" onclick="toggleWebcam()">
+            Start
+          </button>
+          <button
+            id="switchCameraBtn"
+            class="btn"
+            onclick="switchCamera()"
+            style="display: none"
+          >
+            Switch Camera
+          </button>
+          <select
+            id="cameraSelection"
+            style="display: none"
+            onchange="changeCamera()"
+          >
+            <option value="">Select camera</option>
+          </select>
         </div>
+
+        <div id="cameraError" class="error-message"></div>
+
+        <div class="video-container">
+          <video id="video" autoplay playsinline></video>
+          <canvas id="canvas"></canvas>
+          <canvas id="landmarksCanvas"></canvas>
+        </div>
+
+        <div id="realtimeResult" class="result-container"></div>
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
     <script>
-      const socket = io();
-      let streaming = false;
-      let video = document.getElementById("video");
-      let preview = document.getElementById("preview");
-      let resultDiv = document.getElementById("result");
-      let realtimeResult = document.getElementById("realtime-result");
-      let canvas = document.createElement("canvas");
-      let overlayCanvas = document.createElement("canvas");
-      let overlayCtx = overlayCanvas.getContext("2d");
-      let lastProcessedTime = 0;
-      const frameInterval = 500;
-      let lastEmotions = [];
+      let socket;
+      let videoStream;
+      let isStreaming = false;
+      let lastCaptureTime = 0;
+      const CAPTURE_INTERVAL_MS = 200; // Chỉ bắt 5 frames mỗi giây
+      let currentCameraIndex = 0;
+      let availableCameras = [];
 
-      document.querySelector(".realtime-container").appendChild(overlayCanvas);
-      overlayCanvas.style.position = "absolute";
-      overlayCanvas.style.top = video.offsetTop + "px";
-      overlayCanvas.style.left = video.offsetLeft + "px";
-      overlayCanvas.style.pointerEvents = "none";
+      // Khởi tạo kết nối Socket.IO
+      function initSocket() {
+        if (!socket) {
+          const protocol =
+            window.location.protocol === "https:" ? "wss:" : "ws:";
+          const host = window.location.host;
+          const socketUrl = `${protocol}//${host}`;
 
-      video.addEventListener("loadedmetadata", () => {
-        overlayCanvas.width = video.videoWidth;
-        overlayCanvas.height = video.videoHeight;
-        canvas.width = 640;
-        canvas.height = 480;
-        console.log(
-          "Video metadata loaded, resolution:",
-          video.videoWidth,
-          "x",
-          video.videoHeight
-        );
-        if (streaming) processVideo();
-      });
+          socket = io(socketUrl);
 
-      window.addEventListener("resize", () => {
-        overlayCanvas.style.top = video.offsetTop + "px";
-        overlayCanvas.style.left = video.offsetLeft + "px";
-        overlayCanvas.width = video.videoWidth;
-        overlayCanvas.height = video.videoHeight;
-      });
+          socket.on("connect", () => {
+            console.log("Connected to server");
+          });
 
-      function toggleWebcam() {
-        if (!streaming) {
-          navigator.mediaDevices
-            .getUserMedia({ video: true, audio: false }) // Bỏ yêu cầu độ phân giải cụ thể
-            .then((stream) => {
-              video.srcObject = stream;
-              streaming = true;
-              realtimeResult.innerHTML = "Webcam started...";
-              processVideo();
-            })
-            .catch((err) => {
-              console.error("Webcam error:", err);
-              realtimeResult.innerHTML = `<span class="error">Error: ${err.message}. Please check webcam availability and permissions.</span>`;
-            });
-        } else {
-          if (video.srcObject) {
-            video.srcObject.getTracks().forEach((track) => track.stop());
+          socket.on("emotion_result", (data) => {
+            displayRealtimeResult(data);
+          });
+
+          socket.on("disconnect", () => {
+            console.log("Disconnected from server");
+            showError(
+              "cameraError",
+              "Lost connection to server. Please refresh the page."
+            );
+          });
+
+          socket.on("connect_error", (error) => {
+            console.error("Socket.IO connection error:", error);
+            showError(
+              "cameraError",
+              "Could not connect to server. Please check your network connection."
+            );
+          });
+
+          // Thêm xử lý lỗi socket.io
+          socket.on("error", (error) => {
+            console.error("Socket.IO error:", error);
+            showError("cameraError", "Socket error: " + error);
+          });
+        }
+      }
+
+      // Hiển thị thông báo lỗi
+      function showError(elementId, message) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+
+        // Tự động ẩn sau 5 giây
+        setTimeout(() => {
+          errorElement.style.display = "none";
+        }, 5000);
+      }
+
+      // Xóa thông báo lỗi
+      function clearError(elementId) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.style.display = "none";
+      }
+
+      function showTab(tabName) {
+        document.querySelectorAll(".tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        document.getElementById(tabName + "Tab").classList.add("active");
+        document
+          .querySelector(`.tab-btn[onclick="showTab('${tabName}')"]`)
+          .classList.add("active");
+
+        if (tabName === "realtime") {
+          initSocket();
+
+          // Nếu chưa có camera, hãy kiểm tra camera
+          if (!isStreaming && availableCameras.length === 0) {
+            checkCameraAvailability();
           }
-          streaming = false;
-          realtimeResult.innerHTML = "Webcam stopped";
-          if (lastEmotions.length > 0) drawOverlay(lastEmotions);
+        } else {
+          // Dừng webcam khi chuyển sang tab khác
+          if (isStreaming) {
+            stopWebcam();
+          }
         }
       }
 
-      function processVideo() {
-        if (!streaming) return;
-
-        if (!video.videoWidth || !video.videoHeight) {
-          console.log("Video not ready, retrying...");
-          setTimeout(processVideo, 100);
-          return;
-        }
-
-        const currentTime = Date.now();
-        if (currentTime - lastProcessedTime < frameInterval) {
-          requestAnimationFrame(processVideo);
-          return;
-        }
-
-        canvas.width = 640;
-        canvas.height = 480;
-        overlayCanvas.width = video.videoWidth;
-        overlayCanvas.height = video.videoHeight;
-
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const imageData = canvas.toDataURL("image/jpeg", 0.9); // Tăng chất lượng lên 90%
-        console.log(
-          "Sending image at:",
-          new Date().toISOString(),
-          "Size:",
-          imageData.length
-        );
-        socket.emit("image", imageData);
-        lastProcessedTime = currentTime;
-
-        requestAnimationFrame(processVideo);
-      }
-
-      function drawOverlay(emotions) {
-        overlayCtx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
-
-        if (!emotions || emotions.length === 0) {
-          realtimeResult.innerHTML = "No faces detected";
-          console.log(
-            "Drawing overlay (no faces) at:",
-            new Date().toISOString()
+      // Kiểm tra các camera có sẵn
+      async function checkCameraAvailability() {
+        try {
+          const devices = await navigator.mediaDevices.enumerateDevices();
+          const videoDevices = devices.filter(
+            (device) => device.kind === "videoinput"
           );
-          return;
-        }
 
-        console.log("Drawing overlay at:", new Date().toISOString());
-        let resultText = "";
-        overlayCtx.font = "20px Arial";
-        overlayCtx.lineWidth = 2;
-        overlayCtx.strokeStyle = "red";
-        overlayCtx.fillStyle = "white";
-
-        emotions.forEach((face) => {
-          if (!face.x || !face.y || !face.w || !face.h) {
-            console.error("Invalid face data:", face);
-            resultText += `Face: ${
-              face.emotion || "Unknown"
-            } (Invalid coordinates)<br>`;
+          if (videoDevices.length === 0) {
+            showError("cameraError", "No cameras found on your device.");
             return;
           }
 
-          overlayCtx.strokeRect(face.x, face.y, face.w, face.h);
-          const text = face.emotion || "Unknown";
-          const textWidth = overlayCtx.measureText(text).width;
-          overlayCtx.fillRect(face.x, face.y - 25, textWidth + 10, 25);
-          overlayCtx.fillStyle = "black";
-          overlayCtx.fillText(text, face.x + 5, face.y - 5);
-          overlayCtx.fillStyle = "white";
+          availableCameras = videoDevices;
 
-          resultText += `Face at (${face.x}, ${face.y}): ${text}<br>`;
-        });
+          // Hiển thị tùy chọn chuyển đổi camera nếu có nhiều hơn 1 camera
+          if (videoDevices.length > 1) {
+            document.getElementById("switchCameraBtn").style.display =
+              "inline-block";
 
-        realtimeResult.innerHTML = resultText || "No valid faces detected";
+            // Hiển thị dropdown chọn camera
+            const cameraSelection = document.getElementById("cameraSelection");
+            cameraSelection.innerHTML = "";
+            cameraSelection.style.display = "inline-block";
+
+            videoDevices.forEach((device, index) => {
+              const option = document.createElement("option");
+              option.value = index;
+              option.text = device.label || `Camera ${index + 1}`;
+              cameraSelection.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error("Error checking cameras:", error);
+          showError(
+            "cameraError",
+            `Could not access camera list: ${error.message}`
+          );
+        }
       }
 
-      socket.on("emotion_result", (data) => {
-        console.log(
-          "Received emotion_result at:",
-          new Date().toISOString(),
-          data
-        );
-        lastEmotions = data.emotions || [];
-        drawOverlay(lastEmotions);
-      });
+      function previewImage() {
+        const fileInput = document.getElementById("fileInput");
+        const preview = document.getElementById("uploadPreview");
+        const errorElement = document.getElementById("fileInputError");
 
-      window.addEventListener("load", () => {
-        if (streaming) processVideo();
-      });
+        clearError("fileInputError");
+
+        if (fileInput.files && fileInput.files[0]) {
+          const file = fileInput.files[0];
+
+          // Kiểm tra loại file
+          if (
+            !file.type.match("image/jpeg") &&
+            !file.type.match("image/jpg") &&
+            !file.type.match("image/png")
+          ) {
+            showError(
+              "fileInputError",
+              "Please select a JPEG or PNG image file."
+            );
+            fileInput.value = "";
+            preview.style.display = "none";
+            return;
+          }
+
+          // Kiểm tra kích thước file (giới hạn 5MB)
+          if (file.size > 5 * 1024 * 1024) {
+            showError(
+              "fileInputError",
+              "File size is too large. Please select a file smaller than 5MB."
+            );
+            fileInput.value = "";
+            preview.style.display = "none";
+            return;
+          }
+
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            // Tải ảnh để lấy kích thước thật
+            const img = new Image();
+            img.onload = function () {
+              // Hiển thị ảnh preview
+              preview.src = e.target.result;
+              preview.style.display = "block";
+              document.getElementById("uploadResult").innerHTML = "";
+            };
+            img.src = e.target.result;
+          };
+
+          reader.onerror = function () {
+            showError(
+              "fileInputError",
+              "Error reading file. Please try again."
+            );
+            preview.style.display = "none";
+          };
+
+          reader.readAsDataURL(file);
+        }
+      }
+
+      function uploadAndPredict() {
+        const fileInput = document.getElementById("fileInput");
+        const uploadLoading = document.getElementById("uploadLoading");
+
+        clearError("fileInputError");
+
+        if (!fileInput.files || !fileInput.files[0]) {
+          showError("fileInputError", "Please select an image first.");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", fileInput.files[0]);
+
+        document.getElementById("uploadResult").innerHTML = "";
+        uploadLoading.style.display = "block";
+
+        fetch("/predict", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            uploadLoading.style.display = "none";
+            displayUploadResult(data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            uploadLoading.style.display = "none";
+            showError("fileInputError", `Error processing: ${error.message}`);
+          });
+      }
+
+      function displayUploadResult(data) {
+        const resultDiv = document.getElementById("uploadResult");
+        resultDiv.innerHTML = "";
+
+        if (data.error) {
+          showError("fileInputError", data.error);
+          return;
+        }
+
+        if (!data.emotions || data.emotions.length === 0) {
+          resultDiv.innerHTML = "<p>No faces detected in the image.</p>";
+          return;
+        }
+
+        // Tạo container cho kết quả
+        const resultContainer = document.createElement("div");
+
+        // Cho mỗi khuôn mặt phát hiện được
+        data.emotions.forEach((result, index) => {
+          const faceResult = document.createElement("div");
+          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
+            result.emotion
+          }</h3>`;
+
+          // Thêm thanh xác suất nếu có
+          if (result.probabilities) {
+            const probContainer = document.createElement("div");
+
+            Object.entries(result.probabilities)
+              .sort((a, b) => b[1] - a[1])
+              .forEach(([emotion, probability]) => {
+                const percentage = Math.round(probability * 100);
+                probContainer.innerHTML += `
+                                <div>
+                                    <span>${emotion}: ${percentage}%</span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: ${percentage}%">${percentage}%</div>
+                                    </div>
+                                </div>
+                            `;
+              });
+
+            faceResult.appendChild(probContainer);
+          }
+
+          resultContainer.appendChild(faceResult);
+        });
+
+        // Vẽ bounding box trên ảnh preview
+        const previewImg = document.getElementById("uploadPreview");
+        const canvas = document.createElement("canvas");
+
+        // Tải ảnh để lấy kích thước thật
+        const img = new Image();
+        img.onload = function () {
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          const ctx = canvas.getContext("2d");
+
+          // Vẽ ảnh
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+          // Vẽ landmarks nếu có
+          if (data.landmarks && data.landmarks.length > 0) {
+            ctx.fillStyle = "#00ff00";
+            data.landmarks.forEach((point) => {
+              ctx.beginPath();
+              ctx.arc(point[0], point[1], 1, 0, 2 * Math.PI);
+              ctx.fill();
+            });
+
+            // Vẽ đường nối landmarks
+            ctx.strokeStyle = "rgba(0, 255, 0, 0.3)";
+            ctx.lineWidth = 0.5;
+            connectLandmarks(ctx, data.landmarks);
+          }
+
+          // Vẽ hình chữ nhật cho mỗi khuôn mặt
+          data.emotions.forEach((result) => {
+            ctx.strokeStyle = "#00ff00";
+            ctx.lineWidth = 2;
+            ctx.strokeRect(result.x, result.y, result.w, result.h);
+
+            // Vẽ nhãn cảm xúc
+            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+            ctx.fillRect(result.x, result.y - 25, 100, 25);
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "16px Arial";
+            ctx.fillText(result.emotion, result.x + 5, result.y - 5);
+          });
+
+          // Thay thế ảnh preview với canvas
+          previewImg.src = canvas.toDataURL();
+
+          resultDiv.appendChild(resultContainer);
+        };
+        img.src = previewImg.src;
+      }
+
+      // Cải thiện hàm vẽ landmarks để vẽ khung xương chính xác
+      function connectLandmarks(ctx, landmarks) {
+        if (landmarks.length < 30) return;
+
+        // Định nghĩa các phần của khuôn mặt để vẽ
+        const faceRegions = [
+          // Đường viền khuôn mặt
+          generatePointIndices(0, landmarks.length / 8),
+
+          // Mắt trái
+          generatePointIndices(landmarks.length / 8, landmarks.length / 6),
+
+          // Mắt phải
+          generatePointIndices(landmarks.length / 6, landmarks.length / 4),
+
+          // Mũi
+          generatePointIndices(landmarks.length / 4, landmarks.length / 3),
+
+          // Miệng
+          generatePointIndices(landmarks.length / 3, landmarks.length / 2),
+        ];
+
+        // Màu cho các phần khác nhau
+        const colors = [
+          "rgba(255, 0, 0, 0.5)", // Đỏ cho viền mặt
+          "rgba(0, 255, 0, 0.5)", // Xanh lá cho mắt trái
+          "rgba(0, 0, 255, 0.5)", // Xanh dương cho mắt phải
+          "rgba(255, 255, 0, 0.5)", // Vàng cho mũi
+          "rgba(255, 0, 255, 0.5)", // Tím cho miệng
+        ];
+
+        // Vẽ các vùng khuôn mặt
+        faceRegions.forEach((region, regionIndex) => {
+          ctx.strokeStyle = colors[regionIndex];
+          ctx.beginPath();
+
+          for (let i = 0; i < region.length; i++) {
+            const idx = region[i];
+            if (idx < landmarks.length) {
+              if (i === 0) {
+                ctx.moveTo(landmarks[idx][0], landmarks[idx][1]);
+              } else {
+                ctx.lineTo(landmarks[idx][0], landmarks[idx][1]);
+              }
+            }
+          }
+
+          // Khép kín đường path nếu cần
+          if (regionIndex !== 2 && regionIndex !== 3) {
+            ctx.closePath();
+          }
+
+          ctx.stroke();
+        });
+      }
+
+      // Hàm tạo các chỉ số điểm theo phạm vi
+      function generatePointIndices(start, end) {
+        const indices = [];
+        start = Math.floor(start);
+        end = Math.floor(end);
+        for (let i = start; i < end; i++) {
+          indices.push(i);
+        }
+        return indices;
+      }
+
+      function toggleWebcam() {
+        if (isStreaming) {
+          stopWebcam();
+          document.getElementById("startBtn").textContent = "Start";
+        } else {
+          startWebcam();
+        }
+      }
+
+      async function startWebcam() {
+        clearError("cameraError");
+
+        try {
+          // Dừng stream hiện tại nếu có
+          if (videoStream) {
+            videoStream.getTracks().forEach((track) => track.stop());
+          }
+
+          // Kiểm tra camera
+          if (availableCameras.length === 0) {
+            await checkCameraAvailability();
+
+            if (availableCameras.length === 0) {
+              throw new Error("No cameras found on your device.");
+            }
+          }
+
+          // Lấy camera hiện tại
+          const selectedCamera = availableCameras[currentCameraIndex];
+
+          const constraints = {
+            video: {
+              deviceId: selectedCamera.deviceId
+                ? { exact: selectedCamera.deviceId }
+                : undefined,
+              width: { ideal: 640 },
+              height: { ideal: 480 },
+            },
+          };
+
+          const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
+          const video = document.getElementById("video");
+          const canvas = document.getElementById("canvas");
+          const landmarksCanvas = document.getElementById("landmarksCanvas");
+
+          videoStream = stream;
+          video.srcObject = stream;
+
+          // Khi video đã sẵn sàng
+          video.onloadedmetadata = () => {
+            video.play();
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            landmarksCanvas.width = video.videoWidth;
+            landmarksCanvas.height = video.videoHeight;
+
+            isStreaming = true;
+            document.getElementById("startBtn").textContent = "Stop";
+
+            // Bắt đầu capture frame
+            requestAnimationFrame(captureFrame);
+          };
+
+          video.onerror = (e) => {
+            console.error("Video error:", e);
+            showError(
+              "cameraError",
+              "Error playing video. Please refresh the page and try again."
+            );
+            stopWebcam();
+          };
+        } catch (error) {
+          console.error("Error accessing webcam:", error);
+
+          // Hiển thị thông báo lỗi tiếng Anh tùy theo loại lỗi
+          let errorMessage = "";
+
+          switch (error.name) {
+            case "NotFoundError":
+              errorMessage =
+                "No camera found. Please check your camera connection.";
+              break;
+            case "NotAllowedError":
+              errorMessage =
+                "Camera access denied. Please allow camera access.";
+              break;
+            case "NotReadableError":
+            case "AbortError":
+              errorMessage =
+                "Could not start camera. Camera may be in use by another application.";
+              break;
+            case "OverconstrainedError":
+              errorMessage =
+                "Camera does not meet requirements. Please check camera settings.";
+              break;
+            case "SecurityError":
+              errorMessage = "Security error accessing camera.";
+              break;
+            case "TypeError":
+              errorMessage = "Invalid data type. Please check settings.";
+              break;
+            default:
+              errorMessage = "Unknown error accessing camera: " + error.message;
+          }
+
+          showError("cameraError", errorMessage);
+
+          // Đặt lại trạng thái
+          isStreaming = false;
+          document.getElementById("startBtn").textContent = "Start";
+        }
+      }
+
+      function stopWebcam() {
+        if (videoStream) {
+          videoStream.getTracks().forEach((track) => track.stop());
+          document.getElementById("video").srcObject = null;
+          isStreaming = false;
+
+          // Xóa canvas
+          const canvas = document.getElementById("canvas");
+          const landmarksCanvas = document.getElementById("landmarksCanvas");
+          const canvasCtx = canvas.getContext("2d");
+          const landmarksCtx = landmarksCanvas.getContext("2d");
+          canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+          landmarksCtx.clearRect(
+            0,
+            0,
+            landmarksCanvas.width,
+            landmarksCanvas.height
+          );
+
+          // Xóa kết quả
+          document.getElementById("realtimeResult").innerHTML = "";
+        }
+      }
+
+      // Chuyển đổi giữa các camera
+      function switchCamera() {
+        if (availableCameras.length <= 1) {
+          showError("cameraError", "No other cameras to switch to.");
+          return;
+        }
+
+        currentCameraIndex = (currentCameraIndex + 1) % availableCameras.length;
+        document.getElementById("cameraSelection").value = currentCameraIndex;
+
+        if (isStreaming) {
+          stopWebcam();
+          startWebcam();
+        }
+      }
+
+      // Chọn camera cụ thể từ dropdown
+      function changeCamera() {
+        const selection = document.getElementById("cameraSelection");
+        const newIndex = parseInt(selection.value);
+
+        if (
+          !isNaN(newIndex) &&
+          newIndex >= 0 &&
+          newIndex < availableCameras.length
+        ) {
+          currentCameraIndex = newIndex;
+
+          if (isStreaming) {
+            stopWebcam();
+            startWebcam();
+          }
+        }
+      }
+
+      function captureFrame() {
+        if (!isStreaming) return;
+
+        const now = Date.now();
+
+        // Giới hạn tốc độ chụp để tránh quá tải hệ thống
+        if (now - lastCaptureTime >= CAPTURE_INTERVAL_MS) {
+          const video = document.getElementById("video");
+
+          try {
+            // Kiểm tra video trước khi xử lý
+            if (video.videoWidth === 0 || video.videoHeight === 0) {
+              console.log("Video dimensions not available yet");
+              requestAnimationFrame(captureFrame);
+              return;
+            }
+
+            const canvas = document.createElement("canvas");
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext("2d");
+
+            // Vẽ frame video vào canvas
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Lấy dữ liệu ảnh dạng base64 với chất lượng thấp hơn để tăng tốc
+            const imageData = canvas.toDataURL("image/jpeg", 0.7);
+
+            // Gửi tới server
+            if (socket && socket.connected) {
+              socket.emit("image", imageData);
+              lastCaptureTime = now;
+            }
+          } catch (error) {
+            console.error("Error capturing frame:", error);
+          }
+        }
+
+        // Tiếp tục vòng lặp
+        requestAnimationFrame(captureFrame);
+      }
+
+      function displayRealtimeResult(data) {
+        const canvas = document.getElementById("canvas");
+        const landmarksCanvas = document.getElementById("landmarksCanvas");
+        const resultDiv = document.getElementById("realtimeResult");
+
+        if (!canvas || !landmarksCanvas) return;
+
+        const ctx = canvas.getContext("2d");
+        const landmarksCtx = landmarksCanvas.getContext("2d");
+
+        // Xóa vẽ trước đó
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        landmarksCtx.clearRect(
+          0,
+          0,
+          landmarksCanvas.width,
+          landmarksCanvas.height
+        );
+
+        // Không phát hiện được khuôn mặt
+        if (!data.emotions || data.emotions.length === 0) {
+          resultDiv.innerHTML = "<p>No faces detected</p>";
+          return;
+        }
+
+        resultDiv.innerHTML = "";
+
+        // Vẽ hình chữ nhật và nhãn cảm xúc
+        data.emotions.forEach((result, index) => {
+          // Vẽ hình chữ nhật
+          ctx.strokeStyle = "#00ff00";
+          ctx.lineWidth = 3;
+          ctx.strokeRect(result.x, result.y, result.w, result.h);
+
+          // Vẽ nhãn cảm xúc
+          ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+          ctx.fillRect(result.x, result.y - 25, 130, 25);
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "16px Arial";
+          ctx.fillText(result.emotion, result.x + 5, result.y - 5);
+
+          // Thêm vào result div (giữ tiếng Anh cho emotion đầu ra)
+          const faceResult = document.createElement("div");
+          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
+            result.emotion
+          }</h3>`;
+          resultDiv.appendChild(faceResult);
+        });
+
+        // Vẽ landmarks nếu có
+        if (data.landmarks && data.landmarks.length > 0) {
+          // Vẽ điểm landmarks
+          landmarksCtx.fillStyle = "#00ff00";
+          data.landmarks.forEach((point) => {
+            landmarksCtx.beginPath();
+            landmarksCtx.arc(point[0], point[1], 1, 0, 2 * Math.PI);
+            landmarksCtx.fill();
+          });
+
+          // Kết nối landmarks với đường để tạo lưới
+          connectLandmarks(landmarksCtx, data.landmarks);
+        }
+      }
+
+      // Khởi tạo khi trang tải
+      window.onload = function () {
+        showTab("upload");
+      };
+
+      // Dọn dẹp khi rời trang
+      window.onbeforeunload = function () {
+        if (isStreaming) {
+          stopWebcam();
+        }
+        if (socket) {
+          socket.disconnect();
+        }
+      };
     </script>
   </body>
 </html>
