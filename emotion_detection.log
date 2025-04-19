@@ -2483,3 +2483,273 @@ KeyError: 0
 2025-03-24 22:24:23,309 - INFO - File đã được lưu tại static/uploads\images.jpg
 2025-03-24 22:24:25,551 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0016135068144649267, 'Fear': 1.0240463780064601e-05, 'Disgust': 0.00025181719684042037, 'Happy': 0.9933993816375732, 'Sad': 0.0037750268820673227, 'Angry': 0.0007039926713332534, 'Neutral': 0.00024599768221378326}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.00014371925499290228, 'Fear': 5.136432719154982e-06, 'Disgust': 6.918090548424516e-06, 'Happy': 0.9982960820198059, 'Sad': 6.580963236046955e-05, 'Angry': 0.0014477003132924438, 'Neutral': 3.464281326159835e-05}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 8.7347922317349e-07, 'Fear': 1.1826961809902059e-07, 'Disgust': 2.553085778345121e-06, 'Happy': 0.9999765157699585, 'Sad': 1.4016979548614472e-05, 'Angry': 2.328121979644493e-07, 'Neutral': 5.6288354244316e-06}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.035711077041924e-05, 'Fear': 4.295575308788102e-07, 'Disgust': 4.836231823901471e-07, 'Happy': 0.9999464750289917, 'Sad': 1.5727860954939388e-05, 'Angry': 1.5294917830033228e-05, 'Neutral': 1.3076853520033183e-06}}]
 2025-03-24 22:24:25,561 - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:25] "POST /predict HTTP/1.1" 200 -
+2025-03-27 22:26:31,962 - INFO - Đã tải mô hình thành công từ ViTBase_RAFDB_f1.pth
+2025-03-27 22:26:31,978 - INFO - Đã tải mô hình ViT thành công
+2025-03-27 22:26:33,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.8.161:5000
+2025-03-27 22:26:33,135 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 22:28:05,258 - INFO - 127.0.0.1 - - [27/Mar/2025 22:28:05] "GET / HTTP/1.1" 200 -
+2025-03-27 22:28:20,680 - INFO - 127.0.0.1 - - [27/Mar/2025 22:28:20] "GET /socket.io/?EIO=4&transport=polling&t=PNOD_HV HTTP/1.1" 200 -
+2025-03-27 22:28:20,851 - INFO - Đã khởi động thread xử lý
+2025-03-27 22:28:20,870 - INFO - 127.0.0.1 - - [27/Mar/2025 22:28:20] "POST /socket.io/?EIO=4&transport=polling&t=PNOD_JJ&sid=gYBOgkG_eKOZedByAAAA HTTP/1.1" 200 -
+2025-03-27 22:28:20,870 - INFO - 127.0.0.1 - - [27/Mar/2025 22:28:20] "GET /socket.io/?EIO=4&transport=polling&t=PNOD_JO&sid=gYBOgkG_eKOZedByAAAA HTTP/1.1" 200 -
+2025-03-27 22:28:20,921 - INFO - 127.0.0.1 - - [27/Mar/2025 22:28:20] "GET /socket.io/?EIO=4&transport=polling&t=PNOD_Mm&sid=gYBOgkG_eKOZedByAAAA HTTP/1.1" 200 -
+2025-03-27 22:31:33,008 - INFO - Nhận được yêu cầu dự đoán
+2025-03-27 22:31:33,098 - INFO - File đã được lưu tại static/uploads\Training_826522.jpg
+2025-03-27 22:31:36,587 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 3, 'y': 0, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.1669270861602854e-05, 'Fear': 3.029298113688128e-06, 'Disgust': 4.0460730815539137e-05, 'Happy': 0.9996237754821777, 'Sad': 2.1472716980497353e-05, 'Angry': 0.0001160491956397891, 'Neutral': 0.00018348931916989386}}]
+2025-03-27 22:31:36,601 - INFO - 127.0.0.1 - - [27/Mar/2025 22:31:36] "POST /predict HTTP/1.1" 200 -
+2025-03-31 17:17:52,778 - ERROR - Lỗi khi tải mô hình: Không tìm thấy file mô hình tại EfficientNetB4_RAFDB_vs1_f1.pth
+2025-03-31 17:17:52,778 - ERROR - Lỗi khi tải mô hình EfficientNetB4: Không tìm thấy file mô hình tại EfficientNetB4_RAFDB_vs1_f1.pth
+2025-03-31 17:17:53,754 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.210:5000
+2025-03-31 17:17:53,755 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-31 17:17:58,265 - INFO - 127.0.0.1 - - [31/Mar/2025 17:17:58] "GET / HTTP/1.1" 200 -
+2025-03-31 17:18:05,078 - INFO - 127.0.0.1 - - [31/Mar/2025 17:18:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-31 17:18:13,850 - INFO - Nhận được yêu cầu dự đoán
+2025-03-31 17:18:13,854 - INFO - File đã được lưu tại static/uploads\Training_706365.jpg
+2025-03-31 17:18:13,888 - ERROR - Lỗi trong predict_emotion: Mô hình chưa được tải
+Traceback (most recent call last):
+  File "d:\Workspace\CTU\Web_LuanVan_Demo\app.py", line 226, in predict_emotion
+    raise ValueError("Mô hình chưa được tải")
+ValueError: Mô hình chưa được tải
+
+2025-03-31 17:18:13,889 - INFO - Kết quả dự đoán: [{'emotion': 'Lỗi: Mô hình chưa được tải', 'x': 0, 'y': 0, 'w': 0, 'h': 0}]
+2025-03-31 17:18:13,890 - INFO - 127.0.0.1 - - [31/Mar/2025 17:18:13] "POST /predict HTTP/1.1" 200 -
+2025-03-31 17:19:15,879 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-03-31 17:19:15,879 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-03-31 17:19:16,759 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.210:5000
+2025-03-31 17:19:16,775 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-31 17:19:23,052 - INFO - 127.0.0.1 - - [31/Mar/2025 17:19:23] "GET / HTTP/1.1" 200 -
+2025-03-31 17:19:29,899 - INFO - Nhận được yêu cầu dự đoán
+2025-03-31 17:19:29,904 - INFO - File đã được lưu tại static/uploads\Training_10022789.jpg
+2025-03-31 17:19:30,596 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 2, 'y': 11, 'w': 33, 'h': 37, 'probabilities': {'Surprise': 5.196818528929725e-05, 'Fear': 6.678299541817978e-06, 'Disgust': 0.06892078369855881, 'Happy': 0.5611978769302368, 'Sad': 0.3697398006916046, 'Angry': 7.34966597519815e-05, 'Neutral': 9.335562026535627e-06}}]
+2025-03-31 17:19:30,596 - INFO - 127.0.0.1 - - [31/Mar/2025 17:19:30] "POST /predict HTTP/1.1" 200 -
+2025-03-31 17:19:33,294 - INFO - 127.0.0.1 - - [31/Mar/2025 17:19:33] "GET /socket.io/?EIO=4&transport=polling&t=PNhjh0c HTTP/1.1" 200 -
+2025-03-31 17:19:33,310 - INFO - Đã khởi động thread xử lý
+2025-03-31 17:19:33,310 - INFO - 127.0.0.1 - - [31/Mar/2025 17:19:33] "GET /socket.io/?EIO=4&transport=polling&t=PNhjh0v&sid=dqqazdYjfZ9OJ9RqAAAA HTTP/1.1" 200 -
+2025-03-31 17:19:33,310 - INFO - 127.0.0.1 - - [31/Mar/2025 17:19:33] "POST /socket.io/?EIO=4&transport=polling&t=PNhjh0t&sid=dqqazdYjfZ9OJ9RqAAAA HTTP/1.1" 200 -
+2025-03-31 17:20:51,800 - INFO - Đã dừng thread xử lý
+2025-03-31 17:20:51,800 - INFO - 127.0.0.1 - - [31/Mar/2025 17:20:51] "GET /socket.io/?EIO=4&transport=websocket&sid=dqqazdYjfZ9OJ9RqAAAA HTTP/1.1" 200 -
+2025-03-31 17:20:51,841 - INFO - 127.0.0.1 - - [31/Mar/2025 17:20:51] "GET / HTTP/1.1" 200 -
+2025-03-31 17:26:19,249 - INFO - Nhận được yêu cầu dự đoán
+2025-03-31 17:26:19,262 - INFO - File đã được lưu tại static/uploads\test_0778_aligned.jpg
+2025-03-31 17:26:19,928 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 0, 'y': 0, 'w': 100, 'h': 100, 'probabilities': {'Surprise': 7.882239287937409e-07, 'Fear': 0.00045960675925016403, 'Disgust': 0.00010546124394750223, 'Happy': 0.9984433054924011, 'Sad': 0.0008268157835118473, 'Angry': 0.0001416427840013057, 'Neutral': 2.243226845166646e-05}}]
+2025-03-31 17:26:19,928 - INFO - 127.0.0.1 - - [31/Mar/2025 17:26:19] "POST /predict HTTP/1.1" 200 -
+2025-03-31 17:27:59,349 - INFO - Nhận được yêu cầu dự đoán
+2025-03-31 17:27:59,373 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-03-31 17:27:59,618 - INFO - Kết quả dự đoán: []
+2025-03-31 17:27:59,618 - INFO - 127.0.0.1 - - [31/Mar/2025 17:27:59] "POST /predict HTTP/1.1" 200 -
+2025-03-31 17:29:16,457 - INFO - Nhận được yêu cầu dự đoán
+2025-03-31 17:29:16,469 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-03-31 17:29:16,678 - INFO - Kết quả dự đoán: []
+2025-03-31 17:29:16,678 - INFO - 127.0.0.1 - - [31/Mar/2025 17:29:16] "POST /predict HTTP/1.1" 200 -
+2025-03-31 17:29:59,262 - INFO - 127.0.0.1 - - [31/Mar/2025 17:29:59] "GET / HTTP/1.1" 200 -
+2025-03-31 17:33:09,245 - INFO - 127.0.0.1 - - [31/Mar/2025 17:33:09] "GET /socket.io/?EIO=4&transport=polling&t=PNhmoDm HTTP/1.1" 200 -
+2025-03-31 17:33:09,312 - INFO - Đã khởi động thread xử lý
+2025-03-31 17:33:09,312 - INFO - 127.0.0.1 - - [31/Mar/2025 17:33:09] "POST /socket.io/?EIO=4&transport=polling&t=PNhmoEA&sid=KDRVhPanDuQvUYAUAAAC HTTP/1.1" 200 -
+2025-03-31 17:33:09,312 - INFO - 127.0.0.1 - - [31/Mar/2025 17:33:09] "GET /socket.io/?EIO=4&transport=polling&t=PNhmoEC&sid=KDRVhPanDuQvUYAUAAAC HTTP/1.1" 200 -
+2025-03-31 17:35:30,299 - INFO - Đã dừng thread xử lý
+2025-03-31 17:35:30,301 - INFO - 127.0.0.1 - - [31/Mar/2025 17:35:30] "GET /socket.io/?EIO=4&transport=websocket&sid=KDRVhPanDuQvUYAUAAAC HTTP/1.1" 200 -
+2025-03-31 17:35:30,317 - INFO - 127.0.0.1 - - [31/Mar/2025 17:35:30] "GET / HTTP/1.1" 200 -
+2025-03-31 17:35:36,479 - INFO - 127.0.0.1 - - [31/Mar/2025 17:35:36] "GET /socket.io/?EIO=4&transport=polling&t=PNhnMAK HTTP/1.1" 200 -
+2025-03-31 17:35:36,519 - INFO - 127.0.0.1 - - [31/Mar/2025 17:35:36] "GET /socket.io/?EIO=4&transport=polling&t=PNhnMAZ.0&sid=2Y8g7RtiG9LNtHgVAAAE HTTP/1.1" 200 -
+2025-03-31 17:35:36,520 - INFO - Đã khởi động thread xử lý
+2025-03-31 17:35:36,542 - INFO - 127.0.0.1 - - [31/Mar/2025 17:35:36] "POST /socket.io/?EIO=4&transport=polling&t=PNhnMAZ&sid=2Y8g7RtiG9LNtHgVAAAE HTTP/1.1" 200 -
+2025-03-31 18:43:15,271 - INFO - Đã dừng thread xử lý
+2025-03-31 18:43:15,287 - INFO - 127.0.0.1 - - [31/Mar/2025 18:43:15] "GET /socket.io/?EIO=4&transport=websocket&sid=2Y8g7RtiG9LNtHgVAAAE HTTP/1.1" 200 -
+2025-04-02 08:23:52,979 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-02 08:23:52,985 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-02 08:23:54,015 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.225.2:5000
+2025-04-02 08:23:54,015 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-02 08:24:04,185 - INFO - 127.0.0.1 - - [02/Apr/2025 08:24:04] "GET / HTTP/1.1" 200 -
+2025-04-02 08:24:13,080 - INFO - 127.0.0.1 - - [02/Apr/2025 08:24:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-02 08:24:14,059 - INFO - 127.0.0.1 - - [02/Apr/2025 08:24:14] "GET /socket.io/?EIO=4&transport=polling&t=PNq6KuV HTTP/1.1" 200 -
+2025-04-02 08:24:14,154 - INFO - Đã khởi động thread xử lý
+2025-04-02 08:24:14,157 - INFO - 127.0.0.1 - - [02/Apr/2025 08:24:14] "POST /socket.io/?EIO=4&transport=polling&t=PNq6KwD&sid=BN0zgEj8mMw-Oon-AAAA HTTP/1.1" 200 -
+2025-04-02 08:24:14,858 - INFO - 127.0.0.1 - - [02/Apr/2025 08:24:14] "GET /socket.io/?EIO=4&transport=polling&t=PNq6L0p&sid=BN0zgEj8mMw-Oon-AAAA HTTP/1.1" 200 -
+2025-04-02 08:24:14,972 - INFO - 127.0.0.1 - - [02/Apr/2025 08:24:14] "GET /socket.io/?EIO=4&transport=polling&t=PNq6L6X&sid=BN0zgEj8mMw-Oon-AAAA HTTP/1.1" 200 -
+2025-04-02 08:29:00,503 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 08:29:00,527 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-04-02 08:29:03,413 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0005156084662303329, 'Fear': 4.513914063863922e-06, 'Disgust': 0.00015400089614558965, 'Happy': 0.6165899038314819, 'Sad': 0.11023478209972382, 'Angry': 0.269226610660553, 'Neutral': 0.003274565329775214}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.002508771140128374, 'Fear': 2.332374833713402e-06, 'Disgust': 2.08632063731784e-05, 'Happy': 0.8591612577438354, 'Sad': 5.45396233064821e-07, 'Angry': 0.13234084844589233, 'Neutral': 0.005965458694845438}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 1.2112953129417292e-07, 'Fear': 2.5267792125305277e-07, 'Disgust': 1.5624819127424416e-07, 'Happy': 0.999997615814209, 'Sad': 1.8490217144062626e-06, 'Angry': 3.735001641302915e-08, 'Neutral': 4.182339363723031e-09}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.3671902908972697e-06, 'Fear': 1.3438052519632038e-06, 'Disgust': 2.402950485702604e-06, 'Happy': 0.9999866485595703, 'Sad': 7.328238638137918e-08, 'Angry': 6.692729130008956e-06, 'Neutral': 5.025212885811925e-07}}]
+2025-04-02 08:29:03,417 - INFO - 127.0.0.1 - - [02/Apr/2025 08:29:03] "POST /predict HTTP/1.1" 200 -
+2025-04-02 08:35:06,212 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-02 08:35:06,232 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-02 08:35:07,239 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.225.2:5000
+2025-04-02 08:35:07,240 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-02 08:35:14,738 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:14] "GET /socket.io/?EIO=4&transport=polling&t=PNq8sCa HTTP/1.1" 200 -
+2025-04-02 08:35:14,816 - INFO - Đã khởi động thread xử lý
+2025-04-02 08:35:14,817 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:14] "POST /socket.io/?EIO=4&transport=polling&t=PNq8sC_&sid=2OF-JGQ_dRkFgaHIAAAA HTTP/1.1" 200 -
+2025-04-02 08:35:14,846 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:14] "GET /socket.io/?EIO=4&transport=polling&t=PNq8sD4&sid=2OF-JGQ_dRkFgaHIAAAA HTTP/1.1" 200 -
+2025-04-02 08:35:14,901 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:14] "GET /socket.io/?EIO=4&transport=polling&t=PNq8sEa&sid=2OF-JGQ_dRkFgaHIAAAA HTTP/1.1" 200 -
+2025-04-02 08:35:19,496 - INFO - Đã dừng thread xử lý
+2025-04-02 08:35:19,506 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:19] "GET /socket.io/?EIO=4&transport=websocket&sid=2OF-JGQ_dRkFgaHIAAAA HTTP/1.1" 200 -
+2025-04-02 08:35:19,738 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:19] "GET / HTTP/1.1" 200 -
+2025-04-02 08:35:24,748 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:24] "GET /socket.io/?EIO=4&transport=polling&t=PNq8ue- HTTP/1.1" 200 -
+2025-04-02 08:35:24,810 - INFO - Đã khởi động thread xử lý
+2025-04-02 08:35:24,810 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:24] "GET /socket.io/?EIO=4&transport=polling&t=PNq8ufi&sid=t2-S7BJKDXRcY_V8AAAC HTTP/1.1" 200 -
+2025-04-02 08:35:24,810 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:24] "POST /socket.io/?EIO=4&transport=polling&t=PNq8ufg&sid=t2-S7BJKDXRcY_V8AAAC HTTP/1.1" 200 -
+2025-04-02 08:35:24,839 - INFO - 127.0.0.1 - - [02/Apr/2025 08:35:24] "GET /socket.io/?EIO=4&transport=polling&t=PNq8ugQ&sid=t2-S7BJKDXRcY_V8AAAC HTTP/1.1" 200 -
+2025-04-02 08:43:02,690 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-02 08:43:02,690 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-02 08:43:03,709 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.225.2:5000
+2025-04-02 08:43:03,709 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-02 08:43:10,212 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:10] "GET /socket.io/?EIO=4&transport=polling&t=PNqAgH2 HTTP/1.1" 200 -
+2025-04-02 08:43:10,277 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:10] "GET /socket.io/?EIO=4&transport=polling&t=PNqAgIj&sid=i1ZBQIVlWl_UDOgtAAAA HTTP/1.1" 200 -
+2025-04-02 08:43:10,278 - INFO - Đã khởi động thread xử lý
+2025-04-02 08:43:10,292 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:10] "POST /socket.io/?EIO=4&transport=polling&t=PNqAgIh&sid=i1ZBQIVlWl_UDOgtAAAA HTTP/1.1" 200 -
+2025-04-02 08:43:11,026 - INFO - Đã dừng thread xử lý
+2025-04-02 08:43:11,026 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:11] "GET /socket.io/?EIO=4&transport=websocket&sid=i1ZBQIVlWl_UDOgtAAAA HTTP/1.1" 200 -
+2025-04-02 08:43:11,074 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:11] "GET / HTTP/1.1" 200 -
+2025-04-02 08:43:16,009 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:16] "GET /socket.io/?EIO=4&transport=polling&t=PNqAhiT HTTP/1.1" 200 -
+2025-04-02 08:43:16,031 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:16] "GET /socket.io/?EIO=4&transport=polling&t=PNqAhin&sid=tYM5bYtdulcUjm7CAAAC HTTP/1.1" 200 -
+2025-04-02 08:43:16,031 - INFO - Đã khởi động thread xử lý
+2025-04-02 08:43:16,046 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:16] "POST /socket.io/?EIO=4&transport=polling&t=PNqAhil&sid=tYM5bYtdulcUjm7CAAAC HTTP/1.1" 200 -
+2025-04-02 08:43:21,415 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 08:43:21,422 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-04-02 08:43:22,341 - INFO - Kết quả dự đoán: []
+2025-04-02 08:43:22,342 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:22] "POST /predict HTTP/1.1" 200 -
+2025-04-02 08:43:27,559 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 08:43:27,567 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-04-02 08:43:30,229 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0005156084662303329, 'Fear': 4.513914063863922e-06, 'Disgust': 0.00015400089614558965, 'Happy': 0.6165899038314819, 'Sad': 0.11023478209972382, 'Angry': 0.269226610660553, 'Neutral': 0.003274565329775214}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.002508771140128374, 'Fear': 2.332374833713402e-06, 'Disgust': 2.08632063731784e-05, 'Happy': 0.8591612577438354, 'Sad': 5.45396233064821e-07, 'Angry': 0.13234084844589233, 'Neutral': 0.005965458694845438}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 1.2112953129417292e-07, 'Fear': 2.5267792125305277e-07, 'Disgust': 1.5624819127424416e-07, 'Happy': 0.999997615814209, 'Sad': 1.8490217144062626e-06, 'Angry': 3.735001641302915e-08, 'Neutral': 4.182339363723031e-09}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.3671902908972697e-06, 'Fear': 1.3438052519632038e-06, 'Disgust': 2.402950485702604e-06, 'Happy': 0.9999866485595703, 'Sad': 7.328238638137918e-08, 'Angry': 6.692729130008956e-06, 'Neutral': 5.025212885811925e-07}}]
+2025-04-02 08:43:30,229 - INFO - 127.0.0.1 - - [02/Apr/2025 08:43:30] "POST /predict HTTP/1.1" 200 -
+2025-04-02 08:50:43,115 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 08:50:43,126 - INFO - File đã được lưu tại static/uploads\Training_10118481.jpg
+2025-04-02 08:50:44,046 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 2, 'y': 10, 'w': 39, 'h': 38, 'probabilities': {'Surprise': 8.556286775274202e-05, 'Fear': 8.060886466410011e-05, 'Disgust': 0.06569776684045792, 'Happy': 0.6729004979133606, 'Sad': 0.001036274479702115, 'Angry': 0.2601940929889679, 'Neutral': 5.1017841542488895e-06}}]
+2025-04-02 08:50:44,046 - INFO - 127.0.0.1 - - [02/Apr/2025 08:50:44] "POST /predict HTTP/1.1" 200 -
+2025-04-02 08:51:27,684 - INFO - Đã dừng thread xử lý
+2025-04-02 08:51:27,686 - INFO - 127.0.0.1 - - [02/Apr/2025 08:51:27] "GET /socket.io/?EIO=4&transport=websocket&sid=tYM5bYtdulcUjm7CAAAC HTTP/1.1" 200 -
+2025-04-02 09:48:48,909 - INFO - 127.0.0.1 - - [02/Apr/2025 09:48:48] "GET /socket.io/?EIO=4&transport=polling&t=PNqPhlJ HTTP/1.1" 200 -
+2025-04-02 09:48:49,108 - INFO - Đã khởi động thread xử lý
+2025-04-02 09:48:49,108 - INFO - 127.0.0.1 - - [02/Apr/2025 09:48:49] "POST /socket.io/?EIO=4&transport=polling&t=PNqPhwq&sid=gE7FKry4P14kxn_pAAAE HTTP/1.1" 200 -
+2025-04-02 09:48:49,380 - INFO - 127.0.0.1 - - [02/Apr/2025 09:48:49] "GET /socket.io/?EIO=4&transport=polling&t=PNqPhws&sid=gE7FKry4P14kxn_pAAAE HTTP/1.1" 200 -
+2025-04-02 09:49:01,336 - INFO - Đã dừng thread xử lý
+2025-04-02 09:49:01,501 - INFO - 127.0.0.1 - - [02/Apr/2025 09:49:01] "GET /socket.io/?EIO=4&transport=websocket&sid=gE7FKry4P14kxn_pAAAE HTTP/1.1" 200 -
+2025-04-02 09:49:08,673 - INFO - 127.0.0.1 - - [02/Apr/2025 09:49:08] "GET / HTTP/1.1" 200 -
+2025-04-02 09:49:52,840 - INFO - 127.0.0.1 - - [02/Apr/2025 09:49:52] "GET / HTTP/1.1" 200 -
+2025-04-02 09:50:10,309 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 09:50:10,309 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-04-02 09:50:10,548 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 09:50:10,548 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-04-02 09:50:10,627 - INFO - Kết quả dự đoán: []
+2025-04-02 09:50:10,627 - INFO - 127.0.0.1 - - [02/Apr/2025 09:50:10] "POST /predict HTTP/1.1" 200 -
+2025-04-02 09:50:11,079 - INFO - Kết quả dự đoán: []
+2025-04-02 09:50:11,080 - INFO - 127.0.0.1 - - [02/Apr/2025 09:50:11] "POST /predict HTTP/1.1" 200 -
+2025-04-02 09:50:21,207 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 09:50:21,211 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-04-02 09:50:22,632 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0005156084662303329, 'Fear': 4.513914063863922e-06, 'Disgust': 0.00015400089614558965, 'Happy': 0.6165899038314819, 'Sad': 0.11023478209972382, 'Angry': 0.269226610660553, 'Neutral': 0.003274565329775214}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.002508771140128374, 'Fear': 2.332374833713402e-06, 'Disgust': 2.08632063731784e-05, 'Happy': 0.8591612577438354, 'Sad': 5.45396233064821e-07, 'Angry': 0.13234084844589233, 'Neutral': 0.005965458694845438}}, {'emotion': 'Happy', 'x': 103, 'y': 86, 'w': 48, 'h': 55, 'probabilities': {'Surprise': 1.2112953129417292e-07, 'Fear': 2.5267792125305277e-07, 'Disgust': 1.5624819127424416e-07, 'Happy': 0.999997615814209, 'Sad': 1.8490217144062626e-06, 'Angry': 3.735001641302915e-08, 'Neutral': 4.182339363723031e-09}}, {'emotion': 'Happy', 'x': 148, 'y': 66, 'w': 55, 'h': 58, 'probabilities': {'Surprise': 2.3671902908972697e-06, 'Fear': 1.3438052519632038e-06, 'Disgust': 2.402950485702604e-06, 'Happy': 0.9999866485595703, 'Sad': 7.328238638137918e-08, 'Angry': 6.692729130008956e-06, 'Neutral': 5.025212885811925e-07}}]
+2025-04-02 09:50:22,632 - INFO - 127.0.0.1 - - [02/Apr/2025 09:50:22] "POST /predict HTTP/1.1" 200 -
+2025-04-02 09:50:30,312 - INFO - 127.0.0.1 - - [02/Apr/2025 09:50:30] "GET /socket.io/?EIO=4&transport=polling&t=PNqQ4eX HTTP/1.1" 200 -
+2025-04-02 09:50:30,325 - INFO - Đã khởi động thread xử lý
+2025-04-02 09:50:30,325 - INFO - 127.0.0.1 - - [02/Apr/2025 09:50:30] "GET /socket.io/?EIO=4&transport=polling&t=PNqQ4ej&sid=rsf9yw5sUdO5JA-vAAAG HTTP/1.1" 200 -
+2025-04-02 09:50:30,325 - INFO - 127.0.0.1 - - [02/Apr/2025 09:50:30] "POST /socket.io/?EIO=4&transport=polling&t=PNqQ4ei&sid=rsf9yw5sUdO5JA-vAAAG HTTP/1.1" 200 -
+2025-04-02 09:52:34,192 - INFO - Nhận được yêu cầu dự đoán
+2025-04-02 09:52:34,196 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-02 09:52:36,441 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-02 09:52:36,442 - INFO - 127.0.0.1 - - [02/Apr/2025 09:52:36] "POST /predict HTTP/1.1" 200 -
+2025-04-02 09:53:46,595 - INFO - Đã dừng thread xử lý
+2025-04-02 09:53:46,610 - INFO - 127.0.0.1 - - [02/Apr/2025 09:53:46] "GET /socket.io/?EIO=4&transport=websocket&sid=rsf9yw5sUdO5JA-vAAAG HTTP/1.1" 200 -
+2025-04-02 13:27:16,006 - INFO - 127.0.0.1 - - [02/Apr/2025 13:27:16] "GET /socket.io/?EIO=4&transport=polling&t=PNrBgvO HTTP/1.1" 200 -
+2025-04-09 14:34:51,605 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-09 14:34:51,608 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-09 14:34:52,532 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.11.47.121:5000
+2025-04-09 14:34:52,533 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 14:35:08,276 - INFO - 127.0.0.1 - - [09/Apr/2025 14:35:08] "GET / HTTP/1.1" 200 -
+2025-04-09 14:35:25,006 - INFO - 127.0.0.1 - - [09/Apr/2025 14:35:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-09 14:35:31,545 - INFO - 127.0.0.1 - - [09/Apr/2025 14:35:31] "GET /socket.io/?EIO=4&transport=polling&t=POPUR_G HTTP/1.1" 200 -
+2025-04-09 14:35:31,570 - INFO - Đã khởi động thread xử lý
+2025-04-09 14:35:31,581 - INFO - 127.0.0.1 - - [09/Apr/2025 14:35:31] "POST /socket.io/?EIO=4&transport=polling&t=POPUR_d&sid=5mSzWIuDZTSw72suAAAA HTTP/1.1" 200 -
+2025-04-09 14:35:31,593 - INFO - 127.0.0.1 - - [09/Apr/2025 14:35:31] "GET /socket.io/?EIO=4&transport=polling&t=POPUR_g&sid=5mSzWIuDZTSw72suAAAA HTTP/1.1" 200 -
+2025-04-09 14:41:06,738 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:41:06,777 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-09 14:41:09,685 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-09 14:41:09,691 - INFO - 127.0.0.1 - - [09/Apr/2025 14:41:09] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:47:48,126 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-09 14:47:48,128 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-09 14:47:49,011 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.11.47.121:5000
+2025-04-09 14:47:49,013 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 14:47:52,533 - INFO - 127.0.0.1 - - [09/Apr/2025 14:47:52] "GET / HTTP/1.1" 200 -
+2025-04-09 14:48:11,785 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:48:11,799 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-09 14:48:17,562 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-09 14:48:17,573 - INFO - 127.0.0.1 - - [09/Apr/2025 14:48:17] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:48:23,873 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:48:23,878 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-04-09 14:48:24,773 - INFO - Kết quả dự đoán: []
+2025-04-09 14:48:24,774 - INFO - 127.0.0.1 - - [09/Apr/2025 14:48:24] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:48:33,648 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:48:33,649 - INFO - File đã được lưu tại static/uploads\test_0005_aligned.jpg
+2025-04-09 14:48:34,193 - INFO - Kết quả dự đoán: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 100, 'h': 100, 'probabilities': {'Surprise': 4.310610179913965e-08, 'Fear': 3.1805488021063866e-08, 'Disgust': 7.086267572731231e-09, 'Happy': 2.022600028794841e-06, 'Sad': 0.999919056892395, 'Angry': 1.887526107635651e-10, 'Neutral': 7.878014730522409e-05}}]
+2025-04-09 14:48:34,194 - INFO - 127.0.0.1 - - [09/Apr/2025 14:48:34] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:50:01,878 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-09 14:50:01,881 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-09 14:50:02,927 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.11.47.121:5000
+2025-04-09 14:50:02,928 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 14:50:09,507 - INFO - 127.0.0.1 - - [09/Apr/2025 14:50:09] "GET / HTTP/1.1" 200 -
+2025-04-09 14:50:20,644 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:50:20,647 - INFO - File đã được lưu tại static/uploads\test_0022_aligned.jpg
+2025-04-09 14:50:21,844 - INFO - Kết quả dự đoán: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 96, 'h': 100, 'probabilities': {'Surprise': 1.8105845356330974e-07, 'Fear': 6.139910624369804e-08, 'Disgust': 3.0710270948475227e-07, 'Happy': 1.6430624222296686e-11, 'Sad': 0.9999986886978149, 'Angry': 1.5706210776400553e-09, 'Neutral': 6.638310310336237e-07}}]
+2025-04-09 14:50:21,866 - INFO - 127.0.0.1 - - [09/Apr/2025 14:50:21] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:50:24,403 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:50:24,411 - INFO - File đã được lưu tại static/uploads\test_0045_aligned.jpg
+2025-04-09 14:50:25,029 - INFO - Kết quả dự đoán: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 97, 'h': 100, 'probabilities': {'Surprise': 7.841545084374957e-06, 'Fear': 1.0208874812178692e-07, 'Disgust': 4.902381611771034e-09, 'Happy': 1.9068288281687273e-07, 'Sad': 0.999990701675415, 'Angry': 4.085768112727095e-10, 'Neutral': 1.219230853166664e-06}}]
+2025-04-09 14:50:25,030 - INFO - 127.0.0.1 - - [09/Apr/2025 14:50:25] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:50:30,072 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:50:30,074 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-09 14:50:32,404 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-09 14:50:32,413 - INFO - 127.0.0.1 - - [09/Apr/2025 14:50:32] "POST /predict HTTP/1.1" 200 -
+2025-04-09 14:56:50,245 - INFO - 127.0.0.1 - - [09/Apr/2025 14:56:50] "GET / HTTP/1.1" 200 -
+2025-04-09 14:57:04,089 - INFO - Nhận được yêu cầu dự đoán
+2025-04-09 14:57:04,112 - INFO - File đã được lưu tại static/uploads\PublicTest_99462811.jpg
+2025-04-09 14:57:05,501 - INFO - Kết quả dự đoán: [{'emotion': 'Neutral', 'x': 3, 'y': 0, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 0.0007142151007428765, 'Fear': 2.9646939125882454e-08, 'Disgust': 0.0061380909755826, 'Happy': 0.10547948628664017, 'Sad': 0.0009517474682070315, 'Angry': 3.7973134681124066e-07, 'Neutral': 0.8867160677909851}}]
+2025-04-09 14:57:05,508 - INFO - 127.0.0.1 - - [09/Apr/2025 14:57:05] "POST /predict HTTP/1.1" 200 -
+2025-04-16 19:30:05,876 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-16 19:30:05,878 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-16 19:30:06,860 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-16 19:30:06,861 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 19:30:14,636 - INFO - 127.0.0.1 - - [16/Apr/2025 19:30:14] "GET / HTTP/1.1" 200 -
+2025-04-16 19:30:14,952 - INFO - 127.0.0.1 - - [16/Apr/2025 19:30:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-16 19:33:00,989 - INFO - Nhận được yêu cầu dự đoán
+2025-04-16 19:33:00,993 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-16 19:33:05,285 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-16 19:33:05,290 - INFO - 127.0.0.1 - - [16/Apr/2025 19:33:05] "POST /predict HTTP/1.1" 200 -
+2025-04-16 19:33:12,039 - INFO - 127.0.0.1 - - [16/Apr/2025 19:33:12] "GET /socket.io/?EIO=4&transport=polling&t=PO-bijY HTTP/1.1" 200 -
+2025-04-16 19:33:12,073 - INFO - Đã khởi động thread xử lý
+2025-04-16 19:33:12,081 - INFO - 127.0.0.1 - - [16/Apr/2025 19:33:12] "POST /socket.io/?EIO=4&transport=polling&t=PO-bijm&sid=sWqNyqkRy5l2OlHZAAAA HTTP/1.1" 200 -
+2025-04-16 19:33:12,090 - INFO - 127.0.0.1 - - [16/Apr/2025 19:33:12] "GET /socket.io/?EIO=4&transport=polling&t=PO-bijp&sid=sWqNyqkRy5l2OlHZAAAA HTTP/1.1" 200 -
+2025-04-16 19:40:52,235 - INFO - Đã dừng thread xử lý
+2025-04-16 19:40:52,236 - INFO - 127.0.0.1 - - [16/Apr/2025 19:40:52] "GET /socket.io/?EIO=4&transport=websocket&sid=sWqNyqkRy5l2OlHZAAAA HTTP/1.1" 200 -
+2025-04-16 19:42:45,296 - INFO - 127.0.0.1 - - [16/Apr/2025 19:42:45] "GET /socket.io/?EIO=4&transport=polling&t=PO-dufo HTTP/1.1" 200 -
+2025-04-16 19:42:45,415 - INFO - Đã khởi động thread xử lý
+2025-04-16 19:42:45,416 - INFO - 127.0.0.1 - - [16/Apr/2025 19:42:45] "POST /socket.io/?EIO=4&transport=polling&t=PO-duhs&sid=CqbD5ygGUGlcW58wAAAC HTTP/1.1" 200 -
+2025-04-16 19:42:45,417 - INFO - 127.0.0.1 - - [16/Apr/2025 19:42:45] "GET /socket.io/?EIO=4&transport=polling&t=PO-duhv&sid=CqbD5ygGUGlcW58wAAAC HTTP/1.1" 200 -
+2025-04-16 19:42:45,458 - INFO - 127.0.0.1 - - [16/Apr/2025 19:42:45] "GET /socket.io/?EIO=4&transport=polling&t=PO-duj5&sid=CqbD5ygGUGlcW58wAAAC HTTP/1.1" 200 -
+2025-04-16 19:47:52,502 - INFO - Đã dừng thread xử lý
+2025-04-16 19:47:52,504 - INFO - 127.0.0.1 - - [16/Apr/2025 19:47:52] "GET /socket.io/?EIO=4&transport=websocket&sid=CqbD5ygGUGlcW58wAAAC HTTP/1.1" 200 -
