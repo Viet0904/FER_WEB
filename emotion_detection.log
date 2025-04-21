@@ -2820,3 +2820,1241 @@ ValueError: Mô hình chưa được tải
 2025-04-19 12:22:11,254 - INFO - 127.0.0.1 - - [19/Apr/2025 12:22:11] "POST /predict HTTP/1.1" 200 -
 2025-04-19 12:22:28,230 - INFO - Đã dừng thread xử lý
 2025-04-19 12:22:28,231 - INFO - 127.0.0.1 - - [19/Apr/2025 12:22:28] "GET /socket.io/?EIO=4&transport=websocket&sid=fSHZKOmcM_WBGq6IAAAA HTTP/1.1" 200 -
+2025-04-21 21:57:39,486 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 21:57:39,491 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 21:57:40,459 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 21:57:40,468 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 21:58:40,407 - INFO - 127.0.0.1 - - [21/Apr/2025 21:58:40] "GET / HTTP/1.1" 200 -
+2025-04-21 21:58:42,647 - INFO - 127.0.0.1 - - [21/Apr/2025 21:58:42] "GET /socket.io/?EIO=4&transport=polling&t=PPOsyv8 HTTP/1.1" 200 -
+2025-04-21 21:58:42,894 - INFO - Đã khởi động thread xử lý
+2025-04-21 21:58:42,963 - INFO - 127.0.0.1 - - [21/Apr/2025 21:58:42] "POST /socket.io/?EIO=4&transport=polling&t=PPOsy-h&sid=6EBxWKbwGgQOGmTbAAAA HTTP/1.1" 200 -
+2025-04-21 21:58:43,026 - INFO - 127.0.0.1 - - [21/Apr/2025 21:58:43] "GET /socket.io/?EIO=4&transport=polling&t=PPOsy-j&sid=6EBxWKbwGgQOGmTbAAAA HTTP/1.1" 200 -
+2025-04-21 21:58:48,467 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 21:58:48,472 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 21:58:52,517 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-21 21:58:52,523 - INFO - 127.0.0.1 - - [21/Apr/2025 21:58:52] "POST /predict HTTP/1.1" 200 -
+2025-04-21 21:59:00,653 - INFO - Đã dừng thread xử lý
+2025-04-21 21:59:00,655 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:00] "GET /socket.io/?EIO=4&transport=websocket&sid=6EBxWKbwGgQOGmTbAAAA HTTP/1.1" 200 -
+2025-04-21 21:59:00,698 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:00] "GET / HTTP/1.1" 200 -
+2025-04-21 21:59:23,608 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 21:59:23,611 - INFO - File đã được lưu tại static/uploads\IMG_4346.PNG
+2025-04-21 21:59:25,791 - INFO - Kết quả dự đoán: [{'emotion': 'Angry', 'x': 309, 'y': 2256, 'w': 58, 'h': 58, 'probabilities': {'Surprise': 1.1564982287382009e-06, 'Fear': 0.013285590335726738, 'Disgust': 0.0006098605808801949, 'Happy': 5.408878132584505e-05, 'Sad': 0.01156868040561676, 'Angry': 0.970613956451416, 'Neutral': 0.0038666625041514635}}, {'emotion': 'Angry', 'x': 702, 'y': 1409, 'w': 78, 'h': 78, 'probabilities': {'Surprise': 6.516028861369705e-06, 'Fear': 0.01915406994521618, 'Disgust': 1.2718406651401892e-05, 'Happy': 0.0012323042610660195, 'Sad': 0.02283143624663353, 'Angry': 0.6216978430747986, 'Neutral': 0.33506515622138977}}]
+2025-04-21 21:59:25,793 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:25] "POST /predict HTTP/1.1" 200 -
+2025-04-21 21:59:32,099 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 21:59:32,107 - INFO - File đã được lưu tại static/uploads\IMG_4346.PNG
+2025-04-21 21:59:33,118 - INFO - Kết quả dự đoán: [{'emotion': 'Angry', 'x': 702, 'y': 1409, 'w': 78, 'h': 78, 'probabilities': {'Surprise': 6.516028861369705e-06, 'Fear': 0.01915406994521618, 'Disgust': 1.2718406651401892e-05, 'Happy': 0.0012323042610660195, 'Sad': 0.02283143624663353, 'Angry': 0.6216978430747986, 'Neutral': 0.33506515622138977}}, {'emotion': 'Angry', 'x': 309, 'y': 2256, 'w': 58, 'h': 58, 'probabilities': {'Surprise': 1.1564982287382009e-06, 'Fear': 0.013285590335726738, 'Disgust': 0.0006098605808801949, 'Happy': 5.408878132584505e-05, 'Sad': 0.01156868040561676, 'Angry': 0.970613956451416, 'Neutral': 0.0038666625041514635}}]
+2025-04-21 21:59:33,122 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:33] "POST /predict HTTP/1.1" 200 -
+2025-04-21 21:59:37,706 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 21:59:37,712 - INFO - File đã được lưu tại static/uploads\2025-01-19_13-23-25.png
+2025-04-21 21:59:38,701 - INFO - Kết quả dự đoán: [{'emotion': 'Angry', 'x': 599, 'y': 628, 'w': 56, 'h': 56, 'probabilities': {'Surprise': 4.294912425706343e-09, 'Fear': 3.273858510510763e-06, 'Disgust': 5.654095594498365e-11, 'Happy': 9.47792341321474e-06, 'Sad': 0.020473789423704147, 'Angry': 0.9793667197227478, 'Neutral': 0.00014675530837848783}}]
+2025-04-21 21:59:38,704 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:38] "POST /predict HTTP/1.1" 200 -
+2025-04-21 21:59:48,681 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 21:59:48,687 - INFO - File đã được lưu tại static/uploads\2025-01-19_13-23-25.png
+2025-04-21 21:59:49,308 - INFO - Kết quả dự đoán: [{'emotion': 'Angry', 'x': 599, 'y': 628, 'w': 56, 'h': 56, 'probabilities': {'Surprise': 4.294912425706343e-09, 'Fear': 3.273858510510763e-06, 'Disgust': 5.654095594498365e-11, 'Happy': 9.47792341321474e-06, 'Sad': 0.020473789423704147, 'Angry': 0.9793667197227478, 'Neutral': 0.00014675530837848783}}]
+2025-04-21 21:59:49,309 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:49] "POST /predict HTTP/1.1" 200 -
+2025-04-21 21:59:55,673 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 21:59:55,678 - INFO - File đã được lưu tại static/uploads\re-co-tranh.jpg
+2025-04-21 21:59:56,108 - INFO - Kết quả dự đoán: []
+2025-04-21 21:59:56,109 - INFO - 127.0.0.1 - - [21/Apr/2025 21:59:56] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:00:02,905 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:00:02,915 - INFO - File đã được lưu tại static/uploads\Screenshot_2025-01-12_092240.png
+2025-04-21 22:00:03,154 - INFO - Kết quả dự đoán: []
+2025-04-21 22:00:03,155 - INFO - 127.0.0.1 - - [21/Apr/2025 22:00:03] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:00:07,777 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:00:07,780 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:00:11,557 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-21 22:00:11,560 - INFO - 127.0.0.1 - - [21/Apr/2025 22:00:11] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:00:23,097 - INFO - 127.0.0.1 - - [21/Apr/2025 22:00:23] "GET /socket.io/?EIO=4&transport=polling&t=PPOtLUr HTTP/1.1" 200 -
+2025-04-21 22:00:23,114 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:00:23,117 - INFO - 127.0.0.1 - - [21/Apr/2025 22:00:23] "POST /socket.io/?EIO=4&transport=polling&t=PPOtLV7&sid=GuyTVo6f6ZC9vLWHAAAC HTTP/1.1" 200 -
+2025-04-21 22:00:23,123 - INFO - 127.0.0.1 - - [21/Apr/2025 22:00:23] "GET /socket.io/?EIO=4&transport=polling&t=PPOtLV7.0&sid=GuyTVo6f6ZC9vLWHAAAC HTTP/1.1" 200 -
+2025-04-21 22:01:14,547 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:01:14,556 - INFO - File đã được lưu tại static/uploads\PrivateTest_528072.jpg
+2025-04-21 22:01:15,267 - INFO - Kết quả dự đoán: [{'emotion': 'Sad', 'x': 3, 'y': 0, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 7.070301307976479e-06, 'Fear': 0.004861199297010899, 'Disgust': 3.99625969293993e-06, 'Happy': 0.22878043353557587, 'Sad': 0.7662443518638611, 'Angry': 6.219417991815135e-05, 'Neutral': 4.075403558090329e-05}}]
+2025-04-21 22:01:15,271 - INFO - 127.0.0.1 - - [21/Apr/2025 22:01:15] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:05:06,974 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:05:06,982 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:05:07,987 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:05:08,003 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:05:24,058 - INFO - 127.0.0.1 - - [21/Apr/2025 22:05:24] "GET / HTTP/1.1" 200 -
+2025-04-21 22:05:34,508 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:05:34,510 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:05:35,569 - INFO - Kết quả dự đoán: [{'emotion': 'Sad', 'x': 20, 'y': 0, 'w': 360, 'h': 380, 'probabilities': {'Surprise': 1.643573000364995e-06, 'Fear': 0.002581520937383175, 'Disgust': 4.987922466170858e-07, 'Happy': 0.060359224677085876, 'Sad': 0.9370059967041016, 'Angry': 4.910198549623601e-05, 'Neutral': 2.0236257114447653e-06}}]
+2025-04-21 22:05:35,571 - INFO - 127.0.0.1 - - [21/Apr/2025 22:05:35] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:05:41,732 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:05:41,752 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:05:42,526 - INFO - Kết quả dự đoán: [{'emotion': 'Sad', 'x': 0, 'y': 0, 'w': 378, 'h': 380, 'probabilities': {'Surprise': 5.866751052963082e-06, 'Fear': 1.2756806427205447e-05, 'Disgust': 1.1472812730062287e-05, 'Happy': 1.7248265749003622e-06, 'Sad': 0.9999539852142334, 'Angry': 2.781595185297192e-07, 'Neutral': 1.3952328117738944e-05}}]
+2025-04-21 22:05:42,527 - INFO - 127.0.0.1 - - [21/Apr/2025 22:05:42] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:05:48,012 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:05:48,015 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:05:48,727 - INFO - Kết quả dự đoán: [{'emotion': 'Neutral', 'x': 278, 'y': 30, 'w': 55, 'h': 64, 'probabilities': {'Surprise': 1.7506773701825296e-06, 'Fear': 2.4823683020258613e-07, 'Disgust': 1.5686133565395721e-06, 'Happy': 5.229808266449254e-06, 'Sad': 2.3127782696974464e-05, 'Angry': 0.003609522944316268, 'Neutral': 0.9963585734367371}}]
+2025-04-21 22:05:48,729 - INFO - 127.0.0.1 - - [21/Apr/2025 22:05:48] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:05:52,757 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:05:52,760 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:05:53,578 - INFO - Kết quả dự đoán: []
+2025-04-21 22:05:53,579 - INFO - 127.0.0.1 - - [21/Apr/2025 22:05:53] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:05:57,354 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:05:57,357 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:05:57,487 - INFO - Kết quả dự đoán: []
+2025-04-21 22:05:57,487 - INFO - 127.0.0.1 - - [21/Apr/2025 22:05:57] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:06:01,651 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:06:01,654 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:06:01,747 - INFO - Kết quả dự đoán: []
+2025-04-21 22:06:01,748 - INFO - 127.0.0.1 - - [21/Apr/2025 22:06:01] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:06:03,259 - INFO - 127.0.0.1 - - [21/Apr/2025 22:06:03] "GET /socket.io/?EIO=4&transport=polling&t=PPOueXr HTTP/1.1" 200 -
+2025-04-21 22:06:03,277 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:06:03,283 - INFO - 127.0.0.1 - - [21/Apr/2025 22:06:03] "POST /socket.io/?EIO=4&transport=polling&t=PPOueY2&sid=7ijU20rYKErJ-dXsAAAA HTTP/1.1" 200 -
+2025-04-21 22:06:03,286 - INFO - 127.0.0.1 - - [21/Apr/2025 22:06:03] "GET /socket.io/?EIO=4&transport=polling&t=PPOueY6&sid=7ijU20rYKErJ-dXsAAAA HTTP/1.1" 200 -
+2025-04-21 22:06:23,080 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:06:23,082 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:06:25,099 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 94, 'probabilities': {'Surprise': 9.32267721509561e-06, 'Fear': 5.953519575996324e-06, 'Disgust': 2.694182740015094e-06, 'Happy': 0.9995104074478149, 'Sad': 1.7256857972824946e-05, 'Angry': 0.00043804908636957407, 'Neutral': 1.6322688679792918e-05}}, {'emotion': 'Angry', 'x': 214, 'y': 53, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.4330382436256173e-09, 'Fear': 5.2627619879785925e-06, 'Disgust': 5.342026473953432e-11, 'Happy': 0.05057616904377937, 'Sad': 5.440431438685778e-11, 'Angry': 0.9494186043739319, 'Neutral': 1.5988627311003256e-08}}, {'emotion': 'Happy', 'x': 286, 'y': 165, 'w': 94, 'h': 108, 'probabilities': {'Surprise': 2.0364318231713696e-08, 'Fear': 3.2830004670358903e-07, 'Disgust': 6.718040594932972e-07, 'Happy': 0.9999986886978149, 'Sad': 1.1689650136759155e-08, 'Angry': 4.299957367948082e-08, 'Neutral': 2.5522038527014956e-07}}, {'emotion': 'Happy', 'x': 159, 'y': 190, 'w': 102, 'h': 112, 'probabilities': {'Surprise': 1.8387651152806939e-06, 'Fear': 5.6172002160792545e-08, 'Disgust': 1.236977482221846e-06, 'Happy': 0.9999902248382568, 'Sad': 4.31288253821549e-06, 'Angry': 1.0206499609921593e-06, 'Neutral': 1.3485691852110904e-06}}]
+2025-04-21 22:06:25,103 - INFO - 127.0.0.1 - - [21/Apr/2025 22:06:25] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:07:02,253 - INFO - Đã dừng thread xử lý
+2025-04-21 22:07:02,257 - INFO - 127.0.0.1 - - [21/Apr/2025 22:07:02] "GET /socket.io/?EIO=4&transport=websocket&sid=7ijU20rYKErJ-dXsAAAA HTTP/1.1" 200 -
+2025-04-21 22:07:02,275 - INFO - 127.0.0.1 - - [21/Apr/2025 22:07:02] "GET / HTTP/1.1" 200 -
+2025-04-21 22:07:09,226 - INFO - 127.0.0.1 - - [21/Apr/2025 22:07:09] "GET /socket.io/?EIO=4&transport=polling&t=PPOuueb HTTP/1.1" 200 -
+2025-04-21 22:07:09,238 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:07:09,239 - INFO - 127.0.0.1 - - [21/Apr/2025 22:07:09] "POST /socket.io/?EIO=4&transport=polling&t=PPOuuem&sid=cXWrHQtNueVhD-LaAAAC HTTP/1.1" 200 -
+2025-04-21 22:07:09,252 - INFO - 127.0.0.1 - - [21/Apr/2025 22:07:09] "GET /socket.io/?EIO=4&transport=polling&t=PPOuuen&sid=cXWrHQtNueVhD-LaAAAC HTTP/1.1" 200 -
+2025-04-21 22:07:18,376 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:07:18,378 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:07:20,246 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 93, 'probabilities': {'Surprise': 4.083665771759115e-06, 'Fear': 3.4897145724244183e-06, 'Disgust': 1.5108153093024157e-06, 'Happy': 0.9994245767593384, 'Sad': 1.3414198292593937e-05, 'Angry': 0.0005464346031658351, 'Neutral': 6.531257895403542e-06}}, {'emotion': 'Angry', 'x': 214, 'y': 54, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.1411456224408312e-09, 'Fear': 1.3619661558550433e-06, 'Disgust': 1.321157766520642e-11, 'Happy': 0.04052577540278435, 'Sad': 1.719484277185046e-10, 'Angry': 0.9594728946685791, 'Neutral': 3.7064344926562853e-09}}, {'emotion': 'Happy', 'x': 287, 'y': 165, 'w': 93, 'h': 108, 'probabilities': {'Surprise': 9.877863860197067e-09, 'Fear': 4.3208621036683326e-07, 'Disgust': 6.061861768102972e-07, 'Happy': 0.9999985694885254, 'Sad': 1.632960788811033e-08, 'Angry': 4.166890121837241e-08, 'Neutral': 3.651824442840734e-07}}, {'emotion': 'Happy', 'x': 158, 'y': 192, 'w': 99, 'h': 110, 'probabilities': {'Surprise': 2.0144084373896476e-06, 'Fear': 1.228452504165034e-07, 'Disgust': 4.579495453072013e-06, 'Happy': 0.9999825954437256, 'Sad': 5.473631063068751e-06, 'Angry': 3.354449290782213e-06, 'Neutral': 1.9289343526907032e-06}}]
+2025-04-21 22:07:20,250 - INFO - 127.0.0.1 - - [21/Apr/2025 22:07:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:08:17,705 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:08:17,706 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:08:20,582 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 94, 'probabilities': {'Surprise': 9.32267721509561e-06, 'Fear': 5.953519575996324e-06, 'Disgust': 2.694182740015094e-06, 'Happy': 0.9995104074478149, 'Sad': 1.7256857972824946e-05, 'Angry': 0.00043804908636957407, 'Neutral': 1.6322688679792918e-05}}, {'emotion': 'Angry', 'x': 214, 'y': 53, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.4330382436256173e-09, 'Fear': 5.2627619879785925e-06, 'Disgust': 5.342026473953432e-11, 'Happy': 0.05057616904377937, 'Sad': 5.440431438685778e-11, 'Angry': 0.9494186043739319, 'Neutral': 1.5988627311003256e-08}}, {'emotion': 'Happy', 'x': 286, 'y': 165, 'w': 94, 'h': 108, 'probabilities': {'Surprise': 2.0364318231713696e-08, 'Fear': 3.2830004670358903e-07, 'Disgust': 6.718040594932972e-07, 'Happy': 0.9999986886978149, 'Sad': 1.1689650136759155e-08, 'Angry': 4.299957367948082e-08, 'Neutral': 2.5522038527014956e-07}}, {'emotion': 'Happy', 'x': 159, 'y': 190, 'w': 102, 'h': 112, 'probabilities': {'Surprise': 1.8387651152806939e-06, 'Fear': 5.6172002160792545e-08, 'Disgust': 1.236977482221846e-06, 'Happy': 0.9999902248382568, 'Sad': 4.31288253821549e-06, 'Angry': 1.0206499609921593e-06, 'Neutral': 1.3485691852110904e-06}}, {'emotion': 'Happy', 'x': 143, 'y': 114, 'w': 108, 'h': 171, 'probabilities': {'Surprise': 0.001153013901785016, 'Fear': 7.607979569002055e-06, 'Disgust': 3.330620893393643e-05, 'Happy': 0.9956569671630859, 'Sad': 0.00031419031438417733, 'Angry': 0.0026493913028389215, 'Neutral': 0.00018557324074208736}}]
+2025-04-21 22:08:20,584 - INFO - 127.0.0.1 - - [21/Apr/2025 22:08:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:09:14,667 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:09:14,671 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:09:15,870 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 213, 'y': 64, 'w': 167, 'h': 245, 'probabilities': {'Surprise': 6.374979761858413e-07, 'Fear': 6.575085080839926e-07, 'Disgust': 1.112059544539079e-05, 'Happy': 0.9999865293502808, 'Sad': 3.0818316787417643e-08, 'Angry': 1.9149484842273523e-07, 'Neutral': 8.565515372538357e-07}}, {'emotion': 'Happy', 'x': 110, 'y': 91, 'w': 173, 'h': 199, 'probabilities': {'Surprise': 0.0008737740572541952, 'Fear': 6.56681222608313e-05, 'Disgust': 0.00020048313308507204, 'Happy': 0.8863595724105835, 'Sad': 0.06472374498844147, 'Angry': 0.047499578446149826, 'Neutral': 0.0002773099113255739}}]
+2025-04-21 22:09:15,875 - INFO - 127.0.0.1 - - [21/Apr/2025 22:09:15] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:10:03,368 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:10:03,370 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:10:03,937 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 215, 'y': 63, 'w': 165, 'h': 246, 'probabilities': {'Surprise': 8.410326017838088e-07, 'Fear': 8.162411404555314e-07, 'Disgust': 1.4071079931454733e-05, 'Happy': 0.9999834299087524, 'Sad': 3.3488550599258815e-08, 'Angry': 2.604388669169566e-07, 'Neutral': 5.898044719288009e-07}}]
+2025-04-21 22:10:03,938 - INFO - 127.0.0.1 - - [21/Apr/2025 22:10:03] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:10:07,421 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:10:07,428 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:10:09,138 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 54, 'y': 67, 'w': 248, 'h': 280, 'probabilities': {'Surprise': 5.464850687530998e-07, 'Fear': 1.9140429241559787e-09, 'Disgust': 2.2918912634395383e-07, 'Happy': 0.999998927116394, 'Sad': 6.652364703541025e-08, 'Angry': 1.4956506033669825e-09, 'Neutral': 1.0716031795254821e-07}}, {'emotion': 'Happy', 'x': 184, 'y': 60, 'w': 196, 'h': 238, 'probabilities': {'Surprise': 0.004382779821753502, 'Fear': 1.2025691376038594e-06, 'Disgust': 2.1655712771462277e-05, 'Happy': 0.9944695234298706, 'Sad': 0.0007303794263862073, 'Angry': 0.00020340332412160933, 'Neutral': 0.00019093365699518472}}]
+2025-04-21 22:10:09,142 - INFO - 127.0.0.1 - - [21/Apr/2025 22:10:09] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:11:21,325 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:11:21,329 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:11:22,292 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:11:22,292 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:11:24,683 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:24] "GET / HTTP/1.1" 200 -
+2025-04-21 22:11:25,358 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:25] "GET /socket.io/?EIO=4&transport=polling&t=PPOvtAf HTTP/1.1" 200 -
+2025-04-21 22:11:25,391 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:11:25,392 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:25] "POST /socket.io/?EIO=4&transport=polling&t=PPOvtAy&sid=eMxb4bqehDAbfkWXAAAA HTTP/1.1" 200 -
+2025-04-21 22:11:25,436 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:25] "GET /socket.io/?EIO=4&transport=polling&t=PPOvtBt&sid=eMxb4bqehDAbfkWXAAAA HTTP/1.1" 200 -
+2025-04-21 22:11:25,482 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:25] "GET /socket.io/?EIO=4&transport=polling&t=PPOvtCH&sid=eMxb4bqehDAbfkWXAAAA HTTP/1.1" 200 -
+2025-04-21 22:11:34,126 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:34] "GET / HTTP/1.1" 200 -
+2025-04-21 22:11:35,100 - INFO - Đã dừng thread xử lý
+2025-04-21 22:11:35,102 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:35] "GET /socket.io/?EIO=4&transport=websocket&sid=eMxb4bqehDAbfkWXAAAA HTTP/1.1" 200 -
+2025-04-21 22:11:36,392 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:36] "GET / HTTP/1.1" 200 -
+2025-04-21 22:11:44,528 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:11:44,533 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:11:46,180 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 32, 'y': 39, 'w': 146, 'h': 166, 'probabilities': {'Surprise': 5.386384032135538e-07, 'Fear': 2.3772175339331625e-09, 'Disgust': 2.5032321104845323e-07, 'Happy': 0.999998927116394, 'Sad': 1.2839728924518568e-07, 'Angry': 1.2110090708006283e-09, 'Neutral': 8.348630586851868e-08}}]
+2025-04-21 22:11:46,185 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:46] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:11:51,253 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:11:51,254 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:11:53,095 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 126, 'y': 38, 'w': 98, 'h': 143, 'probabilities': {'Surprise': 9.45651663641911e-08, 'Fear': 6.206788327745016e-08, 'Disgust': 2.5592751171643613e-06, 'Happy': 0.9999964237213135, 'Sad': 1.0316194121173794e-08, 'Angry': 5.508640654738883e-08, 'Neutral': 8.068129204730212e-07}}, {'emotion': 'Happy', 'x': 28, 'y': 27, 'w': 176, 'h': 177, 'probabilities': {'Surprise': 0.0001027058606268838, 'Fear': 8.352503755304497e-06, 'Disgust': 0.012119345366954803, 'Happy': 0.9852281808853149, 'Sad': 0.0024104563053697348, 'Angry': 7.3579603849793784e-06, 'Neutral': 0.0001235941454069689}}]
+2025-04-21 22:11:53,096 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:53] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:11:57,151 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:11:57,157 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:11:59,902 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 52, 'y': 43, 'w': 52, 'h': 56, 'probabilities': {'Surprise': 1.9644205622171285e-06, 'Fear': 1.3731921171711292e-05, 'Disgust': 1.143011786552961e-06, 'Happy': 0.9994956254959106, 'Sad': 0.00010260296403430402, 'Angry': 0.0003831640351563692, 'Neutral': 1.7309652093899786e-06}}, {'emotion': 'Angry', 'x': 125, 'y': 31, 'w': 39, 'h': 43, 'probabilities': {'Surprise': 5.345148679225531e-07, 'Fear': 2.2034364519640803e-05, 'Disgust': 2.7002908797868486e-09, 'Happy': 0.08753037452697754, 'Sad': 4.69802188263202e-08, 'Angry': 0.9124467968940735, 'Neutral': 1.8959173075927538e-07}}, {'emotion': 'Happy', 'x': 92, 'y': 111, 'w': 61, 'h': 67, 'probabilities': {'Surprise': 3.3692406304908218e-06, 'Fear': 1.5971019706739753e-07, 'Disgust': 1.4475599527941085e-05, 'Happy': 0.9999802112579346, 'Sad': 1.0260855560773052e-06, 'Angry': 1.083519975964009e-07, 'Neutral': 5.421646847025841e-07}}, {'emotion': 'Happy', 'x': 169, 'y': 97, 'w': 55, 'h': 63, 'probabilities': {'Surprise': 2.577870077402622e-07, 'Fear': 6.498520974673738e-07, 'Disgust': 5.930512543272926e-07, 'Happy': 0.9999971389770508, 'Sad': 2.0829276081713033e-07, 'Angry': 4.212049873331125e-07, 'Neutral': 5.479395213114913e-07}}]
+2025-04-21 22:11:59,907 - INFO - 127.0.0.1 - - [21/Apr/2025 22:11:59] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:12:39,440 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:12:39,442 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:12:40,320 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:12:40,323 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:12:56,230 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:12:56,232 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:12:57,117 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:12:57,117 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:12:58,988 - INFO - 127.0.0.1 - - [21/Apr/2025 22:12:58] "GET / HTTP/1.1" 200 -
+2025-04-21 22:13:04,438 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:13:04,817 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:13:06,113 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 54, 'y': 67, 'w': 248, 'h': 280, 'probabilities': {'Surprise': 5.464850687530998e-07, 'Fear': 1.9140429241559787e-09, 'Disgust': 2.2918912634395383e-07, 'Happy': 0.999998927116394, 'Sad': 6.652364703541025e-08, 'Angry': 1.4956506033669825e-09, 'Neutral': 1.0716031795254821e-07}}]
+2025-04-21 22:13:06,114 - INFO - 127.0.0.1 - - [21/Apr/2025 22:13:06] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:13:09,838 - INFO - 127.0.0.1 - - [21/Apr/2025 22:13:09] "GET /socket.io/?EIO=4&transport=polling&t=PPOwGh6 HTTP/1.1" 200 -
+2025-04-21 22:13:09,852 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:13:09,857 - INFO - 127.0.0.1 - - [21/Apr/2025 22:13:09] "POST /socket.io/?EIO=4&transport=polling&t=PPOwGhN&sid=Tvr7Zom0B362lJdrAAAA HTTP/1.1" 200 -
+2025-04-21 22:13:09,862 - INFO - 127.0.0.1 - - [21/Apr/2025 22:13:09] "GET /socket.io/?EIO=4&transport=polling&t=PPOwGhO&sid=Tvr7Zom0B362lJdrAAAA HTTP/1.1" 200 -
+2025-04-21 22:13:11,163 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:13:11,166 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:13:12,412 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 213, 'y': 64, 'w': 167, 'h': 245, 'probabilities': {'Surprise': 6.374979761858413e-07, 'Fear': 6.575085080839926e-07, 'Disgust': 1.112059544539079e-05, 'Happy': 0.9999865293502808, 'Sad': 3.0818316787417643e-08, 'Angry': 1.9149484842273523e-07, 'Neutral': 8.565515372538357e-07}}, {'emotion': 'Happy', 'x': 49, 'y': 47, 'w': 295, 'h': 301, 'probabilities': {'Surprise': 0.0006865581963211298, 'Fear': 3.183280205121264e-05, 'Disgust': 0.024201536551117897, 'Happy': 0.9665191173553467, 'Sad': 0.004929754417389631, 'Angry': 1.8577386072138324e-05, 'Neutral': 0.0036126445047557354}}]
+2025-04-21 22:13:12,414 - INFO - 127.0.0.1 - - [21/Apr/2025 22:13:12] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:13:20,884 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:13:20,886 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:13:23,171 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 94, 'probabilities': {'Surprise': 9.32267721509561e-06, 'Fear': 5.953519575996324e-06, 'Disgust': 2.694182740015094e-06, 'Happy': 0.9995104074478149, 'Sad': 1.7256857972824946e-05, 'Angry': 0.00043804908636957407, 'Neutral': 1.6322688679792918e-05}}, {'emotion': 'Angry', 'x': 214, 'y': 53, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.4330382436256173e-09, 'Fear': 5.2627619879785925e-06, 'Disgust': 5.342026473953432e-11, 'Happy': 0.05057616904377937, 'Sad': 5.440431438685778e-11, 'Angry': 0.9494186043739319, 'Neutral': 1.5988627311003256e-08}}, {'emotion': 'Happy', 'x': 286, 'y': 165, 'w': 94, 'h': 108, 'probabilities': {'Surprise': 2.0364318231713696e-08, 'Fear': 3.2830004670358903e-07, 'Disgust': 6.718040594932972e-07, 'Happy': 0.9999986886978149, 'Sad': 1.1689650136759155e-08, 'Angry': 4.299957367948082e-08, 'Neutral': 2.5522038527014956e-07}}, {'emotion': 'Happy', 'x': 159, 'y': 190, 'w': 102, 'h': 112, 'probabilities': {'Surprise': 1.8387651152806939e-06, 'Fear': 5.6172002160792545e-08, 'Disgust': 1.236977482221846e-06, 'Happy': 0.9999902248382568, 'Sad': 4.31288253821549e-06, 'Angry': 1.0206499609921593e-06, 'Neutral': 1.3485691852110904e-06}}]
+2025-04-21 22:13:23,177 - INFO - 127.0.0.1 - - [21/Apr/2025 22:13:23] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:14:01,250 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:14:01,252 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:14:02,148 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:14:02,149 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:14:03,067 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:03] "GET /socket.io/?EIO=4&transport=polling&t=PPOwTge HTTP/1.1" 200 -
+2025-04-21 22:14:03,091 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:14:03,093 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:03] "POST /socket.io/?EIO=4&transport=polling&t=PPOwTh4&sid=GSeXGReEc240IrkeAAAA HTTP/1.1" 200 -
+2025-04-21 22:14:03,116 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:03] "GET /socket.io/?EIO=4&transport=polling&t=PPOwThB&sid=GSeXGReEc240IrkeAAAA HTTP/1.1" 200 -
+2025-04-21 22:14:05,865 - INFO - Đã dừng thread xử lý
+2025-04-21 22:14:05,880 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:05] "GET /socket.io/?EIO=4&transport=websocket&sid=GSeXGReEc240IrkeAAAA HTTP/1.1" 200 -
+2025-04-21 22:14:06,088 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:06] "GET / HTTP/1.1" 200 -
+2025-04-21 22:14:10,701 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:14:10,712 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:14:14,365 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 40, 'probabilities': {'Surprise': 1.212011158102655e-09, 'Fear': 2.4010150809772313e-06, 'Disgust': 9.583724924766557e-09, 'Happy': 0.9047353267669678, 'Sad': 1.5987490087354672e-07, 'Angry': 0.09525559842586517, 'Neutral': 6.595469130843412e-06}}]
+2025-04-21 22:14:14,371 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:14] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:14:37,401 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:14:37,418 - INFO - File đã được lưu tại static/uploads\PrivateTest_5373177.jpg
+2025-04-21 22:14:43,476 - INFO - Kết quả dự đoán: [{'emotion': 'Neutral', 'x': 4, 'y': 0, 'w': 42, 'h': 42, 'probabilities': {'Surprise': 0.0010014864383265376, 'Fear': 5.168484858586453e-05, 'Disgust': 2.8944045880052727e-06, 'Happy': 0.001114441198296845, 'Sad': 2.696117235245765e-06, 'Angry': 2.5313514925073832e-05, 'Neutral': 0.9978014826774597}}]
+2025-04-21 22:14:43,485 - INFO - 127.0.0.1 - - [21/Apr/2025 22:14:43] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:15:06,571 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:15:06,580 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:15:09,241 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}, {'emotion': 'Sad', 'x': 56, 'y': 0, 'w': 173, 'h': 158, 'probabilities': {'Surprise': 0.3437595069408417, 'Fear': 0.0010642040288075805, 'Disgust': 0.0014614661922678351, 'Happy': 0.029850687831640244, 'Sad': 0.5699028968811035, 'Angry': 0.03581070527434349, 'Neutral': 0.01815050281584263}}]
+2025-04-21 22:15:09,243 - INFO - 127.0.0.1 - - [21/Apr/2025 22:15:09] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:15:16,373 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:15:16,376 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:15:17,112 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 80, 'y': 18, 'w': 122, 'h': 145, 'probabilities': {'Surprise': 2.963981273751415e-07, 'Fear': 3.618908976932289e-07, 'Disgust': 4.341529347584583e-06, 'Happy': 0.9999890327453613, 'Sad': 5.488621354743373e-06, 'Angry': 1.847403652277535e-08, 'Neutral': 4.2010998413388734e-07}}]
+2025-04-21 22:15:17,114 - INFO - 127.0.0.1 - - [21/Apr/2025 22:15:17] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:15:20,232 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:15:20,235 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:15:21,962 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}, {'emotion': 'Happy', 'x': 72, 'y': 22, 'w': 136, 'h': 152, 'probabilities': {'Surprise': 4.300615546526387e-05, 'Fear': 7.059573545120656e-05, 'Disgust': 0.016342805698513985, 'Happy': 0.9680539965629578, 'Sad': 0.014671127311885357, 'Angry': 5.089671321911737e-05, 'Neutral': 0.000767537800129503}}]
+2025-04-21 22:15:21,966 - INFO - 127.0.0.1 - - [21/Apr/2025 22:15:21] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:21:32,066 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:21:32,068 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:21:33,023 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:21:33,024 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:22:00,578 - INFO - 127.0.0.1 - - [21/Apr/2025 22:22:00] "GET / HTTP/1.1" 200 -
+2025-04-21 22:22:06,139 - INFO - 127.0.0.1 - - [21/Apr/2025 22:22:06] "GET / HTTP/1.1" 200 -
+2025-04-21 22:22:14,401 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:22:14,403 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:22:15,330 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 22:22:15,332 - INFO - 127.0.0.1 - - [21/Apr/2025 22:22:15] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:22:19,666 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:22:19,696 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:22:21,039 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 82, 'y': 30, 'w': 116, 'h': 138, 'probabilities': {'Surprise': 5.510336995939724e-05, 'Fear': 0.00038213879452086985, 'Disgust': 0.009617061354219913, 'Happy': 0.9812527298927307, 'Sad': 0.007424783427268267, 'Angry': 0.0004930508439429104, 'Neutral': 0.0007750789518468082}}]
+2025-04-21 22:22:21,040 - INFO - 127.0.0.1 - - [21/Apr/2025 22:22:21] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:22:26,464 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:22:26,468 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:22:27,639 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 213, 'y': 12, 'w': 51, 'h': 51, 'probabilities': {'Surprise': 3.8064894170020125e-07, 'Fear': 7.936504516692366e-06, 'Disgust': 2.667299440872739e-06, 'Happy': 0.9999580383300781, 'Sad': 1.289979900320759e-05, 'Angry': 7.454752903868211e-08, 'Neutral': 1.804562270990573e-05}}]
+2025-04-21 22:22:27,640 - INFO - 127.0.0.1 - - [21/Apr/2025 22:22:27] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:25:10,069 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:25:10,073 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:25:10,968 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:25:10,968 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:25:16,548 - INFO - 127.0.0.1 - - [21/Apr/2025 22:25:16] "GET / HTTP/1.1" 200 -
+2025-04-21 22:25:24,817 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:25:24,824 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:25:25,678 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 22:25:25,680 - INFO - 127.0.0.1 - - [21/Apr/2025 22:25:25] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:25:29,446 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:25:29,448 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:25:30,576 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}, {'emotion': 'Happy', 'x': 82, 'y': 30, 'w': 116, 'h': 138, 'probabilities': {'Surprise': 5.510336995939724e-05, 'Fear': 0.00038213879452086985, 'Disgust': 0.009617061354219913, 'Happy': 0.9812527298927307, 'Sad': 0.007424783427268267, 'Angry': 0.0004930508439429104, 'Neutral': 0.0007750789518468082}}]
+2025-04-21 22:25:30,578 - INFO - 127.0.0.1 - - [21/Apr/2025 22:25:30] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:25:36,774 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:25:36,776 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:25:39,260 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 215, 'y': 15, 'w': 44, 'h': 48, 'probabilities': {'Surprise': 9.209213835958963e-09, 'Fear': 7.071492746035801e-06, 'Disgust': 1.976101060563451e-07, 'Happy': 0.9999922513961792, 'Sad': 3.2134346383827506e-07, 'Angry': 4.99733836534233e-08, 'Neutral': 8.109129367994683e-08}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 39, 'probabilities': {'Surprise': 1.0600370359270528e-08, 'Fear': 1.3068500265944749e-05, 'Disgust': 6.278834341344464e-09, 'Happy': 0.5152215957641602, 'Sad': 3.256554492736541e-08, 'Angry': 0.48475560545921326, 'Neutral': 9.665965990279801e-06}}]
+2025-04-21 22:25:39,263 - INFO - 127.0.0.1 - - [21/Apr/2025 22:25:39] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:05,238 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:05,249 - INFO - File đã được lưu tại static/uploads\Training_10118481.jpg
+2025-04-21 22:26:06,274 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 2, 'y': 10, 'w': 39, 'h': 38, 'probabilities': {'Surprise': 8.556286775274202e-05, 'Fear': 8.060886466410011e-05, 'Disgust': 0.06569776684045792, 'Happy': 0.6729004979133606, 'Sad': 0.001036274479702115, 'Angry': 0.2601940929889679, 'Neutral': 5.1017841542488895e-06}}]
+2025-04-21 22:26:06,283 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:06] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:22,814 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:22,816 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:23,464 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 22:26:23,466 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:23] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:28,007 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:28,009 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:28,399 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:28,400 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:28] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:29,568 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:29,570 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:29,942 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:29,943 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:29] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:30,622 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:30,624 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:30,992 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:30,993 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:30] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:31,605 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:31,607 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:32,022 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:32,023 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:32] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:32,535 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:32,537 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:32,904 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:32,904 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:32] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:33,558 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:33,560 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:33,974 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:33,975 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:33] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:35,504 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:35] "GET / HTTP/1.1" 200 -
+2025-04-21 22:26:39,359 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:39,362 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:39,820 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:39,821 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:39] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:41,391 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:41,393 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:41,844 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:41,846 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:41] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:42,303 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:42,306 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:42,919 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:42,926 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:42] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:42,999 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:26:43,001 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:26:43,494 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:26:43,496 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:43] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:26:45,200 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:45] "GET / HTTP/1.1" 200 -
+2025-04-21 22:26:47,100 - INFO - 127.0.0.1 - - [21/Apr/2025 22:26:47] "GET / HTTP/1.1" 200 -
+2025-04-21 22:27:35,814 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:27:35,816 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:27:36,700 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:27:36,702 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:27:41,395 - INFO - 127.0.0.1 - - [21/Apr/2025 22:27:41] "GET / HTTP/1.1" 200 -
+2025-04-21 22:27:46,038 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:27:46,041 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:27:49,123 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 91, 'w': 48, 'h': 54, 'probabilities': {'Surprise': 2.268594244014821e-06, 'Fear': 6.735229476362292e-07, 'Disgust': 3.2344519240723457e-06, 'Happy': 0.9999858140945435, 'Sad': 6.578094598808093e-06, 'Angry': 3.022638281890977e-07, 'Neutral': 1.1148434850838385e-06}}, {'emotion': 'Happy', 'x': 215, 'y': 15, 'w': 44, 'h': 48, 'probabilities': {'Surprise': 9.209213835958963e-09, 'Fear': 7.071492746035801e-06, 'Disgust': 1.976101060563451e-07, 'Happy': 0.9999922513961792, 'Sad': 3.2134346383827506e-07, 'Angry': 4.99733836534233e-08, 'Neutral': 8.109129367994683e-08}}, {'emotion': 'Happy', 'x': 148, 'y': 24, 'w': 33, 'h': 39, 'probabilities': {'Surprise': 1.0600370359270528e-08, 'Fear': 1.3068500265944749e-05, 'Disgust': 6.278834341344464e-09, 'Happy': 0.5152215957641602, 'Sad': 3.256554492736541e-08, 'Angry': 0.48475560545921326, 'Neutral': 9.665965990279801e-06}}]
+2025-04-21 22:27:49,128 - INFO - 127.0.0.1 - - [21/Apr/2025 22:27:49] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:27:56,615 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:27:56,618 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:27:58,476 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}, {'emotion': 'Happy', 'x': 178, 'y': 81, 'w': 55, 'h': 53, 'probabilities': {'Surprise': 3.4710660656855907e-06, 'Fear': 7.155600201258494e-08, 'Disgust': 3.0446763048530556e-06, 'Happy': 0.999908447265625, 'Sad': 2.077484850815381e-06, 'Angry': 1.1868723959196359e-06, 'Neutral': 8.173117385013029e-05}}]
+2025-04-21 22:27:58,481 - INFO - 127.0.0.1 - - [21/Apr/2025 22:27:58] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:27:59,511 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:27:59,514 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:27:59,993 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:27:59,995 - INFO - 127.0.0.1 - - [21/Apr/2025 22:27:59] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:00,603 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:00,608 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:28:01,319 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:28:01,322 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:01] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:03,448 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:03,450 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:28:03,843 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:28:03,847 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:03] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:04,865 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:04,867 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:28:05,345 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:28:05,346 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:05] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:06,550 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:06,551 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:28:07,041 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:28:07,043 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:07] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:10,431 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:10,434 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:28:11,981 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}, {'emotion': 'Happy', 'x': 138, 'y': 24, 'w': 128, 'h': 114, 'probabilities': {'Surprise': 0.0012474755058065057, 'Fear': 4.1945395423681475e-06, 'Disgust': 1.06969728221884e-05, 'Happy': 0.9843558669090271, 'Sad': 0.010504747740924358, 'Angry': 0.003825246822088957, 'Neutral': 5.17926637257915e-05}}]
+2025-04-21 22:28:11,984 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:11] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:16,911 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:16,913 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:28:18,279 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 82, 'y': 30, 'w': 116, 'h': 138, 'probabilities': {'Surprise': 5.510336995939724e-05, 'Fear': 0.00038213879452086985, 'Disgust': 0.009617061354219913, 'Happy': 0.9812527298927307, 'Sad': 0.007424783427268267, 'Angry': 0.0004930508439429104, 'Neutral': 0.0007750789518468082}}, {'emotion': 'Happy', 'x': 148, 'y': 28, 'w': 99, 'h': 122, 'probabilities': {'Surprise': 7.14037651050603e-06, 'Fear': 1.4576705325453077e-05, 'Disgust': 0.0022204346023499966, 'Happy': 0.9977572560310364, 'Sad': 1.2309878627547732e-07, 'Angry': 2.807405792282225e-07, 'Neutral': 2.1409006478734227e-07}}]
+2025-04-21 22:28:18,281 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:18] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:29,984 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:30,016 - INFO - File đã được lưu tại static/uploads\images.jpg
+2025-04-21 22:28:31,708 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 58, 'y': 43, 'w': 72, 'h': 71, 'probabilities': {'Surprise': 0.0005156084662303329, 'Fear': 4.513914063863922e-06, 'Disgust': 0.00015400089614558965, 'Happy': 0.6165899038314819, 'Sad': 0.11023478209972382, 'Angry': 0.269226610660553, 'Neutral': 0.003274565329775214}}, {'emotion': 'Happy', 'x': 161, 'y': 26, 'w': 66, 'h': 60, 'probabilities': {'Surprise': 0.002508771140128374, 'Fear': 2.332374833713402e-06, 'Disgust': 2.08632063731784e-05, 'Happy': 0.8591612577438354, 'Sad': 5.45396233064821e-07, 'Angry': 0.13234084844589233, 'Neutral': 0.005965458694845438}}, {'emotion': 'Happy', 'x': 104, 'y': 88, 'w': 45, 'h': 51, 'probabilities': {'Surprise': 8.851044697166799e-08, 'Fear': 3.575332243599405e-07, 'Disgust': 1.7266635898849358e-09, 'Happy': 0.9999995231628418, 'Sad': 1.214626088597015e-08, 'Angry': 1.1261880317192663e-08, 'Neutral': 3.4356145706126995e-10}}, {'emotion': 'Happy', 'x': 148, 'y': 65, 'w': 55, 'h': 59, 'probabilities': {'Surprise': 6.186072823766153e-06, 'Fear': 7.474430958609446e-07, 'Disgust': 4.386699856695486e-06, 'Happy': 0.9999854564666748, 'Sad': 5.002683067800717e-08, 'Angry': 2.9132845611457014e-06, 'Neutral': 3.2714930853217083e-07}}]
+2025-04-21 22:28:31,710 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:31] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:28:39,158 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:28:39,159 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:28:40,714 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}, {'emotion': 'Neutral', 'x': 73, 'y': 43, 'w': 66, 'h': 63, 'probabilities': {'Surprise': 0.005021471064537764, 'Fear': 0.0005103058647364378, 'Disgust': 5.217862417339347e-05, 'Happy': 0.033839624375104904, 'Sad': 0.05951506644487381, 'Angry': 0.10254215449094772, 'Neutral': 0.7985191941261292}}, {'emotion': 'Happy', 'x': 104, 'y': 85, 'w': 57, 'h': 50, 'probabilities': {'Surprise': 4.2174281134066405e-07, 'Fear': 5.001329554943368e-06, 'Disgust': 9.563318599248305e-07, 'Happy': 0.9939767122268677, 'Sad': 0.0004446224484127015, 'Angry': 0.0031170218717306852, 'Neutral': 0.0024552769027650356}}]
+2025-04-21 22:28:40,717 - INFO - 127.0.0.1 - - [21/Apr/2025 22:28:40] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:09,858 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:31:09,861 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:31:10,895 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:31:10,895 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:31:12,972 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:12] "GET / HTTP/1.1" 200 -
+2025-04-21 22:31:17,285 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:17] "GET / HTTP/1.1" 200 -
+2025-04-21 22:31:22,170 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:22,173 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:23,771 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 54, 'y': 67, 'w': 248, 'h': 280, 'probabilities': {'Surprise': 5.464850687530998e-07, 'Fear': 1.9140429241559787e-09, 'Disgust': 2.2918912634395383e-07, 'Happy': 0.999998927116394, 'Sad': 6.652364703541025e-08, 'Angry': 1.4956506033669825e-09, 'Neutral': 1.0716031795254821e-07}}]
+2025-04-21 22:31:23,773 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:23] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:27,795 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:27,799 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:29,022 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 213, 'y': 64, 'w': 167, 'h': 245, 'probabilities': {'Surprise': 6.374979761858413e-07, 'Fear': 6.575085080839926e-07, 'Disgust': 1.112059544539079e-05, 'Happy': 0.9999865293502808, 'Sad': 3.0818316787417643e-08, 'Angry': 1.9149484842273523e-07, 'Neutral': 8.565515372538357e-07}}, {'emotion': 'Happy', 'x': 49, 'y': 46, 'w': 295, 'h': 301, 'probabilities': {'Surprise': 0.0005349704879336059, 'Fear': 3.0217977837310173e-05, 'Disgust': 0.014706330373883247, 'Happy': 0.975669801235199, 'Sad': 0.007582380902022123, 'Angry': 1.7318765458185226e-05, 'Neutral': 0.0014590235659852624}}]
+2025-04-21 22:31:29,024 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:29] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:31,428 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:31,429 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:32,206 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 215, 'y': 63, 'w': 165, 'h': 246, 'probabilities': {'Surprise': 8.410326017838088e-07, 'Fear': 8.162411404555314e-07, 'Disgust': 1.4071079931454733e-05, 'Happy': 0.9999834299087524, 'Sad': 3.3488550599258815e-08, 'Angry': 2.604388669169566e-07, 'Neutral': 5.898044719288009e-07}}, {'emotion': 'Happy', 'x': 64, 'y': 40, 'w': 304, 'h': 297, 'probabilities': {'Surprise': 3.4984677768079564e-05, 'Fear': 2.0855379716522293e-06, 'Disgust': 0.005655626300722361, 'Happy': 0.9940199851989746, 'Sad': 0.0001571458124089986, 'Angry': 1.6117370478241355e-06, 'Neutral': 0.0001285147009184584}}]
+2025-04-21 22:31:32,207 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:32] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:34,957 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:34,959 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:35,686 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 63, 'w': 164, 'h': 247, 'probabilities': {'Surprise': 1.506435296505515e-06, 'Fear': 4.3347120026737684e-07, 'Disgust': 7.7112163126003e-06, 'Happy': 0.9999896287918091, 'Sad': 2.3426860451536413e-08, 'Angry': 1.3625371764192096e-07, 'Neutral': 5.66485880426626e-07}}, {'emotion': 'Happy', 'x': 94, 'y': 39, 'w': 286, 'h': 291, 'probabilities': {'Surprise': 4.797970541403629e-05, 'Fear': 1.3678335562872235e-05, 'Disgust': 0.027790678665041924, 'Happy': 0.9718305468559265, 'Sad': 0.00017887384456116706, 'Angry': 8.978079677035566e-06, 'Neutral': 0.00012933991092722863}}]
+2025-04-21 22:31:35,688 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:35] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:37,352 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:37,354 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:37,764 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 124, 'y': 47, 'w': 256, 'h': 282, 'probabilities': {'Surprise': 1.0509949788684025e-05, 'Fear': 4.385604825074552e-06, 'Disgust': 0.0009317509247921407, 'Happy': 0.9990391731262207, 'Sad': 1.3030974514549598e-05, 'Angry': 2.1161447705253522e-07, 'Neutral': 9.279107189286151e-07}}]
+2025-04-21 22:31:37,765 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:37] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:40,169 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:40,172 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:40,589 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 169, 'y': 62, 'w': 211, 'h': 263, 'probabilities': {'Surprise': 1.2715318007394671e-05, 'Fear': 6.301067514868919e-06, 'Disgust': 0.0013668359024450183, 'Happy': 0.998603880405426, 'Sad': 1.9749984403460985e-06, 'Angry': 9.686565363153932e-07, 'Neutral': 7.307742180273635e-06}}]
+2025-04-21 22:31:40,591 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:40] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:42,350 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:42,352 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:42,817 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 197, 'y': 58, 'w': 183, 'h': 260, 'probabilities': {'Surprise': 2.786139702948276e-06, 'Fear': 2.6268473447998986e-05, 'Disgust': 0.0002468776365276426, 'Happy': 0.9997187256813049, 'Sad': 6.409392767636746e-07, 'Angry': 4.2023881974273536e-07, 'Neutral': 4.234934294800041e-06}}]
+2025-04-21 22:31:42,818 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:42] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:44,382 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:44,384 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:44,930 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 213, 'y': 62, 'w': 167, 'h': 249, 'probabilities': {'Surprise': 9.322150162915932e-07, 'Fear': 1.201055056299083e-06, 'Disgust': 2.774457971099764e-05, 'Happy': 0.9999682903289795, 'Sad': 4.420396138016258e-08, 'Angry': 2.3763196566051192e-07, 'Neutral': 1.4918306305844453e-06}}]
+2025-04-21 22:31:44,932 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:44] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:47,978 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:47,983 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:49,314 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 54, 'y': 67, 'w': 248, 'h': 280, 'probabilities': {'Surprise': 5.464850687530998e-07, 'Fear': 1.9140429241559787e-09, 'Disgust': 2.2918912634395383e-07, 'Happy': 0.999998927116394, 'Sad': 6.652364703541025e-08, 'Angry': 1.4956506033669825e-09, 'Neutral': 1.0716031795254821e-07}}, {'emotion': 'Happy', 'x': 170, 'y': 64, 'w': 210, 'h': 239, 'probabilities': {'Surprise': 9.251399023924023e-05, 'Fear': 8.851873758430884e-07, 'Disgust': 4.236942004354205e-06, 'Happy': 0.999488115310669, 'Sad': 0.0002592313685454428, 'Angry': 5.47771378478501e-05, 'Neutral': 0.00010016073065344244}}]
+2025-04-21 22:31:49,319 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:49] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:31:56,737 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:31:56,740 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:31:58,006 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 49, 'y': 46, 'w': 295, 'h': 301, 'probabilities': {'Surprise': 0.0005349704879336059, 'Fear': 3.0217977837310173e-05, 'Disgust': 0.014706330373883247, 'Happy': 0.975669801235199, 'Sad': 0.007582380902022123, 'Angry': 1.7318765458185226e-05, 'Neutral': 0.0014590235659852624}}, {'emotion': 'Happy', 'x': 209, 'y': 63, 'w': 171, 'h': 247, 'probabilities': {'Surprise': 1.1575325515877921e-06, 'Fear': 1.493300146648835e-06, 'Disgust': 3.204744280083105e-05, 'Happy': 0.9999638795852661, 'Sad': 5.967790883687485e-08, 'Angry': 2.744401115251094e-07, 'Neutral': 1.0757950121842441e-06}}]
+2025-04-21 22:31:58,007 - INFO - 127.0.0.1 - - [21/Apr/2025 22:31:58] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:32:04,927 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:32:04,930 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:32:07,253 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 94, 'probabilities': {'Surprise': 9.32267721509561e-06, 'Fear': 5.953519575996324e-06, 'Disgust': 2.694182740015094e-06, 'Happy': 0.9995104074478149, 'Sad': 1.7256857972824946e-05, 'Angry': 0.00043804908636957407, 'Neutral': 1.6322688679792918e-05}}, {'emotion': 'Angry', 'x': 214, 'y': 53, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.4330382436256173e-09, 'Fear': 5.2627619879785925e-06, 'Disgust': 5.342026473953432e-11, 'Happy': 0.05057616904377937, 'Sad': 5.440431438685778e-11, 'Angry': 0.9494186043739319, 'Neutral': 1.5988627311003256e-08}}, {'emotion': 'Happy', 'x': 285, 'y': 165, 'w': 95, 'h': 108, 'probabilities': {'Surprise': 1.7262420826114067e-08, 'Fear': 2.480565797213785e-07, 'Disgust': 5.346378770809679e-07, 'Happy': 0.9999990463256836, 'Sad': 1.0370276193327754e-08, 'Angry': 4.210433246498724e-08, 'Neutral': 1.5784269180585397e-07}}, {'emotion': 'Happy', 'x': 158, 'y': 190, 'w': 103, 'h': 112, 'probabilities': {'Surprise': 2.376913698753924e-06, 'Fear': 1.5171701761573786e-07, 'Disgust': 2.0170641619188245e-06, 'Happy': 0.9999860525131226, 'Sad': 6.748073701601243e-06, 'Angry': 1.4948251418900327e-06, 'Neutral': 1.0265075616189279e-06}}]
+2025-04-21 22:32:07,256 - INFO - 127.0.0.1 - - [21/Apr/2025 22:32:07] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:32:16,852 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:32:16,855 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:32:18,350 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 93, 'probabilities': {'Surprise': 4.083665771759115e-06, 'Fear': 3.4897145724244183e-06, 'Disgust': 1.5108153093024157e-06, 'Happy': 0.9994245767593384, 'Sad': 1.3414198292593937e-05, 'Angry': 0.0005464346031658351, 'Neutral': 6.531257895403542e-06}}, {'emotion': 'Angry', 'x': 214, 'y': 54, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.1411456224408312e-09, 'Fear': 1.3619661558550433e-06, 'Disgust': 1.321157766520642e-11, 'Happy': 0.04052577540278435, 'Sad': 1.719484277185046e-10, 'Angry': 0.9594728946685791, 'Neutral': 3.7064344926562853e-09}}, {'emotion': 'Happy', 'x': 287, 'y': 165, 'w': 93, 'h': 108, 'probabilities': {'Surprise': 9.877863860197067e-09, 'Fear': 4.3208621036683326e-07, 'Disgust': 6.061861768102972e-07, 'Happy': 0.9999985694885254, 'Sad': 1.632960788811033e-08, 'Angry': 4.166890121837241e-08, 'Neutral': 3.651824442840734e-07}}, {'emotion': 'Happy', 'x': 158, 'y': 192, 'w': 99, 'h': 109, 'probabilities': {'Surprise': 2.358719939365983e-06, 'Fear': 1.5570579137147433e-07, 'Disgust': 3.3808923944889102e-06, 'Happy': 0.9999849796295166, 'Sad': 5.641786628984846e-06, 'Angry': 2.5215033474523807e-06, 'Neutral': 1.0768246738734888e-06}}]
+2025-04-21 22:32:18,352 - INFO - 127.0.0.1 - - [21/Apr/2025 22:32:18] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:13,214 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:13,216 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:13,885 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 213, 'y': 64, 'w': 167, 'h': 245, 'probabilities': {'Surprise': 6.374979761858413e-07, 'Fear': 6.575085080839926e-07, 'Disgust': 1.112059544539079e-05, 'Happy': 0.9999865293502808, 'Sad': 3.0818316787417643e-08, 'Angry': 1.9149484842273523e-07, 'Neutral': 8.565515372538357e-07}}]
+2025-04-21 22:33:13,888 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:13] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:15,444 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:15,446 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:15,860 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 215, 'y': 63, 'w': 165, 'h': 246, 'probabilities': {'Surprise': 8.410326017838088e-07, 'Fear': 8.162411404555314e-07, 'Disgust': 1.4071079931454733e-05, 'Happy': 0.9999834299087524, 'Sad': 3.3488550599258815e-08, 'Angry': 2.604388669169566e-07, 'Neutral': 5.898044719288009e-07}}]
+2025-04-21 22:33:15,861 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:15] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:16,878 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:16,880 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:17,340 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 63, 'w': 164, 'h': 247, 'probabilities': {'Surprise': 1.506435296505515e-06, 'Fear': 4.3347120026737684e-07, 'Disgust': 7.7112163126003e-06, 'Happy': 0.9999896287918091, 'Sad': 2.3426860451536413e-08, 'Angry': 1.3625371764192096e-07, 'Neutral': 5.66485880426626e-07}}]
+2025-04-21 22:33:17,341 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:17] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:18,477 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:18,478 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:18,990 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 64, 'w': 164, 'h': 246, 'probabilities': {'Surprise': 1.1194620128662791e-06, 'Fear': 4.0942501300378353e-07, 'Disgust': 7.10553922544932e-06, 'Happy': 0.999990701675415, 'Sad': 1.9718351396136313e-08, 'Angry': 1.01718875100687e-07, 'Neutral': 5.552250854634622e-07}}]
+2025-04-21 22:33:18,991 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:18] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:19,957 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:19,959 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:20,401 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 64, 'w': 164, 'h': 246, 'probabilities': {'Surprise': 1.1194620128662791e-06, 'Fear': 4.0942501300378353e-07, 'Disgust': 7.10553922544932e-06, 'Happy': 0.999990701675415, 'Sad': 1.9718351396136313e-08, 'Angry': 1.01718875100687e-07, 'Neutral': 5.552250854634622e-07}}]
+2025-04-21 22:33:20,402 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:21,155 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:21,158 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:21,541 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 64, 'w': 164, 'h': 246, 'probabilities': {'Surprise': 1.1194620128662791e-06, 'Fear': 4.0942501300378353e-07, 'Disgust': 7.10553922544932e-06, 'Happy': 0.999990701675415, 'Sad': 1.9718351396136313e-08, 'Angry': 1.01718875100687e-07, 'Neutral': 5.552250854634622e-07}}]
+2025-04-21 22:33:21,542 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:21] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:22,405 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:22,407 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:22,837 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 64, 'w': 164, 'h': 246, 'probabilities': {'Surprise': 1.1194620128662791e-06, 'Fear': 4.0942501300378353e-07, 'Disgust': 7.10553922544932e-06, 'Happy': 0.999990701675415, 'Sad': 1.9718351396136313e-08, 'Angry': 1.01718875100687e-07, 'Neutral': 5.552250854634622e-07}}]
+2025-04-21 22:33:22,838 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:22] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:24,285 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:24,287 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:24,673 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 216, 'y': 64, 'w': 164, 'h': 246, 'probabilities': {'Surprise': 1.1194620128662791e-06, 'Fear': 4.0942501300378353e-07, 'Disgust': 7.10553922544932e-06, 'Happy': 0.999990701675415, 'Sad': 1.9718351396136313e-08, 'Angry': 1.01718875100687e-07, 'Neutral': 5.552250854634622e-07}}]
+2025-04-21 22:33:24,674 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:24] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:27,417 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:27,420 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:28,563 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 54, 'y': 67, 'w': 248, 'h': 280, 'probabilities': {'Surprise': 5.464850687530998e-07, 'Fear': 1.9140429241559787e-09, 'Disgust': 2.2918912634395383e-07, 'Happy': 0.999998927116394, 'Sad': 6.652364703541025e-08, 'Angry': 1.4956506033669825e-09, 'Neutral': 1.0716031795254821e-07}}, {'emotion': 'Happy', 'x': 189, 'y': 64, 'w': 191, 'h': 235, 'probabilities': {'Surprise': 0.14399424195289612, 'Fear': 2.331868017790839e-05, 'Disgust': 0.000414781883591786, 'Happy': 0.8393152952194214, 'Sad': 0.00967668741941452, 'Angry': 0.003753016237169504, 'Neutral': 0.002822680165991187}}]
+2025-04-21 22:33:28,564 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:28] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:30,932 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:30,934 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:31,653 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 55, 'y': 67, 'w': 246, 'h': 280, 'probabilities': {'Surprise': 5.743024189541757e-07, 'Fear': 1.2804890481277198e-09, 'Disgust': 2.882821092953236e-07, 'Happy': 0.999998927116394, 'Sad': 5.985727113966277e-08, 'Angry': 1.6868316743412493e-09, 'Neutral': 9.270309675457611e-08}}, {'emotion': 'Happy', 'x': 169, 'y': 72, 'w': 211, 'h': 215, 'probabilities': {'Surprise': 0.00013334046525415033, 'Fear': 5.340364168660017e-07, 'Disgust': 3.6570193060470046e-06, 'Happy': 0.9988787770271301, 'Sad': 0.0005791614530608058, 'Angry': 0.00022731001081410795, 'Neutral': 0.00017715826106723398}}]
+2025-04-21 22:33:31,654 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:31] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:33,395 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:33,395 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:34,132 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 55, 'y': 66, 'w': 247, 'h': 281, 'probabilities': {'Surprise': 1.1423693422329961e-06, 'Fear': 1.6767137678286304e-09, 'Disgust': 1.354237468831343e-07, 'Happy': 0.9999984502792358, 'Sad': 8.374431814672789e-08, 'Angry': 2.5946575998858634e-09, 'Neutral': 1.0000960060096986e-07}}, {'emotion': 'Happy', 'x': 147, 'y': 82, 'w': 200, 'h': 200, 'probabilities': {'Surprise': 8.30841418064665e-06, 'Fear': 2.223018640279406e-07, 'Disgust': 5.978060357847426e-07, 'Happy': 0.9999308586120605, 'Sad': 5.6560616940259933e-05, 'Angry': 2.277044131915318e-06, 'Neutral': 1.24466407669388e-06}}]
+2025-04-21 22:33:34,138 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:34] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:34,626 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:34,627 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:35,360 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 54, 'y': 66, 'w': 247, 'h': 281, 'probabilities': {'Surprise': 5.980983814879437e-07, 'Fear': 1.4655702207377885e-09, 'Disgust': 1.822818802565962e-07, 'Happy': 0.9999991655349731, 'Sad': 3.5001125553435486e-08, 'Angry': 1.5422452204205683e-09, 'Neutral': 4.3004352079378805e-08}}, {'emotion': 'Happy', 'x': 146, 'y': 86, 'w': 159, 'h': 199, 'probabilities': {'Surprise': 2.474770553817507e-06, 'Fear': 3.421634531264317e-08, 'Disgust': 5.261088986685536e-08, 'Happy': 0.9999798536300659, 'Sad': 2.3325010545249825e-07, 'Angry': 6.027874519531906e-07, 'Neutral': 1.6808582586236298e-05}}]
+2025-04-21 22:33:35,362 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:35] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:40,255 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:40,258 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:42,368 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 90, 'y': 74, 'w': 88, 'h': 94, 'probabilities': {'Surprise': 9.32267721509561e-06, 'Fear': 5.953519575996324e-06, 'Disgust': 2.694182740015094e-06, 'Happy': 0.9995104074478149, 'Sad': 1.7256857972824946e-05, 'Angry': 0.00043804908636957407, 'Neutral': 1.6322688679792918e-05}}, {'emotion': 'Angry', 'x': 214, 'y': 53, 'w': 66, 'h': 75, 'probabilities': {'Surprise': 1.4330382436256173e-09, 'Fear': 5.2627619879785925e-06, 'Disgust': 5.342026473953432e-11, 'Happy': 0.05057616904377937, 'Sad': 5.440431438685778e-11, 'Angry': 0.9494186043739319, 'Neutral': 1.5988627311003256e-08}}, {'emotion': 'Happy', 'x': 285, 'y': 165, 'w': 95, 'h': 108, 'probabilities': {'Surprise': 1.7262420826114067e-08, 'Fear': 2.480565797213785e-07, 'Disgust': 5.346378770809679e-07, 'Happy': 0.9999990463256836, 'Sad': 1.0370276193327754e-08, 'Angry': 4.210433246498724e-08, 'Neutral': 1.5784269180585397e-07}}, {'emotion': 'Happy', 'x': 158, 'y': 190, 'w': 103, 'h': 112, 'probabilities': {'Surprise': 2.376913698753924e-06, 'Fear': 1.5171701761573786e-07, 'Disgust': 2.0170641619188245e-06, 'Happy': 0.9999860525131226, 'Sad': 6.748073701601243e-06, 'Angry': 1.4948251418900327e-06, 'Neutral': 1.0265075616189279e-06}}, {'emotion': 'Sad', 'x': 138, 'y': 78, 'w': 165, 'h': 208, 'probabilities': {'Surprise': 0.013685538433492184, 'Fear': 0.00012359418906271458, 'Disgust': 0.00012685426918324083, 'Happy': 0.12532289326190948, 'Sad': 0.6658956408500671, 'Angry': 0.17882242798805237, 'Neutral': 0.016023142263293266}}]
+2025-04-21 22:33:42,370 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:42] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:33:45,087 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:45] "GET /socket.io/?EIO=4&transport=polling&t=PPO--Fy HTTP/1.1" 200 -
+2025-04-21 22:33:45,111 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:33:45,114 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:45] "POST /socket.io/?EIO=4&transport=polling&t=PPO--GD&sid=E6Bz5trL5G3WjgtyAAAA HTTP/1.1" 200 -
+2025-04-21 22:33:45,115 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:45] "GET /socket.io/?EIO=4&transport=polling&t=PPO--GH&sid=E6Bz5trL5G3WjgtyAAAA HTTP/1.1" 200 -
+2025-04-21 22:33:51,112 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:33:51,114 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:33:51,711 - INFO - Kết quả dự đoán: [{'emotion': 'Disgust', 'x': 15, 'y': 73, 'w': 315, 'h': 307, 'probabilities': {'Surprise': 4.932135925628245e-05, 'Fear': 0.00010863916395464912, 'Disgust': 0.5059384703636169, 'Happy': 0.27129918336868286, 'Sad': 0.006475653499364853, 'Angry': 0.21610857546329498, 'Neutral': 2.018145823967643e-05}}]
+2025-04-21 22:33:51,713 - INFO - 127.0.0.1 - - [21/Apr/2025 22:33:51] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:04,983 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:04,985 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:05,684 - INFO - Kết quả dự đoán: []
+2025-04-21 22:34:05,687 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:05] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:09,064 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:09,065 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:11,169 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 118, 'y': 182, 'w': 99, 'h': 109, 'probabilities': {'Surprise': 5.2264283567637904e-08, 'Fear': 7.406564606071697e-08, 'Disgust': 3.544696092205868e-09, 'Happy': 0.9999998807907104, 'Sad': 5.850899853498959e-08, 'Angry': 5.655839174778521e-08, 'Neutral': 1.1931196308712089e-10}}, {'emotion': 'Happy', 'x': 240, 'y': 51, 'w': 138, 'h': 131, 'probabilities': {'Surprise': 0.0079883998259902, 'Fear': 3.4406548365950584e-06, 'Disgust': 1.69662762345979e-05, 'Happy': 0.8832096457481384, 'Sad': 2.2868447047130758e-07, 'Angry': 0.10854100435972214, 'Neutral': 0.0002402786776656285}}, {'emotion': 'Angry', 'x': 22, 'y': 89, 'w': 156, 'h': 151, 'probabilities': {'Surprise': 2.8238304366823286e-05, 'Fear': 2.5209867544617737e-06, 'Disgust': 2.7407977540860884e-05, 'Happy': 0.10346086323261261, 'Sad': 0.008059683255851269, 'Angry': 0.8881922364234924, 'Neutral': 0.00022898465977050364}}, {'emotion': 'Happy', 'x': 211, 'y': 136, 'w': 115, 'h': 120, 'probabilities': {'Surprise': 1.225578580488218e-05, 'Fear': 3.400997172775533e-07, 'Disgust': 1.4431442650675308e-05, 'Happy': 0.999932050704956, 'Sad': 1.004589648800902e-06, 'Angry': 3.91675675928127e-05, 'Neutral': 7.113369520084234e-07}}]
+2025-04-21 22:34:11,172 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:11] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:13,341 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:13,344 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:14,714 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 119, 'y': 180, 'w': 99, 'h': 112, 'probabilities': {'Surprise': 2.896238626703962e-08, 'Fear': 1.1406303457306421e-07, 'Disgust': 5.9748233027789865e-09, 'Happy': 0.9999995231628418, 'Sad': 2.8316645739323576e-07, 'Angry': 1.0028418984120435e-07, 'Neutral': 3.8635686316901285e-10}}, {'emotion': 'Happy', 'x': 239, 'y': 50, 'w': 140, 'h': 133, 'probabilities': {'Surprise': 0.022958409041166306, 'Fear': 4.559489752864465e-06, 'Disgust': 5.816771226818673e-05, 'Happy': 0.7184343934059143, 'Sad': 2.408811496934504e-07, 'Angry': 0.2583904564380646, 'Neutral': 0.0001538310752948746}}, {'emotion': 'Angry', 'x': 21, 'y': 90, 'w': 158, 'h': 152, 'probabilities': {'Surprise': 9.024863538797945e-05, 'Fear': 5.8640366660256404e-06, 'Disgust': 4.634149809135124e-05, 'Happy': 0.06264115124940872, 'Sad': 0.02014508657157421, 'Angry': 0.916366457939148, 'Neutral': 0.0007049283594824374}}, {'emotion': 'Happy', 'x': 210, 'y': 135, 'w': 117, 'h': 124, 'probabilities': {'Surprise': 1.180642721010372e-05, 'Fear': 2.3134509774536127e-06, 'Disgust': 2.6769159376272e-05, 'Happy': 0.9998656511306763, 'Sad': 4.7150686555141874e-07, 'Angry': 9.156164742307737e-05, 'Neutral': 1.4057130783839966e-06}}]
+2025-04-21 22:34:14,717 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:14] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:16,421 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:16,423 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:18,042 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 119, 'y': 179, 'w': 99, 'h': 113, 'probabilities': {'Surprise': 5.913963008197243e-08, 'Fear': 9.38370448011483e-08, 'Disgust': 1.5531540498159302e-08, 'Happy': 0.9999994039535522, 'Sad': 4.1299841768704937e-07, 'Angry': 1.245280714101682e-07, 'Neutral': 1.1791518872428242e-09}}, {'emotion': 'Happy', 'x': 239, 'y': 50, 'w': 141, 'h': 133, 'probabilities': {'Surprise': 0.03892125189304352, 'Fear': 4.756539965455886e-06, 'Disgust': 6.80012526572682e-05, 'Happy': 0.6904077529907227, 'Sad': 3.8052010609135323e-07, 'Angry': 0.2704615592956543, 'Neutral': 0.0001362659822916612}}, {'emotion': 'Angry', 'x': 20, 'y': 90, 'w': 160, 'h': 154, 'probabilities': {'Surprise': 0.0002802336239255965, 'Fear': 4.492510015552398e-06, 'Disgust': 0.0003529776295181364, 'Happy': 0.17334696650505066, 'Sad': 0.09538919478654861, 'Angry': 0.7302207350730896, 'Neutral': 0.00040543044451624155}}, {'emotion': 'Happy', 'x': 209, 'y': 134, 'w': 120, 'h': 127, 'probabilities': {'Surprise': 3.951723192585632e-05, 'Fear': 1.1544877906999318e-06, 'Disgust': 9.27076325751841e-06, 'Happy': 0.9998094439506531, 'Sad': 2.984116463267128e-06, 'Angry': 0.00013545737601816654, 'Neutral': 2.191814928664826e-06}}]
+2025-04-21 22:34:18,045 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:18] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:19,253 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:19,255 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:20,693 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 119, 'y': 179, 'w': 99, 'h': 113, 'probabilities': {'Surprise': 5.913963008197243e-08, 'Fear': 9.38370448011483e-08, 'Disgust': 1.5531540498159302e-08, 'Happy': 0.9999994039535522, 'Sad': 4.1299841768704937e-07, 'Angry': 1.245280714101682e-07, 'Neutral': 1.1791518872428242e-09}}, {'emotion': 'Happy', 'x': 239, 'y': 50, 'w': 141, 'h': 134, 'probabilities': {'Surprise': 0.045354753732681274, 'Fear': 6.958437097637216e-06, 'Disgust': 4.8348876589443535e-05, 'Happy': 0.713485836982727, 'Sad': 7.082175557115988e-07, 'Angry': 0.24075773358345032, 'Neutral': 0.0003456595877651125}}, {'emotion': 'Angry', 'x': 20, 'y': 89, 'w': 160, 'h': 155, 'probabilities': {'Surprise': 0.0003216349286958575, 'Fear': 3.1336912797996774e-06, 'Disgust': 0.00023197026166599244, 'Happy': 0.06706028431653976, 'Sad': 0.10358010977506638, 'Angry': 0.8285255432128906, 'Neutral': 0.0002772920415736735}}, {'emotion': 'Happy', 'x': 209, 'y': 133, 'w': 120, 'h': 128, 'probabilities': {'Surprise': 8.378863276448101e-05, 'Fear': 2.107454747601878e-06, 'Disgust': 9.379171387990937e-06, 'Happy': 0.9996973276138306, 'Sad': 5.539572157431394e-06, 'Angry': 0.00019775250984821469, 'Neutral': 4.315482328820508e-06}}]
+2025-04-21 22:34:20,695 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:21,566 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:21,567 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:22,986 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 119, 'y': 179, 'w': 99, 'h': 113, 'probabilities': {'Surprise': 5.913963008197243e-08, 'Fear': 9.38370448011483e-08, 'Disgust': 1.5531540498159302e-08, 'Happy': 0.9999994039535522, 'Sad': 4.1299841768704937e-07, 'Angry': 1.245280714101682e-07, 'Neutral': 1.1791518872428242e-09}}, {'emotion': 'Happy', 'x': 240, 'y': 50, 'w': 140, 'h': 135, 'probabilities': {'Surprise': 0.04273524880409241, 'Fear': 1.2996859368286096e-05, 'Disgust': 4.806612560059875e-05, 'Happy': 0.7452356815338135, 'Sad': 1.1278957572358195e-06, 'Angry': 0.21059022843837738, 'Neutral': 0.0013766272459179163}}, {'emotion': 'Angry', 'x': 20, 'y': 89, 'w': 160, 'h': 154, 'probabilities': {'Surprise': 0.0001179958344437182, 'Fear': 2.200694325438235e-06, 'Disgust': 0.00012986859655939043, 'Happy': 0.06144214794039726, 'Sad': 0.048157062381505966, 'Angry': 0.8898303508758545, 'Neutral': 0.00032037371420301497}}, {'emotion': 'Happy', 'x': 209, 'y': 133, 'w': 121, 'h': 129, 'probabilities': {'Surprise': 6.592563295271248e-05, 'Fear': 1.918061343531008e-06, 'Disgust': 2.7075262551079504e-05, 'Happy': 0.9991425275802612, 'Sad': 5.161189164937241e-06, 'Angry': 0.0007544475956819952, 'Neutral': 2.9889276902395068e-06}}]
+2025-04-21 22:34:22,990 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:22] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:34:23,798 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:34:23,800 - INFO - File đã được lưu tại static/uploads\resized_image.jpg
+2025-04-21 22:34:25,238 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 119, 'y': 179, 'w': 99, 'h': 113, 'probabilities': {'Surprise': 5.913963008197243e-08, 'Fear': 9.38370448011483e-08, 'Disgust': 1.5531540498159302e-08, 'Happy': 0.9999994039535522, 'Sad': 4.1299841768704937e-07, 'Angry': 1.245280714101682e-07, 'Neutral': 1.1791518872428242e-09}}, {'emotion': 'Happy', 'x': 240, 'y': 50, 'w': 140, 'h': 134, 'probabilities': {'Surprise': 0.04209832847118378, 'Fear': 8.114091542665847e-06, 'Disgust': 5.1487622840795666e-05, 'Happy': 0.7421257495880127, 'Sad': 6.796366278649657e-07, 'Angry': 0.21479405462741852, 'Neutral': 0.0009214678429998457}}, {'emotion': 'Angry', 'x': 20, 'y': 89, 'w': 160, 'h': 154, 'probabilities': {'Surprise': 0.0001179958344437182, 'Fear': 2.200694325438235e-06, 'Disgust': 0.00012986859655939043, 'Happy': 0.06144214794039726, 'Sad': 0.048157062381505966, 'Angry': 0.8898303508758545, 'Neutral': 0.00032037371420301497}}, {'emotion': 'Happy', 'x': 209, 'y': 132, 'w': 121, 'h': 130, 'probabilities': {'Surprise': 5.502775456989184e-05, 'Fear': 1.2330222034506733e-06, 'Disgust': 1.9027331290999427e-05, 'Happy': 0.9995562434196472, 'Sad': 5.568014330492588e-06, 'Angry': 0.00036085981992073357, 'Neutral': 2.0721001874335343e-06}}]
+2025-04-21 22:34:25,240 - INFO - 127.0.0.1 - - [21/Apr/2025 22:34:25] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:45:49,298 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:45:49,302 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:45:50,249 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:45:50,250 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:47:59,413 - INFO - 127.0.0.1 - - [21/Apr/2025 22:47:59] "GET / HTTP/1.1" 200 -
+2025-04-21 22:48:03,764 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:03,768 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:48:04,908 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 22:48:04,910 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:04] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:48:06,214 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:06,220 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:48:06,769 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:48:06,771 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:06] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:48:07,551 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:07,554 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:48:08,053 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:48:08,054 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:08] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:48:08,860 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:08,865 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:48:09,337 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:48:09,339 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:09] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:48:11,901 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:11,903 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:48:13,085 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 138, 'y': 24, 'w': 128, 'h': 115, 'probabilities': {'Surprise': 0.0019947895780205727, 'Fear': 4.131612968194531e-06, 'Disgust': 1.5108173101907596e-05, 'Happy': 0.9725390076637268, 'Sad': 0.022395487874746323, 'Angry': 0.0029914584010839462, 'Neutral': 5.998424967401661e-05}}, {'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 22:48:13,086 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:13] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:48:14,191 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:14,194 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:48:14,913 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 124, 'y': 20, 'w': 126, 'h': 118, 'probabilities': {'Surprise': 0.00013983032840769738, 'Fear': 6.8109616222500335e-06, 'Disgust': 4.033400909975171e-05, 'Happy': 0.9986068606376648, 'Sad': 0.0008752928697504103, 'Angry': 0.0003197312471456826, 'Neutral': 1.1012180948455352e-05}}, {'emotion': 'Happy', 'x': 84, 'y': 30, 'w': 111, 'h': 127, 'probabilities': {'Surprise': 5.0630003300966564e-08, 'Fear': 2.7840842964366175e-09, 'Disgust': 2.7871939423107506e-08, 'Happy': 0.9999997615814209, 'Sad': 1.1761044049762859e-07, 'Angry': 2.478332650213133e-09, 'Neutral': 5.6691447980483645e-08}}]
+2025-04-21 22:48:14,914 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:14] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:48:50,079 - INFO - Đã tải mô hình EfficientNetB4 thành công từ EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:48:50,082 - INFO - Đã tải mô hình EfficientNetB4 thành công
+2025-04-21 22:48:51,063 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:48:51,063 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:48:54,040 - INFO - 127.0.0.1 - - [21/Apr/2025 22:48:54] "GET / HTTP/1.1" 200 -
+2025-04-21 22:48:59,104 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:48:59,107 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:49:00,101 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 22:49:00,105 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:00] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:07,204 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:07,207 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:49:08,619 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 141, 'y': 26, 'w': 124, 'h': 114, 'probabilities': {'Surprise': 0.006810253486037254, 'Fear': 4.797198926098645e-06, 'Disgust': 3.071356695727445e-05, 'Happy': 0.9821109175682068, 'Sad': 0.010720477439463139, 'Angry': 0.0002880567335523665, 'Neutral': 3.484115222818218e-05}}, {'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 22:49:08,620 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:08] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:09,564 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:09,565 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:49:10,333 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 127, 'y': 25, 'w': 121, 'h': 113, 'probabilities': {'Surprise': 6.489782390417531e-05, 'Fear': 2.9170744255679892e-06, 'Disgust': 6.5459457800898235e-06, 'Happy': 0.9981153011322021, 'Sad': 0.0007952020387165248, 'Angry': 0.0010112756863236427, 'Neutral': 3.942606781492941e-06}}, {'emotion': 'Happy', 'x': 84, 'y': 30, 'w': 111, 'h': 127, 'probabilities': {'Surprise': 5.0630003300966564e-08, 'Fear': 2.7840842964366175e-09, 'Disgust': 2.7871939423107506e-08, 'Happy': 0.9999997615814209, 'Sad': 1.1761044049762859e-07, 'Angry': 2.478332650213133e-09, 'Neutral': 5.6691447980483645e-08}}]
+2025-04-21 22:49:10,342 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:10] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:12,790 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:12,792 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:49:13,974 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 142, 'y': 28, 'w': 105, 'h': 121, 'probabilities': {'Surprise': 6.696676791762002e-06, 'Fear': 1.627746496524196e-05, 'Disgust': 0.002221867674961686, 'Happy': 0.9977540373802185, 'Sad': 1.3974546675399324e-07, 'Angry': 8.501763772983395e-07, 'Neutral': 2.0669828870722995e-07}}, {'emotion': 'Happy', 'x': 79, 'y': 26, 'w': 122, 'h': 144, 'probabilities': {'Surprise': 2.6713454644777812e-05, 'Fear': 0.00017574474622961134, 'Disgust': 0.013958506286144257, 'Happy': 0.974808931350708, 'Sad': 0.00998178031295538, 'Angry': 0.0006076725549064577, 'Neutral': 0.0004405968065839261}}]
+2025-04-21 22:49:13,976 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:13] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:18,957 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:18,958 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:49:20,416 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 126, 'y': 21, 'w': 135, 'h': 118, 'probabilities': {'Surprise': 0.00021963198378216475, 'Fear': 1.1837069905595854e-05, 'Disgust': 2.044416032731533e-05, 'Happy': 0.9978870749473572, 'Sad': 0.0011845392873510718, 'Angry': 0.0006751622422598302, 'Neutral': 1.2015630090900231e-06}}, {'emotion': 'Happy', 'x': 82, 'y': 29, 'w': 120, 'h': 130, 'probabilities': {'Surprise': 2.3307836727326503e-07, 'Fear': 3.536393933245563e-08, 'Disgust': 4.611185886460589e-07, 'Happy': 0.9999985694885254, 'Sad': 6.370898972818395e-07, 'Angry': 2.7037561078913086e-09, 'Neutral': 1.1175578151778609e-07}}]
+2025-04-21 22:49:20,419 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:23,501 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:23,503 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:49:24,704 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 146, 'y': 28, 'w': 102, 'h': 123, 'probabilities': {'Surprise': 6.956793640711112e-06, 'Fear': 3.64218394679483e-05, 'Disgust': 0.0037171451840549707, 'Happy': 0.9962378740310669, 'Sad': 5.638520974571293e-07, 'Angry': 2.9827219805156346e-07, 'Neutral': 6.371416816364217e-07}}, {'emotion': 'Happy', 'x': 80, 'y': 25, 'w': 126, 'h': 145, 'probabilities': {'Surprise': 5.726765266445e-06, 'Fear': 0.00016485064406879246, 'Disgust': 0.00328997103497386, 'Happy': 0.9950706958770752, 'Sad': 0.0013935775496065617, 'Angry': 2.653947740327567e-05, 'Neutral': 4.866060771746561e-05}}]
+2025-04-21 22:49:24,708 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:24] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:28,668 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:28,673 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:49:30,605 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}]
+2025-04-21 22:49:30,607 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:30] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:37,975 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:37] "GET /socket.io/?EIO=4&transport=polling&t=PPP2cuo HTTP/1.1" 200 -
+2025-04-21 22:49:38,005 - INFO - Đã khởi động thread xử lý
+2025-04-21 22:49:38,009 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:38] "POST /socket.io/?EIO=4&transport=polling&t=PPP2cv2&sid=4L5v6HLDh2W1BAbYAAAA HTTP/1.1" 200 -
+2025-04-21 22:49:38,020 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:38] "GET /socket.io/?EIO=4&transport=polling&t=PPP2cv4&sid=4L5v6HLDh2W1BAbYAAAA HTTP/1.1" 200 -
+2025-04-21 22:49:48,613 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:48,615 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:49:50,438 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}]
+2025-04-21 22:49:50,440 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:50] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:53,013 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:53,017 - INFO - File đã được lưu tại static/uploads\images_1.jpg
+2025-04-21 22:49:53,650 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 22:49:53,654 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:53] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:49:56,988 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:49:56,990 - INFO - File đã được lưu tại static/uploads\download.jpg
+2025-04-21 22:49:58,982 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}, {'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}]
+2025-04-21 22:49:58,984 - INFO - 127.0.0.1 - - [21/Apr/2025 22:49:58] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:50:05,838 - INFO - Nhận được yêu cầu dự đoán
+2025-04-21 22:50:05,841 - INFO - File đã được lưu tại static/uploads\download_1.jpg
+2025-04-21 22:50:07,175 - INFO - Kết quả dự đoán: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 22:50:07,176 - INFO - 127.0.0.1 - - [21/Apr/2025 22:50:07] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:03,441 - INFO - Loaded EfficientNetB4 model successfully from EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 22:58:03,447 - INFO - Loaded EfficientNetB4 model successfully
+2025-04-21 22:58:04,611 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 22:58:04,613 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 22:58:05,082 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:05] "GET /socket.io/?EIO=4&transport=polling&t=PPP4Yi6 HTTP/1.1" 200 -
+2025-04-21 22:58:05,573 - INFO - Started processing thread
+2025-04-21 22:58:05,574 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:05] "POST /socket.io/?EIO=4&transport=polling&t=PPP4YkD&sid=kgkzSzWvBKfVvw2iAAAA HTTP/1.1" 200 -
+2025-04-21 22:58:05,665 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:05] "GET /socket.io/?EIO=4&transport=polling&t=PPP4YqT&sid=kgkzSzWvBKfVvw2iAAAA HTTP/1.1" 200 -
+2025-04-21 22:58:06,828 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:06] "GET /socket.io/?EIO=4&transport=polling&t=PPP4Z7T&sid=kgkzSzWvBKfVvw2iAAAA HTTP/1.1" 200 -
+2025-04-21 22:58:31,180 - INFO - Stopped processing thread
+2025-04-21 22:58:31,182 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:31] "GET /socket.io/?EIO=4&transport=websocket&sid=kgkzSzWvBKfVvw2iAAAA HTTP/1.1" 200 -
+2025-04-21 22:58:36,643 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:36] "GET / HTTP/1.1" 200 -
+2025-04-21 22:58:38,582 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:38] "GET / HTTP/1.1" 200 -
+2025-04-21 22:58:44,365 - INFO - Received prediction request
+2025-04-21 22:58:44,367 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:45,189 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 22:58:45,190 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:45] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:45,717 - INFO - Received prediction request
+2025-04-21 22:58:45,719 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:46,060 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 84, 'y': 30, 'w': 111, 'h': 127, 'probabilities': {'Surprise': 5.0630003300966564e-08, 'Fear': 2.7840842964366175e-09, 'Disgust': 2.7871939423107506e-08, 'Happy': 0.9999997615814209, 'Sad': 1.1761044049762859e-07, 'Angry': 2.478332650213133e-09, 'Neutral': 5.6691447980483645e-08}}]
+2025-04-21 22:58:46,062 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:46] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:46,483 - INFO - Received prediction request
+2025-04-21 22:58:46,485 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:46,821 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:46,822 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:46] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:47,181 - INFO - Received prediction request
+2025-04-21 22:58:47,183 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:47,533 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:47,535 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:47] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:47,843 - INFO - Received prediction request
+2025-04-21 22:58:47,846 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:48,172 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:48,173 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:48] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:48,365 - INFO - Received prediction request
+2025-04-21 22:58:48,367 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:48,699 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:48,700 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:48] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:48,860 - INFO - Received prediction request
+2025-04-21 22:58:48,863 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:49,198 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:49,199 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:49] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:49,332 - INFO - Received prediction request
+2025-04-21 22:58:49,334 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:49,677 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:49,679 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:49] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:49,740 - INFO - Received prediction request
+2025-04-21 22:58:49,745 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:50,166 - INFO - Received prediction request
+2025-04-21 22:58:50,169 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 22:58:50,327 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:50,330 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:50] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:50,707 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 22:58:50,710 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:50] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:52,931 - INFO - Received prediction request
+2025-04-21 22:58:52,933 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 22:58:54,103 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 79, 'y': 25, 'w': 122, 'h': 145, 'probabilities': {'Surprise': 2.6047850042232312e-05, 'Fear': 0.00014212093083187938, 'Disgust': 0.01014865655452013, 'Happy': 0.9841107130050659, 'Sad': 0.004909088835120201, 'Angry': 0.0003609866835176945, 'Neutral': 0.0003023942990694195}}, {'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 22:58:54,106 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:54] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:58:56,853 - INFO - Received prediction request
+2025-04-21 22:58:56,856 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 22:58:57,625 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 76, 'y': 20, 'w': 151, 'h': 144, 'probabilities': {'Surprise': 0.00046799518167972565, 'Fear': 3.9484140870627016e-05, 'Disgust': 0.07093796133995056, 'Happy': 0.9258757829666138, 'Sad': 0.0012351850746199489, 'Angry': 1.2117970072722528e-05, 'Neutral': 0.0014314372092485428}}, {'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 22:58:57,626 - INFO - 127.0.0.1 - - [21/Apr/2025 22:58:57] "POST /predict HTTP/1.1" 200 -
+2025-04-21 22:59:00,951 - INFO - Received prediction request
+2025-04-21 22:59:00,954 - INFO - File saved at static/uploads\download.jpg
+2025-04-21 22:59:03,087 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}]
+2025-04-21 22:59:03,089 - INFO - 127.0.0.1 - - [21/Apr/2025 22:59:03] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:09,619 - INFO - Loaded EfficientNetB4 model successfully from EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 23:01:09,622 - INFO - Loaded EfficientNetB4 model successfully
+2025-04-21 23:01:10,515 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 23:01:10,516 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 23:01:30,404 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:30] "GET / HTTP/1.1" 200 -
+2025-04-21 23:01:37,656 - INFO - Received prediction request
+2025-04-21 23:01:37,660 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:01:39,022 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 23:01:39,023 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:39] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:40,444 - INFO - Received prediction request
+2025-04-21 23:01:40,448 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:01:40,988 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:01:40,991 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:40] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:41,643 - INFO - Received prediction request
+2025-04-21 23:01:41,649 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:01:42,225 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:01:42,226 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:42] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:42,781 - INFO - Received prediction request
+2025-04-21 23:01:42,785 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:01:43,237 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:01:43,238 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:43] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:48,099 - INFO - Received prediction request
+2025-04-21 23:01:48,101 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:01:49,478 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 138, 'y': 24, 'w': 128, 'h': 114, 'probabilities': {'Surprise': 0.0012474755058065057, 'Fear': 4.1945395423681475e-06, 'Disgust': 1.06969728221884e-05, 'Happy': 0.9843558669090271, 'Sad': 0.010504747740924358, 'Angry': 0.003825246822088957, 'Neutral': 5.17926637257915e-05}}, {'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 23:01:49,480 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:49] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:50,051 - INFO - Received prediction request
+2025-04-21 23:01:50,056 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:01:51,141 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 124, 'y': 19, 'w': 126, 'h': 119, 'probabilities': {'Surprise': 0.0001304323086515069, 'Fear': 1.092849561246112e-05, 'Disgust': 3.84802624466829e-05, 'Happy': 0.9981346130371094, 'Sad': 0.0014328082324936986, 'Angry': 0.00024472762015648186, 'Neutral': 8.029109267226886e-06}}, {'emotion': 'Happy', 'x': 84, 'y': 30, 'w': 111, 'h': 127, 'probabilities': {'Surprise': 5.0630003300966564e-08, 'Fear': 2.7840842964366175e-09, 'Disgust': 2.7871939423107506e-08, 'Happy': 0.9999997615814209, 'Sad': 1.1761044049762859e-07, 'Angry': 2.478332650213133e-09, 'Neutral': 5.6691447980483645e-08}}]
+2025-04-21 23:01:51,142 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:51] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:52,077 - INFO - Received prediction request
+2025-04-21 23:01:52,081 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:01:53,278 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}, {'emotion': 'Happy', 'x': 108, 'y': 21, 'w': 116, 'h': 117, 'probabilities': {'Surprise': 1.109614345295995e-06, 'Fear': 6.111999795166412e-08, 'Disgust': 9.345551177375455e-08, 'Happy': 0.9999916553497314, 'Sad': 6.461589237005683e-06, 'Angry': 6.428502530297919e-08, 'Neutral': 5.185340228308633e-07}}]
+2025-04-21 23:01:53,281 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:53] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:01:56,188 - INFO - Received prediction request
+2025-04-21 23:01:56,190 - INFO - File saved at static/uploads\download.jpg
+2025-04-21 23:01:58,729 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}]
+2025-04-21 23:01:58,733 - INFO - 127.0.0.1 - - [21/Apr/2025 23:01:58] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:22:53,563 - INFO - Loaded EfficientNetB4 model successfully from EfficientNetB4_RAFDB_vs1_f1.pth
+2025-04-21 23:22:53,563 - INFO - Loaded EfficientNetB4 model successfully
+2025-04-21 23:22:54,538 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.9.131:5000
+2025-04-21 23:22:54,538 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-21 23:24:33,407 - INFO - 127.0.0.1 - - [21/Apr/2025 23:24:33] "GET / HTTP/1.1" 200 -
+2025-04-21 23:24:37,843 - INFO - Received prediction request
+2025-04-21 23:24:37,846 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:24:37,936 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:24:37,939 - INFO - After NMS: 1 faces kept
+2025-04-21 23:24:38,601 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 23:24:38,601 - INFO - 127.0.0.1 - - [21/Apr/2025 23:24:38] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:24:39,762 - INFO - Received prediction request
+2025-04-21 23:24:39,764 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:24:39,781 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:24:39,781 - INFO - After NMS: 1 faces kept
+2025-04-21 23:24:40,117 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 84, 'y': 30, 'w': 111, 'h': 127, 'probabilities': {'Surprise': 5.0630003300966564e-08, 'Fear': 2.7840842964366175e-09, 'Disgust': 2.7871939423107506e-08, 'Happy': 0.9999997615814209, 'Sad': 1.1761044049762859e-07, 'Angry': 2.478332650213133e-09, 'Neutral': 5.6691447980483645e-08}}]
+2025-04-21 23:24:40,133 - INFO - 127.0.0.1 - - [21/Apr/2025 23:24:40] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:24:45,291 - INFO - Received prediction request
+2025-04-21 23:24:45,292 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:24:45,305 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:24:45,305 - INFO - After NMS: 1 faces kept
+2025-04-21 23:24:45,633 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 23:24:45,633 - INFO - 127.0.0.1 - - [21/Apr/2025 23:24:45] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:24:49,746 - INFO - Received prediction request
+2025-04-21 23:24:49,748 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:24:49,760 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:24:49,761 - INFO - After NMS: 1 faces kept
+2025-04-21 23:24:50,125 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 83, 'y': 30, 'w': 113, 'h': 127, 'probabilities': {'Surprise': 8.507196014306828e-08, 'Fear': 5.16279641260553e-09, 'Disgust': 4.3571425578647904e-08, 'Happy': 0.9999996423721313, 'Sad': 1.1931962262679008e-07, 'Angry': 4.488356353249401e-09, 'Neutral': 7.62555387723296e-08}}]
+2025-04-21 23:24:50,125 - INFO - 127.0.0.1 - - [21/Apr/2025 23:24:50] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:24:55,612 - INFO - Received prediction request
+2025-04-21 23:24:55,615 - INFO - File saved at static/uploads\download.jpg
+2025-04-21 23:24:55,669 - INFO - MediaPipe detected 5 faces before NMS
+2025-04-21 23:24:55,687 - INFO - After NMS: 5 faces kept
+2025-04-21 23:24:57,499 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}]
+2025-04-21 23:24:57,499 - INFO - 127.0.0.1 - - [21/Apr/2025 23:24:57] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:09,529 - INFO - Received prediction request
+2025-04-21 23:25:09,531 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:09,572 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:25:09,572 - INFO - After NMS: 2 faces kept
+2025-04-21 23:25:10,437 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}, {'emotion': 'Happy', 'x': 179, 'y': 81, 'w': 54, 'h': 53, 'probabilities': {'Surprise': 4.882142093265429e-06, 'Fear': 1.1491086127080052e-07, 'Disgust': 4.243810963089345e-06, 'Happy': 0.9999176263809204, 'Sad': 1.5588362884955131e-06, 'Angry': 1.5382279343612026e-06, 'Neutral': 7.000108598731458e-05}}]
+2025-04-21 23:25:10,437 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:10] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:14,026 - INFO - Received prediction request
+2025-04-21 23:25:14,028 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:14,043 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:14,043 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:14,368 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:14,368 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:14] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:15,787 - INFO - Received prediction request
+2025-04-21 23:25:15,789 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:15,801 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:15,802 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:16,103 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:16,103 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:16] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:16,570 - INFO - Received prediction request
+2025-04-21 23:25:16,572 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:16,583 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:16,584 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:16,865 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:16,865 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:16] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:17,241 - INFO - Received prediction request
+2025-04-21 23:25:17,243 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:17,255 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:17,256 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:17,531 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:17,531 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:17] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:17,883 - INFO - Received prediction request
+2025-04-21 23:25:17,885 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:17,895 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:17,896 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:18,212 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:18,214 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:18] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:18,402 - INFO - Received prediction request
+2025-04-21 23:25:18,403 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:18,419 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:18,419 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:18,697 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:18,697 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:18] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:18,937 - INFO - Received prediction request
+2025-04-21 23:25:18,939 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:18,953 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:18,953 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:19,246 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:19,246 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:19] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:19,425 - INFO - Received prediction request
+2025-04-21 23:25:19,426 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:19,439 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:19,440 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:19,713 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:19,713 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:19] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:19,970 - INFO - Received prediction request
+2025-04-21 23:25:19,972 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:19,985 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:19,985 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:20,262 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:20,262 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:20,531 - INFO - Received prediction request
+2025-04-21 23:25:20,533 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:20,544 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:20,545 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:20,828 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:20,845 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:20] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:21,050 - INFO - Received prediction request
+2025-04-21 23:25:21,052 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:21,064 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:21,065 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:21,327 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:21,327 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:21] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:21,531 - INFO - Received prediction request
+2025-04-21 23:25:21,533 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:21,545 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:21,546 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:21,810 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:21,810 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:21] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:22,090 - INFO - Received prediction request
+2025-04-21 23:25:22,092 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:22,104 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:22,104 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:22,443 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:22,443 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:22] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:22,866 - INFO - Received prediction request
+2025-04-21 23:25:22,868 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:22,881 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:22,883 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:23,209 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:23,209 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:23] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:23,575 - INFO - Received prediction request
+2025-04-21 23:25:23,575 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:23,602 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:23,642 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:24,109 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:24,109 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:24] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:24,746 - INFO - Received prediction request
+2025-04-21 23:25:24,748 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:24,760 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:24,761 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:25,040 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:25,040 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:25] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:25,729 - INFO - Received prediction request
+2025-04-21 23:25:25,731 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:25,745 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:25,745 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:26,039 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:26,039 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:26] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:26,587 - INFO - Received prediction request
+2025-04-21 23:25:26,591 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:26,602 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:26,603 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:26,923 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:26,923 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:26] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:31,556 - INFO - Received prediction request
+2025-04-21 23:25:31,557 - INFO - File saved at static/uploads\download.jpg
+2025-04-21 23:25:31,587 - INFO - MediaPipe detected 5 faces before NMS
+2025-04-21 23:25:31,602 - INFO - After NMS: 5 faces kept
+2025-04-21 23:25:33,417 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 17, 'y': 51, 'w': 50, 'h': 53, 'probabilities': {'Surprise': 4.888888724963181e-07, 'Fear': 7.554067593673608e-08, 'Disgust': 0.009081924334168434, 'Happy': 0.9907913208007812, 'Sad': 1.514252971901442e-07, 'Angry': 0.0001250811037607491, 'Neutral': 9.885457075142767e-07}}, {'emotion': 'Happy', 'x': 122, 'y': 92, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 5.125642928760499e-06, 'Fear': 2.0600016625849094e-07, 'Disgust': 2.084579591610236e-06, 'Happy': 0.9999892711639404, 'Sad': 1.8949150444314e-06, 'Angry': 1.577272570330024e-07, 'Neutral': 1.2551348618217162e-06}}, {'emotion': 'Happy', 'x': 183, 'y': 79, 'w': 48, 'h': 52, 'probabilities': {'Surprise': 4.701172073851012e-08, 'Fear': 5.390154456108576e-07, 'Disgust': 3.9653036765230354e-07, 'Happy': 0.9999986886978149, 'Sad': 6.868705071383374e-08, 'Angry': 8.078194113636528e-09, 'Neutral': 1.821941992830034e-07}}, {'emotion': 'Happy', 'x': 214, 'y': 15, 'w': 45, 'h': 48, 'probabilities': {'Surprise': 1.8156161019078354e-08, 'Fear': 7.0414398578577675e-06, 'Disgust': 5.175261321710423e-07, 'Happy': 0.9999915361404419, 'Sad': 5.589972147390654e-07, 'Angry': 7.247734856719035e-08, 'Neutral': 1.3827710176883556e-07}}, {'emotion': 'Happy', 'x': 89, 'y': 35, 'w': 42, 'h': 45, 'probabilities': {'Surprise': 2.7375567697163206e-06, 'Fear': 8.873140018295089e-07, 'Disgust': 1.7341743614451843e-06, 'Happy': 0.9999744892120361, 'Sad': 5.158820840733824e-06, 'Angry': 8.257573426817544e-06, 'Neutral': 6.8240628934290726e-06}}]
+2025-04-21 23:25:33,417 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:33] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:38,532 - INFO - Received prediction request
+2025-04-21 23:25:38,534 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:25:38,562 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:38,562 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:38,944 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 23:25:38,944 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:38] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:42,907 - INFO - Received prediction request
+2025-04-21 23:25:42,913 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:42,927 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:25:42,927 - INFO - After NMS: 2 faces kept
+2025-04-21 23:25:43,791 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 82, 'y': 30, 'w': 116, 'h': 138, 'probabilities': {'Surprise': 5.510336995939724e-05, 'Fear': 0.00038213879452086985, 'Disgust': 0.009617061354219913, 'Happy': 0.9812527298927307, 'Sad': 0.007424783427268267, 'Angry': 0.0004930508439429104, 'Neutral': 0.0007750789518468082}}, {'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}]
+2025-04-21 23:25:43,791 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:43] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:56,083 - INFO - Received prediction request
+2025-04-21 23:25:56,085 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:56,101 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:25:56,101 - INFO - After NMS: 2 faces kept
+2025-04-21 23:25:56,778 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 77, 'y': 22, 'w': 145, 'h': 142, 'probabilities': {'Surprise': 4.297897612559609e-05, 'Fear': 2.6172614525421523e-05, 'Disgust': 0.024602890014648438, 'Happy': 0.973249077796936, 'Sad': 0.0012776467483490705, 'Angry': 9.309324923378881e-06, 'Neutral': 0.0007919988711364567}}, {'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:56,778 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:56] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:57,650 - INFO - Received prediction request
+2025-04-21 23:25:57,652 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:57,669 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:25:57,669 - INFO - After NMS: 2 faces kept
+2025-04-21 23:25:58,260 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 87, 'y': 17, 'w': 147, 'h': 143, 'probabilities': {'Surprise': 4.3696261855075136e-05, 'Fear': 5.538383993552998e-05, 'Disgust': 0.16630752384662628, 'Happy': 0.8300528526306152, 'Sad': 0.0020253777038306, 'Angry': 2.5676368750282563e-05, 'Neutral': 0.0014894841006025672}}, {'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:25:58,260 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:58] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:25:59,012 - INFO - Received prediction request
+2025-04-21 23:25:59,014 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:25:59,026 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:25:59,028 - INFO - After NMS: 1 faces kept
+2025-04-21 23:25:59,345 - INFO - Prediction results: [{'emotion': 'Disgust', 'x': 98, 'y': 17, 'w': 145, 'h': 142, 'probabilities': {'Surprise': 1.580232310516294e-05, 'Fear': 3.654190004453994e-05, 'Disgust': 0.5397454500198364, 'Happy': 0.4596305787563324, 'Sad': 0.0004896253813058138, 'Angry': 1.0641776498232502e-05, 'Neutral': 7.128105062292889e-05}}]
+2025-04-21 23:25:59,345 - INFO - 127.0.0.1 - - [21/Apr/2025 23:25:59] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:05,675 - INFO - Received prediction request
+2025-04-21 23:26:05,676 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:05,692 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:26:05,692 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:06,102 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 120, 'y': 24, 'w': 122, 'h': 133, 'probabilities': {'Surprise': 8.343157787749078e-06, 'Fear': 6.56634583720006e-05, 'Disgust': 0.04956786707043648, 'Happy': 0.9503443837165833, 'Sad': 8.01698934083106e-06, 'Angry': 2.633835038068355e-06, 'Neutral': 3.0863034226058517e-06}}]
+2025-04-21 23:26:06,102 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:06] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:07,281 - INFO - Received prediction request
+2025-04-21 23:26:07,282 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:07,303 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:07,303 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:07,700 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 135, 'y': 30, 'w': 114, 'h': 128, 'probabilities': {'Surprise': 6.976612894504797e-06, 'Fear': 4.563197217066772e-05, 'Disgust': 0.04978900030255318, 'Happy': 0.9501546025276184, 'Sad': 3.5891312677449605e-07, 'Angry': 1.0641924745868891e-06, 'Neutral': 2.452840817568358e-06}}]
+2025-04-21 23:26:07,700 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:07] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:08,714 - INFO - Received prediction request
+2025-04-21 23:26:08,718 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:08,734 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:08,735 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:09,100 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 146, 'y': 29, 'w': 102, 'h': 121, 'probabilities': {'Surprise': 1.0778180694615003e-05, 'Fear': 2.918660902651027e-05, 'Disgust': 0.0029792338609695435, 'Happy': 0.9969800114631653, 'Sad': 2.473293818638922e-07, 'Angry': 1.652859822343089e-07, 'Neutral': 4.0504784237782587e-07}}]
+2025-04-21 23:26:09,100 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:09] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:16,249 - INFO - Received prediction request
+2025-04-21 23:26:16,251 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:16,264 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:16,264 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:16,577 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 147, 'y': 30, 'w': 101, 'h': 119, 'probabilities': {'Surprise': 1.2333549420873169e-05, 'Fear': 1.299184987146873e-05, 'Disgust': 0.0019585425034165382, 'Happy': 0.9980154037475586, 'Sad': 1.2431051743533317e-07, 'Angry': 2.4144046051333135e-07, 'Neutral': 3.238252190840285e-07}}]
+2025-04-21 23:26:16,577 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:16] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:19,308 - INFO - Received prediction request
+2025-04-21 23:26:19,308 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:19,330 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:19,330 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:19,641 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 118, 'probabilities': {'Surprise': 4.333551260060631e-06, 'Fear': 1.2682628948823549e-05, 'Disgust': 0.0007455065497197211, 'Happy': 0.9992371797561646, 'Sad': 6.823883325068891e-08, 'Angry': 1.7782220140816207e-07, 'Neutral': 1.1676098665702739e-07}}]
+2025-04-21 23:26:19,641 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:19] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:21,849 - INFO - Received prediction request
+2025-04-21 23:26:21,851 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:21,863 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:21,864 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:22,188 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:22,188 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:22] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:22,930 - INFO - Received prediction request
+2025-04-21 23:26:22,932 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:22,947 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:22,947 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:23,302 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:23,302 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:23] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:24,866 - INFO - Received prediction request
+2025-04-21 23:26:24,870 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:24,881 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:24,881 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:25,183 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:25,185 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:25] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:26,340 - INFO - Received prediction request
+2025-04-21 23:26:26,342 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:26,354 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:26,355 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:26,650 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:26,650 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:26] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:27,442 - INFO - Received prediction request
+2025-04-21 23:26:27,444 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:27,457 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:27,457 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:27,801 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:27,801 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:27] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:28,562 - INFO - Received prediction request
+2025-04-21 23:26:28,567 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:28,579 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:28,580 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:28,882 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:28,882 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:28] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:29,353 - INFO - Received prediction request
+2025-04-21 23:26:29,355 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:26:29,367 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:29,368 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:29,663 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 100, 'h': 117, 'probabilities': {'Surprise': 5.195167886995478e-06, 'Fear': 6.609832780668512e-06, 'Disgust': 0.0006386875757016242, 'Happy': 0.999349057674408, 'Sad': 6.319633882867493e-08, 'Angry': 2.5816274273893214e-07, 'Neutral': 6.016094289407192e-08}}]
+2025-04-21 23:26:29,663 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:29] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:26:30,572 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:30] "GET /socket.io/?EIO=4&transport=polling&t=PPPB34e HTTP/1.1" 200 -
+2025-04-21 23:26:30,590 - INFO - Started processing thread
+2025-04-21 23:26:30,593 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:30] "POST /socket.io/?EIO=4&transport=polling&t=PPPB34v&sid=ntK7wCA61j3mH8oSAAAA HTTP/1.1" 200 -
+2025-04-21 23:26:30,594 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:30] "GET /socket.io/?EIO=4&transport=polling&t=PPPB34x&sid=ntK7wCA61j3mH8oSAAAA HTTP/1.1" 200 -
+2025-04-21 23:26:30,608 - INFO - 127.0.0.1 - - [21/Apr/2025 23:26:30] "GET /socket.io/?EIO=4&transport=polling&t=PPPB35D&sid=ntK7wCA61j3mH8oSAAAA HTTP/1.1" 200 -
+2025-04-21 23:26:33,722 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:33,723 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:34,062 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:34,063 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:34,400 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:34,400 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:34,728 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:34,728 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:35,035 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:35,035 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:35,363 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:26:35,364 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:35,692 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:35,693 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:36,017 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:36,018 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:36,442 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:36,442 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:36,774 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:36,775 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:37,090 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:37,090 - INFO - After NMS: 1 faces kept
+2025-04-21 23:26:37,442 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:26:37,442 - INFO - After NMS: 1 faces kept
+2025-04-21 23:29:50,664 - INFO - Stopped processing thread
+2025-04-21 23:29:50,664 - INFO - 127.0.0.1 - - [21/Apr/2025 23:29:50] "GET /socket.io/?EIO=4&transport=websocket&sid=ntK7wCA61j3mH8oSAAAA HTTP/1.1" 200 -
+2025-04-21 23:32:56,046 - INFO - 127.0.0.1 - - [21/Apr/2025 23:32:56] "GET /socket.io/?EIO=4&transport=polling&t=PPPCXBl HTTP/1.1" 200 -
+2025-04-21 23:32:56,077 - INFO - Started processing thread
+2025-04-21 23:32:56,077 - INFO - 127.0.0.1 - - [21/Apr/2025 23:32:56] "POST /socket.io/?EIO=4&transport=polling&t=PPPCXC3&sid=mZFJxzPXibaUP88pAAAC HTTP/1.1" 200 -
+2025-04-21 23:32:56,092 - INFO - 127.0.0.1 - - [21/Apr/2025 23:32:56] "GET /socket.io/?EIO=4&transport=polling&t=PPPCXCO&sid=mZFJxzPXibaUP88pAAAC HTTP/1.1" 200 -
+2025-04-21 23:33:57,801 - INFO - Received prediction request
+2025-04-21 23:33:57,804 - INFO - File saved at static/uploads\images_1.jpg
+2025-04-21 23:33:57,853 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:33:57,854 - INFO - After NMS: 2 faces kept
+2025-04-21 23:33:58,959 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 148, 'y': 31, 'w': 101, 'h': 116, 'probabilities': {'Surprise': 2.947543407572084e-06, 'Fear': 4.763393008033745e-06, 'Disgust': 0.0003241382946725935, 'Happy': 0.999667763710022, 'Sad': 1.3492853945251682e-08, 'Angry': 3.214273647245136e-07, 'Neutral': 4.394063424228989e-08}}, {'emotion': 'Happy', 'x': 100, 'y': 41, 'w': 86, 'h': 84, 'probabilities': {'Surprise': 0.0004034059529658407, 'Fear': 0.0001396832667523995, 'Disgust': 1.2607681128429249e-05, 'Happy': 0.9962038397789001, 'Sad': 0.0001763691834639758, 'Angry': 0.002996280789375305, 'Neutral': 6.797492096666247e-05}}]
+2025-04-21 23:33:58,959 - INFO - 127.0.0.1 - - [21/Apr/2025 23:33:58] "POST /predict HTTP/1.1" 200 -
+2025-04-21 23:34:06,236 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:06,237 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:07,024 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:07,024 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:07,810 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:07,811 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:08,225 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:08,226 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:08,593 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:08,593 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:08,959 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:08,959 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:09,323 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:09,324 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:09,698 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:09,698 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:10,065 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:10,065 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:10,420 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:10,420 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:10,769 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:10,769 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:11,128 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:11,128 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:11,491 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:11,492 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:11,848 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:11,849 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:12,207 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:12,207 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:12,567 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:12,568 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:12,922 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:12,922 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:13,279 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:13,280 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:13,577 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:13,578 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:13,898 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:13,899 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:14,419 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:14,420 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:14,764 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:14,764 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:15,068 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:15,068 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:15,396 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:15,396 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:15,698 - INFO - MediaPipe detected 0 faces before NMS
+2025-04-21 23:34:16,307 - INFO - Haar Cascade detected 0 faces before NMS
+2025-04-21 23:34:16,319 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:16,320 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:16,622 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:16,623 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:16,928 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:16,928 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:17,254 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:17,257 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:17,564 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:17,565 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:17,893 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:17,893 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:18,528 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:18,528 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:18,841 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:18,842 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:19,467 - INFO - MediaPipe detected 0 faces before NMS
+2025-04-21 23:34:19,516 - INFO - Haar Cascade detected 0 faces before NMS
+2025-04-21 23:34:19,589 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:19,589 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:19,905 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:19,905 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:20,245 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:20,245 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:20,559 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:20,560 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:20,872 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:20,872 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:21,184 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:21,184 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:21,795 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:21,796 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:22,435 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:22,435 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:23,061 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:23,061 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:23,736 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:23,736 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:24,378 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:24,378 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:24,974 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:24,975 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:25,590 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:25,590 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:26,257 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:26,258 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:26,862 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:26,863 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:27,494 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:27,496 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:28,180 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:28,181 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:28,860 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:28,862 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:29,602 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:29,602 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:30,257 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:30,257 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:30,944 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:30,945 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:31,647 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:31,648 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:32,335 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:32,335 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:33,010 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:33,010 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:33,700 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:33,700 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:34,434 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:34,435 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:35,082 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:35,083 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:35,739 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:35,739 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:36,089 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:36,090 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:36,449 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:36,450 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:36,788 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:36,789 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:37,449 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:37,450 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:38,151 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:38,152 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:38,816 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:38,816 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:39,521 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:39,521 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:40,188 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:40,189 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:40,928 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:40,929 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:41,272 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:41,273 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:41,601 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:41,601 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:41,952 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:41,953 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:43,338 - INFO - MediaPipe detected 0 faces before NMS
+2025-04-21 23:34:43,397 - INFO - Haar Cascade detected 0 faces before NMS
+2025-04-21 23:34:43,537 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:43,537 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:43,925 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:43,926 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:44,312 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:44,312 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:44,732 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:44,733 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:45,122 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:45,122 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:45,514 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:45,514 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:45,888 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:45,889 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:46,352 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:46,353 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:47,415 - INFO - MediaPipe detected 3 faces before NMS
+2025-04-21 23:34:47,416 - INFO - After NMS: 3 faces kept
+2025-04-21 23:34:48,636 - INFO - MediaPipe detected 3 faces before NMS
+2025-04-21 23:34:48,637 - INFO - After NMS: 3 faces kept
+2025-04-21 23:34:49,724 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:49,726 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:50,454 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:50,455 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:51,108 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:51,109 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:51,775 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:51,775 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:52,453 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:52,454 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:53,182 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:53,182 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:53,911 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:53,911 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:54,615 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:34:54,616 - INFO - After NMS: 1 faces kept
+2025-04-21 23:34:54,974 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:54,974 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:55,641 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:55,642 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:56,338 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:56,339 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:57,044 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:57,044 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:57,766 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:57,766 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:58,479 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:58,480 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:59,219 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:59,219 - INFO - After NMS: 2 faces kept
+2025-04-21 23:34:59,911 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:34:59,912 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:00,630 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:00,631 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:01,360 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:01,361 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:02,043 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:02,044 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:02,722 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:02,722 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:03,417 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:03,417 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:04,136 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:04,137 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:04,831 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:04,832 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:05,522 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:05,522 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:06,215 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:06,216 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:06,878 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:35:06,878 - INFO - After NMS: 1 faces kept
+2025-04-21 23:35:07,215 - INFO - MediaPipe detected 2 faces before NMS
+2025-04-21 23:35:07,215 - INFO - After NMS: 2 faces kept
+2025-04-21 23:35:07,930 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:35:07,931 - INFO - After NMS: 1 faces kept
+2025-04-21 23:35:08,325 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:35:08,325 - INFO - After NMS: 1 faces kept
+2025-04-21 23:35:08,725 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:35:08,725 - INFO - After NMS: 1 faces kept
+2025-04-21 23:35:14,297 - INFO - Received prediction request
+2025-04-21 23:35:14,299 - INFO - File saved at static/uploads\download_1.jpg
+2025-04-21 23:35:14,319 - INFO - MediaPipe detected 1 faces before NMS
+2025-04-21 23:35:14,320 - INFO - After NMS: 1 faces kept
+2025-04-21 23:35:15,076 - INFO - Prediction results: [{'emotion': 'Happy', 'x': 84, 'y': 32, 'w': 110, 'h': 125, 'probabilities': {'Surprise': 8.857547584284475e-08, 'Fear': 3.779091706235249e-09, 'Disgust': 1.204791715281317e-07, 'Happy': 0.9999995231628418, 'Sad': 1.360929786642373e-07, 'Angry': 3.8957601589117985e-09, 'Neutral': 6.718970979591177e-08}}]
+2025-04-21 23:35:15,076 - INFO - 127.0.0.1 - - [21/Apr/2025 23:35:15] "POST /predict HTTP/1.1" 200 -
