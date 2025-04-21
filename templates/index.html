@@ -147,6 +147,7 @@
         text-align: center;
         margin: 20px 0;
         min-height: 300px;
+        position: relative;
       }
       .result-container {
         margin-top: 20px;
@@ -300,6 +301,7 @@
         <!-- Container hiển thị ảnh xem trước -->
         <div class="preview-container">
           <img id="uploadPreview" alt="Upload Preview" />
+          <canvas id="uploadCanvas" style="position: absolute; top: 0; left: 0;"></canvas>
         </div>
 
         <!-- Container hiển thị kết quả dự đoán -->
@@ -354,52 +356,41 @@
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
     <script>
       // Khai báo biến toàn cục
-      let socket; // Đối tượng Socket.IO
-      let videoStream; // Luồng video từ webcam
-      let isStreaming = false; // Trạng thái phát video
-      let lastCaptureTime = 0; // Thời điểm chụp frame cuối
-      const CAPTURE_INTERVAL_MS = 200; // Khoảng thời gian giữa các lần chụp frame (ms)
-      let currentCameraIndex = 0; // Chỉ số camera hiện tại
-      let availableCameras = []; // Danh sách camera khả dụng
+      let socket;
+      let videoStream;
+      let isStreaming = false;
+      let lastCaptureTime = 0;
+      const CAPTURE_INTERVAL_MS = 200;
+      let currentCameraIndex = 0;
+      let availableCameras = [];
+      let originalImageSrc = null; // Lưu trữ ảnh gốc
 
       // Khởi tạo kết nối Socket.IO
       function initSocket() {
         if (!socket) {
-          const protocol =
-            window.location.protocol === "https:" ? "wss:" : "ws:"; // Giao thức socket
-          const host = window.location.host; // Địa chỉ host
-          const socketUrl = `${protocol}//${host}`; // URL socket
-          socket = io(socketUrl); // Khởi tạo socket
+          const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+          const host = window.location.host;
+          const socketUrl = `${protocol}//${host}`;
+          socket = io(socketUrl);
 
-          // Xử lý sự kiện kết nối thành công
           socket.on("connect", () => {
             console.log("Connected to server");
           });
 
-          // Xử lý kết quả cảm xúc từ server
           socket.on("emotion_result", (data) => {
             displayRealtimeResult(data);
           });
 
-          // Xử lý sự kiện mất kết nối
           socket.on("disconnect", () => {
             console.log("Disconnected from server");
-            showError(
-              "cameraError",
-              "Lost connection to server. Please reload the page."
-            );
+            showError("cameraError", "Lost connection to server. Please reload the page.");
           });
 
-          // Xử lý lỗi kết nối
           socket.on("connect_error", (error) => {
             console.error("Socket.IO connection error:", error);
-            showError(
-              "cameraError",
-              "Unable to connect to server. Please check your network."
-            );
+            showError("cameraError", "Unable to connect to server. Please check your network.");
           });
 
-          // Xử lý lỗi socket chung
           socket.on("error", (error) => {
             console.error("Socket.IO error:", error);
             showError("cameraError", "Socket error: " + error);
@@ -414,7 +405,7 @@
         errorElement.style.display = "block";
         setTimeout(() => {
           errorElement.style.display = "none";
-        }, 5000); // Ẩn sau 5 giây
+        }, 5000);
       }
 
       // Xóa thông báo lỗi
@@ -425,58 +416,46 @@
 
       // Chuyển đổi giữa các tab
       function showTab(tabName) {
-        document
-          .querySelectorAll(".tab")
-          .forEach((tab) => tab.classList.remove("active"));
-        document
-          .querySelectorAll(".tab-btn")
-          .forEach((btn) => btn.classList.remove("active"));
+        document.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("active"));
+        document.querySelectorAll(".tab-btn").forEach((btn) => btn.classList.remove("active"));
         document.getElementById(tabName + "Tab").classList.add("active");
-        document
-          .querySelector(`.tab-btn[onclick="showTab('${tabName}')"]`)
-          .classList.add("active");
+        document.querySelector(`.tab-btn[onclick="showTab('${tabName}')"]`).classList.add("active");
 
         if (tabName === "realtime") {
-          initSocket(); // Khởi tạo socket khi vào tab real-time
+          initSocket();
           if (!isStreaming && availableCameras.length === 0) {
-            checkCameraAvailability(); // Kiểm tra camera khả dụng
+            checkCameraAvailability();
           }
         } else if (isStreaming) {
-          stopWebcam(); // Dừng webcam khi rời tab real-time
+          stopWebcam();
         }
       }
 
       // Kiểm tra các camera khả dụng
       async function checkCameraAvailability() {
         try {
-          const devices = await navigator.mediaDevices.enumerateDevices(); // Lấy danh sách thiết bị
-          const videoDevices = devices.filter(
-            (device) => device.kind === "videoinput"
-          ); // Lọc camera
+          const devices = await navigator.mediaDevices.enumerateDevices();
+          const videoDevices = devices.filter((device) => device.kind === "videoinput");
           if (videoDevices.length === 0) {
             showError("cameraError", "No camera found on your device.");
             return;
           }
           availableCameras = videoDevices;
           if (videoDevices.length > 1) {
-            document.getElementById("switchCameraBtn").style.display =
-              "inline-block"; // Hiển thị nút chuyển camera
+            document.getElementById("switchCameraBtn").style.display = "inline-block";
             const cameraSelection = document.getElementById("cameraSelection");
             cameraSelection.innerHTML = "";
-            cameraSelection.style.display = "inline-block"; // Hiển thị dropdown
+            cameraSelection.style.display = "inline-block";
             videoDevices.forEach((device, index) => {
               const option = document.createElement("option");
               option.value = index;
               option.text = device.label || `Camera ${index + 1}`;
-              cameraSelection.appendChild(option); // Thêm tùy chọn camera
+              cameraSelection.appendChild(option);
             });
           }
         } catch (error) {
           console.error("Error checking cameras:", error);
-          showError(
-            "cameraError",
-            `Unable to access camera list: ${error.message}`
-          );
+          showError("cameraError", `Unable to access camera list: ${error.message}`);
         }
       }
 
@@ -485,26 +464,22 @@
         const fileInput = document.getElementById("fileInput");
         const preview = document.getElementById("uploadPreview");
         const errorElement = document.getElementById("fileInputError");
+        const canvas = document.getElementById("uploadCanvas");
         clearError("fileInputError");
         if (fileInput.files && fileInput.files[0]) {
           const file = fileInput.files[0];
-          if (
-            !file.type.match("image/jpeg") &&
-            !file.type.match("image/jpg") &&
-            !file.type.match("image/png")
-          ) {
+          if (!file.type.match("image/jpeg") && !file.type.match("image/jpg") && !file.type.match("image/png")) {
             showError("fileInputError", "Please select a JPEG or PNG image.");
             fileInput.value = "";
             preview.style.display = "none";
+            canvas.style.display = "none";
             return;
           }
           if (file.size > 5 * 1024 * 1024) {
-            showError(
-              "fileInputError",
-              "File size too large. Please select a file smaller than 5MB."
-            );
+            showError("fileInputError", "File size too large. Please select a file smaller than 5MB.");
             fileInput.value = "";
             preview.style.display = "none";
+            canvas.style.display = "none";
             return;
           }
           const reader = new FileReader();
@@ -512,19 +487,23 @@
             const img = new Image();
             img.onload = function () {
               preview.src = e.target.result;
+              originalImageSrc = e.target.result; // Lưu ảnh gốc
               preview.style.display = "block";
-              document.getElementById("uploadResult").innerHTML = ""; // Xóa kết quả cũ
+              canvas.width = img.naturalWidth;
+              canvas.height = img.naturalHeight;
+              canvas.style.left = preview.offsetLeft + "px";
+              canvas.style.top = preview.offsetTop + "px";
+              canvas.style.display = "none"; // Ẩn canvas ban đầu
+              document.getElementById("uploadResult").innerHTML = "";
             };
             img.src = e.target.result;
           };
           reader.onerror = function () {
-            showError(
-              "fileInputError",
-              "Error reading file. Please try again."
-            );
+            showError("fileInputError", "Error reading file. Please try again.");
             preview.style.display = "none";
+            canvas.style.display = "none";
           };
-          reader.readAsDataURL(file); // Đọc file dưới dạng URL
+          reader.readAsDataURL(file);
         }
       }
 
@@ -538,9 +517,9 @@
           return;
         }
         const formData = new FormData();
-        formData.append("file", fileInput.files[0]); // Thêm file vào form
+        formData.append("file", fileInput.files[0]);
         document.getElementById("uploadResult").innerHTML = "";
-        uploadLoading.style.display = "block"; // Hiển thị hiệu ứng tải
+        uploadLoading.style.display = "block";
         fetch("/predict", {
           method: "POST",
           body: formData,
@@ -551,7 +530,7 @@
           })
           .then((data) => {
             uploadLoading.style.display = "none";
-            displayUploadResult(data); // Hiển thị kết quả
+            displayUploadResult(data);
           })
           .catch((error) => {
             console.error("Error:", error);
@@ -563,91 +542,79 @@
       // Hiển thị kết quả dự đoán từ ảnh tải lên
       function displayUploadResult(data) {
         const resultDiv = document.getElementById("uploadResult");
-        resultDiv.innerHTML = "";
-        if (data.error) {
-          let errorMsg;
-          switch (data.error) {
-            case "No file part":
-              errorMsg = "No file part in the request.";
-              break;
-            case "No selected file":
-              errorMsg = "No file selected.";
-              break;
-            case "Invalid file format":
-              errorMsg = "Invalid file format.";
-              break;
-            default:
-              errorMsg = data.error;
-          }
-          showError("fileInputError", errorMsg);
-          return;
-        }
-        if (!data.emotions || data.emotions.length === 0) {
-          resultDiv.innerHTML = "<p>No faces detected in the image.</p>";
-          return;
-        }
-        const resultContainer = document.createElement("div");
-        data.emotions.forEach((result, index) => {
-          const faceResult = document.createElement("div");
-          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
-            result.emotion
-          }</h3>`;
-          if (result.probabilities) {
-            console.log("Raw probabilities:", result.probabilities); // In dữ liệu gốc
-            const probContainer = document.createElement("div");
-            let totalPercentage = 0; // Theo dõi tổng xác suất
-            Object.entries(result.probabilities)
-              .sort((a, b) => b[1] - a[1]) // Sắp xếp theo xác suất giảm dần
-              .forEach(([emotion, probability]) => {
-                const percentage = Math.round(probability * 100);
-                totalPercentage += parseFloat(percentage);
-                probContainer.innerHTML += `
-                  <div>
-                    <span>${emotion}: ${percentage}%</span>
-                    <div class="progress-container">
-                      <div class="progress-bar" style="width: ${percentage}%">${percentage}%</div>
-                    </div>
-                  </div>
-                `;
-              });
-            console.log("Total percentage displayed:", totalPercentage); // In tổng hiển thị
-            faceResult.appendChild(probContainer);
-          }
-          resultContainer.appendChild(faceResult);
-        });
         const previewImg = document.getElementById("uploadPreview");
-        const canvas = document.createElement("canvas");
+        const canvas = document.getElementById("uploadCanvas");
+        const ctx = canvas.getContext("2d");
+        
+        // Tải lại ảnh gốc trước khi vẽ
         const img = new Image();
         img.onload = function () {
-          canvas.width = img.naturalWidth;
-          canvas.height = img.naturalHeight;
-          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas trước khi vẽ
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          /* if (data.landmarks && data.landmarks.length > 0) {
-            ctx.fillStyle = "#00ff00"; // Màu điểm landmarks
-            data.landmarks.forEach((point) => {
-              ctx.beginPath();
-              ctx.arc(point[0], point[1], 1, 0, 2 * Math.PI);
-              ctx.fill(); // Vẽ các điểm landmarks
-            });
-            ctx.strokeStyle = "rgba(0, 255, 0, 0.3)"; // Màu đường nối
-            ctx.lineWidth = 0.5;
-            connectLandmarks(ctx, data.landmarks); // Nối các điểm landmarks
-          }  */
-          data.emotions.forEach((result) => {
-            ctx.strokeStyle = "#00ff00"; // Màu viền bounding box
+          
+          resultDiv.innerHTML = "";
+          if (data.error) {
+            let errorMsg;
+            switch (data.error) {
+              case "No file part":
+                errorMsg = "No file part in the request.";
+                break;
+              case "No selected file":
+                errorMsg = "No file selected.";
+                break;
+              case "Invalid file format":
+                errorMsg = "Invalid file format.";
+                break;
+              default:
+                errorMsg = data.error;
+            }
+            showError("fileInputError", errorMsg);
+            return;
+          }
+          if (!data.emotions || data.emotions.length === 0) {
+            resultDiv.innerHTML = "<p>No faces detected in the image.</p>";
+            canvas.style.display = "none";
+            return;
+          }
+          
+          const resultContainer = document.createElement("div");
+          data.emotions.forEach((result, index) => {
+            const faceResult = document.createElement("div");
+            faceResult.innerHTML = `<h3>Face ${index + 1}: ${result.emotion}</h3>`;
+            if (result.probabilities) {
+              const probContainer = document.createElement("div");
+              Object.entries(result.probabilities)
+                .sort((a, b) => b[1] - a[1])
+                .forEach(([emotion, probability]) => {
+                  const percentage = Math.round(probability * 100);
+                  probContainer.innerHTML += `
+                    <div>
+                      <span>${emotion}: ${percentage}%</span>
+                      <div class="progress-container">
+                        <div class="progress-bar" style="width: ${percentage}%">${percentage}%</div>
+                      </div>
+                    </div>
+                  `;
+                });
+              faceResult.appendChild(probContainer);
+            }
+            resultContainer.appendChild(faceResult);
+
+            // Vẽ bounding box lên canvas
+            ctx.strokeStyle = "#00ff00";
             ctx.lineWidth = 2;
-            ctx.strokeRect(result.x, result.y, result.w, result.h); // Vẽ bounding box
-            ctx.fillStyle = "rgba(0, 0, 0, 0.7)"; // Màu nền nhãn
+            ctx.strokeRect(result.x, result.y, result.w, result.h);
+            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
             ctx.fillRect(result.x, result.y - 25, 100, 25);
-            ctx.fillStyle = "#ffffff"; // Màu chữ nhãn
+            ctx.fillStyle = "#ffffff";
             ctx.font = "16px Arial";
-            ctx.fillText(result.emotion, result.x + 5, result.y - 5); // Vẽ nhãn cảm xúc
+            ctx.fillText(result.emotion, result.x + 5, result.y - 5);
           });
-          previewImg.src = canvas.toDataURL(); // Cập nhật ảnh xem trước
+          
+          canvas.style.display = "block"; // Hiển thị canvas với kết quả
           resultDiv.appendChild(resultContainer);
         };
-        img.src = previewImg.src;
+        img.src = originalImageSrc || previewImg.src; // Sử dụng ảnh gốc
       }
 
       // Nối các điểm landmarks trên canvas
@@ -678,7 +645,7 @@
             }
           }
           if (regionIndex !== 2 && regionIndex !== 3) ctx.closePath();
-          ctx.stroke(); // Vẽ các đường nối
+          ctx.stroke();
         });
       }
 
@@ -705,24 +672,20 @@
       async function startWebcam() {
         clearError("cameraError");
         try {
-          if (videoStream)
-            videoStream.getTracks().forEach((track) => track.stop()); // Dừng stream cũ
+          if (videoStream) videoStream.getTracks().forEach((track) => track.stop());
           if (availableCameras.length === 0) {
             await checkCameraAvailability();
-            if (availableCameras.length === 0)
-              throw new Error("No camera found.");
+            if (availableCameras.length === 0) throw new Error("No camera found.");
           }
           const selectedCamera = availableCameras[currentCameraIndex];
           const constraints = {
             video: {
-              deviceId: selectedCamera.deviceId
-                ? { exact: selectedCamera.deviceId }
-                : undefined,
+              deviceId: selectedCamera.deviceId ? { exact: selectedCamera.deviceId } : undefined,
               width: { ideal: 640 },
               height: { ideal: 480 },
             },
           };
-          const stream = await navigator.mediaDevices.getUserMedia(constraints); // Lấy stream từ camera
+          const stream = await navigator.mediaDevices.getUserMedia(constraints);
           const video = document.getElementById("video");
           const canvas = document.getElementById("canvas");
           const landmarksCanvas = document.getElementById("landmarksCanvas");
@@ -736,14 +699,11 @@
             landmarksCanvas.height = video.videoHeight;
             isStreaming = true;
             document.getElementById("startBtn").textContent = "Stop";
-            requestAnimationFrame(captureFrame); // Bắt đầu chụp frame
+            requestAnimationFrame(captureFrame);
           };
           video.onerror = (e) => {
             console.error("Video error:", e);
-            showError(
-              "cameraError",
-              "Error playing video. Please reload the page and try again."
-            );
+            showError("cameraError", "Error playing video. Please reload the page and try again.");
             stopWebcam();
           };
         } catch (error) {
@@ -761,8 +721,7 @@
               errorMessage = "Unable to start camera. It may be in use.";
               break;
             case "OverconstrainedError":
-              errorMessage =
-                "Camera does not meet requirements. Check settings.";
+              errorMessage = "Camera does not meet requirements. Check settings.";
               break;
             case "SecurityError":
               errorMessage = "Security error accessing camera.";
@@ -782,21 +741,16 @@
       // Dừng webcam
       function stopWebcam() {
         if (videoStream) {
-          videoStream.getTracks().forEach((track) => track.stop()); // Dừng tất cả track
+          videoStream.getTracks().forEach((track) => track.stop());
           document.getElementById("video").srcObject = null;
           isStreaming = false;
           const canvas = document.getElementById("canvas");
           const landmarksCanvas = document.getElementById("landmarksCanvas");
           const canvasCtx = canvas.getContext("2d");
           const landmarksCtx = landmarksCanvas.getContext("2d");
-          canvasCtx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas
-          landmarksCtx.clearRect(
-            0,
-            0,
-            landmarksCanvas.width,
-            landmarksCanvas.height
-          );
-          document.getElementById("realtimeResult").innerHTML = ""; // Xóa kết quả
+          canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+          landmarksCtx.clearRect(0, 0, landmarksCanvas.width, landmarksCanvas.height);
+          document.getElementById("realtimeResult").innerHTML = "";
         }
       }
 
@@ -810,7 +764,7 @@
         document.getElementById("cameraSelection").value = currentCameraIndex;
         if (isStreaming) {
           stopWebcam();
-          startWebcam(); // Khởi động lại với camera mới
+          startWebcam();
         }
       }
 
@@ -818,15 +772,11 @@
       function changeCamera() {
         const selection = document.getElementById("cameraSelection");
         const newIndex = parseInt(selection.value);
-        if (
-          !isNaN(newIndex) &&
-          newIndex >= 0 &&
-          newIndex < availableCameras.length
-        ) {
+        if (!isNaN(newIndex) && newIndex >= 0 && newIndex < availableCameras.length) {
           currentCameraIndex = newIndex;
           if (isStreaming) {
             stopWebcam();
-            startWebcam(); // Khởi động lại với camera được chọn
+            startWebcam();
           }
         }
       }
@@ -847,13 +797,13 @@
           canvas.height = video.videoHeight;
           const ctx = canvas.getContext("2d");
           ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-          const imageData = canvas.toDataURL("image/jpeg", 0.7); // Chuyển frame thành JPEG
+          const imageData = canvas.toDataURL("image/jpeg", 0.7);
           if (socket && socket.connected) {
-            socket.emit("image", imageData); // Gửi frame qua socket
+            socket.emit("image", imageData);
             lastCaptureTime = now;
           }
         }
-        requestAnimationFrame(captureFrame); // Tiếp tục chụp frame
+        requestAnimationFrame(captureFrame);
       }
 
       // Hiển thị kết quả cảm xúc thời gian thực
@@ -861,17 +811,11 @@
         const canvas = document.getElementById("canvas");
         const landmarksCanvas = document.getElementById("landmarksCanvas");
         const resultDiv = document.getElementById("realtimeResult");
-        console.log("Received data from server (realtime):", data); // In dữ liệu nhận được
         if (!canvas || !landmarksCanvas) return;
         const ctx = canvas.getContext("2d");
         const landmarksCtx = landmarksCanvas.getContext("2d");
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        landmarksCtx.clearRect(
-          0,
-          0,
-          landmarksCanvas.width,
-          landmarksCanvas.height
-        );
+        landmarksCtx.clearRect(0, 0, landmarksCanvas.width, landmarksCanvas.height);
         if (!data.emotions || data.emotions.length === 0) {
           resultDiv.innerHTML = "<p>No faces detected</p>";
           return;
@@ -887,9 +831,7 @@
           ctx.font = "16px Arial";
           ctx.fillText(result.emotion, result.x + 5, result.y - 5);
           const faceResult = document.createElement("div");
-          faceResult.innerHTML = `<h3>Face ${index + 1}: ${
-            result.emotion
-          }</h3>`;
+          faceResult.innerHTML = `<h3>Face ${index + 1}: ${result.emotion}</h3>`;
           resultDiv.appendChild(faceResult);
         });
       }

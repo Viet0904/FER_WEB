@@ -79,8 +79,8 @@ mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(
     static_image_mode=False,
     max_num_faces=MAX_FACES,
-    min_detection_confidence=0.5,
-    min_tracking_confidence=0.5,
+    min_detection_confidence=0.7,
+    min_tracking_confidence=0.7,
 )
 
 # Tải bộ phân loại Haar Cascade để phát hiện khuôn mặt dự phòng
@@ -229,7 +229,7 @@ def predict_emotion(image, model, max_faces=1, return_probs=False):
         if not faces:
             gray = cv2.cvtColor(original_image, cv2.COLOR_RGB2GRAY)
             haar_faces = face_cascade.detectMultiScale(
-                gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)
+                gray, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30)
             )
             faces = [(x, y, w, h) for (x, y, w, h) in haar_faces][:max_faces]
             landmarks = []
